@@ -1,106 +1,243 @@
 import type { Metadata } from "next";
+import Link from "next/link";
+import { FadeIn } from "@/components/ui/fade-in";
+import { SectionHeading } from "@/components/ui/section-heading";
 
 export const metadata: Metadata = {
   title: "Skincare Brand China Market Entry — Central Orbit",
   description:
-    "Central Orbit helps independent Western skincare brands establish their own commercial presence in the Chinese market — from regulatory approval to launch and ongoing management.",
+    "Central Orbit builds owned China B2C channels for Western skincare brands — retaining brand control, consumer data, and pricing from day one.",
   openGraph: {
     title: "Skincare Brand China Market Entry — Central Orbit",
     description:
-      "A structured, managed approach to China market entry for independent Western skincare brands.",
+      "A complete China B2C operation, run by us, owned by you. Brand assessment through to ongoing management.",
   },
 };
 
-const steps = [
-  { title: "Brand Assessment", body: "We evaluate your brand, product range, pricing, positioning and overall readiness for the Chinese market. We provide an honest assessment of your strengths, gaps and the most appropriate entry route for your specific situation." },
-  { title: "Regulatory Approvals", body: "We guide you through the Chinese regulatory requirements applicable to your product range and manage the approval process, ensuring your products meet all necessary compliance standards before entering the market." },
-  { title: "Legal and Financial Structure", body: "We advise on the appropriate legal and financial structure for your China operations, including entity setup, commercial agreements and financial flows between your home market and China." },
-  { title: "Channel Setup", body: "We design and establish your brand's own commercial channels in China, ensuring you maintain full control over your pricing, positioning and customer relationships. Where relevant, introductions to market partners are made as part of the broader channel strategy." },
-  { title: "Launch Planning and Sales Strategy", body: "We develop your go-to-market plan, sales strategy and campaign structure, ensuring your brand launches with commercial momentum and clear revenue targets from day one." },
-  { title: "Platform Activation", body: "We identify and set up the right Chinese retail and digital platforms for your brand and oversee the full launch process." },
-  { title: "Ongoing Management", body: "We support your China operations on an ongoing basis, managing platform performance, partner relationships and market development." },
+const whatWeBuild = [
+  {
+    title: "Brand Assessment",
+    body: "We assess whether your brand, ingredients and management approach are genuinely ready for China. We say no when the fit is not right.",
+  },
+  {
+    title: "Regulatory Approval",
+    body: "Full product registration, trademark protection, CSAR compliance and legal entity setup handled by our on-ground agents.",
+  },
+  {
+    title: "WeChat Mini App",
+    body: "Your brand's digital home in China. Built and operated within the WeChat ecosystem where Chinese consumers live.",
+  },
+  {
+    title: "Platform Launch",
+    body: "Douyin, Little Red Book and Tmall as you scale. We set up, operate and optimise every platform.",
+  },
+  {
+    title: "Marketing Execution",
+    body: "Campaign management, content creation, KOL and KOC relationships. Your story adapted for Chinese consumers without losing what makes your brand distinctive.",
+  },
+  {
+    title: "Ongoing Operations",
+    body: "Logistics, inventory, consumer data, CRM and repeat purchase management. From your factory door to the Chinese consumer.",
+  },
 ];
 
-const scope = [
-  "Brand assessment and market readiness evaluation",
-  "Regulatory approval and compliance management",
-  "Legal structure and entity setup advisory",
-  "Financial structure and cross-border payment setup",
-  "Channel strategy and owned distribution model setup",
-  "Introduction to relevant market partners as part of the broader entry strategy",
-  "Launch planning and go-to-market execution",
-  "Sales strategy and revenue model design",
-  "Campaign structure and digital marketing activation",
-  "Platform setup and product listing",
-  "Brand messaging adaptation for Chinese consumers",
-  "Ongoing channel and platform management",
+const years = [
+  {
+    label: "Year 1",
+    title: "Validate",
+    body: "Trademark registration, regulatory approval, WeChat mini app build, platform setup, brand story adaptation, initial launch and review generation.",
+  },
+  {
+    label: "Year 2",
+    title: "Scale",
+    body: "Push hero SKUs, expand paid activity, build monthly campaign rhythm and repeat purchase evidence.",
+  },
+  {
+    label: "Year 3",
+    title: "Operate",
+    body: "Mature CRM, festival playbooks, platform expansion into Tier 2 and Tier 3 cities, full operating scale.",
+  },
 ];
 
 export default function SkincarePage() {
   return (
-    <main>
-      <section className="bg-gray-50">
-        <div className="mx-auto max-w-3xl px-6 py-20">
-          <p className="mb-3 text-sm font-medium uppercase tracking-widest text-orange-600">
-            Service
-          </p>
-          <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 md:text-5xl">
-            Skincare Brand China Market Entry
-          </h1>
-          <div className="mt-8 space-y-5 text-base leading-relaxed text-gray-700">
-            <p>
-              Central Orbit helps independent Western skincare brands establish
-              their own commercial presence in the Chinese market. We work with
-              founder-led brands ready to expand beyond their home market and
-              looking for a structured, managed approach to China entry.
+    <>
+      {/* Hero */}
+      <section className="pt-28 pb-16 lg:pt-36 lg:pb-20 bg-surface">
+        <div className="mx-auto max-w-6xl px-6">
+          <FadeIn>
+            <h1 className="font-heading text-4xl md:text-5xl font-bold text-primary max-w-3xl leading-tight">
+              Own the Brand. Own the Channel. Own the Consumer Relationship.
+            </h1>
+            <div className="mt-3 w-16 h-1 bg-primary rounded-full" />
+            <p className="mt-8 text-text-light text-lg max-w-2xl leading-relaxed">
+              Most Western skincare brands entering China hand control to a
+              distributor. We do the opposite. We build your owned China B2C
+              channel so you keep the brand, the data, the pricing and the
+              consumer relationship.
             </p>
-            <p>
-              Our work covers the full process — from initial brand assessment
-              through to regulatory approval, legal and financial structuring,
-              owned channel setup, launch planning and ongoing commercial
-              management. The goal is always for our clients to own and control
-              their China presence independently.
-            </p>
+          </FadeIn>
+        </div>
+      </section>
+
+      {/* Two Routes */}
+      <section className="py-16 bg-white">
+        <div className="mx-auto max-w-6xl px-6">
+          <SectionHeading title="Two Routes Into China. Very Different Outcomes." />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10">
+            <FadeIn>
+              <div className="bg-surface rounded-lg p-8 border border-border h-full">
+                <h3 className="font-heading text-lg font-semibold text-text mb-6">
+                  Traditional Distributor Route
+                </h3>
+                <ul className="space-y-4">
+                  {[
+                    "A purchase order, then limited visibility",
+                    "Shelf priority and campaign timing sit with the importer",
+                    "Competing brands can be promoted harder in the same quarter",
+                    "You rarely learn who buys, why they buy or when they repurchase",
+                    "Each shipment is a transaction, not an owned China asset",
+                  ].map((item) => (
+                    <li
+                      key={item}
+                      className="flex items-start gap-3 text-sm text-text-light leading-relaxed"
+                    >
+                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-text-light/40" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </FadeIn>
+            <FadeIn delay={0.1}>
+              <div className="bg-surface rounded-lg p-8 border border-primary/30 h-full">
+                <h3 className="font-heading text-lg font-semibold text-primary mb-6">
+                  Central Orbit Direct B2C Channel
+                </h3>
+                <ul className="space-y-4">
+                  {[
+                    "You retain full brand architecture, story and pricing control",
+                    "Our team operates the channel on your behalf",
+                    "Campaign calendar and platform focus agreed in advance",
+                    "Consumer data, reviews and CRM become your assets",
+                    "Volume growth tied to a clear 3-year plan",
+                  ].map((item) => (
+                    <li
+                      key={item}
+                      className="flex items-start gap-3 text-sm text-text-light leading-relaxed"
+                    >
+                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </FadeIn>
           </div>
         </div>
       </section>
 
-      <section>
-        <div className="mx-auto max-w-3xl px-6 py-20">
-          <h2 className="text-2xl font-bold tracking-tight text-gray-900 md:text-3xl">
-            Our Approach
-          </h2>
-          <ol className="mt-10 space-y-8">
-            {steps.map((s, i) => (
-              <li key={s.title} className="flex gap-5">
-                <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-orange-600 text-sm font-semibold text-white">
-                  {i + 1}
+      {/* What We Build */}
+      <section className="py-16 bg-surface">
+        <div className="mx-auto max-w-6xl px-6">
+          <SectionHeading
+            title="A Complete China Operation. Run by Us. Owned by You."
+          />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
+            {whatWeBuild.map((item, i) => (
+              <FadeIn key={item.title} delay={Math.min(i * 0.08, 0.4)}>
+                <div className="bg-white rounded-lg p-6 border border-border h-full">
+                  <h3 className="font-heading text-base font-semibold text-text">
+                    {item.title}
+                  </h3>
+                  <p className="mt-3 text-sm text-text-light leading-relaxed">
+                    {item.body}
+                  </p>
                 </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-900">{s.title}</h3>
-                  <p className="mt-2 text-base leading-relaxed text-gray-700">{s.body}</p>
-                </div>
-              </li>
+              </FadeIn>
             ))}
-          </ol>
+          </div>
         </div>
       </section>
 
-      <section className="bg-gray-50">
-        <div className="mx-auto max-w-3xl px-6 py-20">
-          <h2 className="text-2xl font-bold tracking-tight text-gray-900 md:text-3xl">
-            Scope of Service
-          </h2>
-          <ul className="mt-8 grid gap-3 sm:grid-cols-2">
-            {scope.map((item) => (
-              <li key={item} className="flex gap-3 text-base leading-relaxed text-gray-700">
-                <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-orange-600" />
-                <span>{item}</span>
-              </li>
+      {/* Three Year Path */}
+      <section className="py-16 bg-white">
+        <div className="mx-auto max-w-6xl px-6">
+          <SectionHeading title="Validate. Scale. Operate." />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
+            {years.map((year, i) => (
+              <FadeIn key={year.title} delay={i * 0.1}>
+                <div className="bg-surface rounded-lg p-6 border border-border h-full">
+                  <span className="text-xs font-medium uppercase tracking-widest text-primary">
+                    {year.label}
+                  </span>
+                  <h3 className="font-heading text-xl font-semibold text-text mt-1">
+                    {year.title}
+                  </h3>
+                  <p className="mt-4 text-sm text-text-light leading-relaxed">
+                    {year.body}
+                  </p>
+                </div>
+              </FadeIn>
             ))}
-          </ul>
+          </div>
+          <FadeIn delay={0.3}>
+            <p className="mt-8 text-sm text-text-light max-w-2xl leading-relaxed italic">
+              Timeline from assessment to first sale is typically 12 to 18
+              months. China is a strategic investment, not a marketing sprint.
+            </p>
+          </FadeIn>
         </div>
       </section>
-    </main>
+
+      {/* Who We Work With */}
+      <section className="py-16 bg-surface">
+        <div className="mx-auto max-w-6xl px-6">
+          <SectionHeading title="We Are Selective by Design." />
+          <FadeIn>
+            <div className="max-w-2xl space-y-4 text-text-light leading-relaxed">
+              <p>
+                We work with a maximum of ten skincare brands at any time. Each
+                engagement is a full operational partnership, not a consulting
+                retainer. We currently have capacity for three to four new
+                brands.
+              </p>
+              <p>
+                The brands we take on have a strong product, a defensible
+                ingredient story, an established home market and management that
+                understands China requires patience and long-term commitment. If
+                you are looking for quick results, we are not the right partner.
+              </p>
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+
+      {/* How to Start */}
+      <section className="py-16 bg-white">
+        <div className="mx-auto max-w-6xl px-6">
+          <SectionHeading title="Start with a Conversation." />
+          <FadeIn>
+            <div className="max-w-2xl space-y-4 text-text-light leading-relaxed">
+              <p>
+                We begin every engagement with an honest assessment of whether
+                your brand is ready for China and whether we are the right
+                partner for each other. There is no cost to that conversation.
+              </p>
+              <p>
+                To start,{" "}
+                <Link
+                  href="/contact"
+                  className="text-primary hover:text-primary-dark transition-colors underline underline-offset-2"
+                >
+                  contact us here
+                </Link>
+                .
+              </p>
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+    </>
   );
 }
