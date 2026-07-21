@@ -107,7 +107,7 @@ export function ContactForm() {
             required
             rows={5}
             className="w-full rounded-md border border-border bg-surface px-4 py-2.5 text-sm text-text placeholder:text-text-light/60 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/20 transition-colors resize-none"
-            placeholder="How can we help?"
+            placeholder="What do you sell, what have you already tried in China, and what outcome are you seeking?"
           />
         </div>
         {status === "error" && (

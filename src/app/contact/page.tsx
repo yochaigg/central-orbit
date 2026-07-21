@@ -34,7 +34,7 @@ export default function ContactPage() {
             <div>
               <SectionHeading
                 title="Get in Touch"
-                subtitle="Please feel free to contact us with any inquiry you might have."
+                subtitle="Tell us what you sell, where you operate and what you are trying to achieve in China. We will respond with an initial view of whether a conversation is worthwhile."
               />
               <ContactForm />
             </div>

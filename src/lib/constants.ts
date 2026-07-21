@@ -1,80 +1,74 @@
 export const SITE = {
   name: "Central Orbit",
-  tagline: "where impossible becomes possible",
+  tagline: "Western products. Chinese customers.",
   description:
-    "International business consultancy helping companies navigate cross-cultural markets across the APAC region since 1998.",
+    "Commercial advisory and execution for Western companies building customers, channels and revenue in China.",
   url: "https://central-orbit.com",
 };
 
 export const NAV_LINKS = [
   { label: "Home", href: "/" },
+  { label: "How We Help", href: "/about#services" },
+  { label: "Experience", href: "/clients" },
+  { label: "Industries", href: "/markets" },
   { label: "About", href: "/about" },
-  { label: "Markets", href: "/markets" },
-  { label: "Clients", href: "/clients" },
-  { label: "Skincare", href: "/skincare" },
-  { label: "Waste to Energy", href: "/waste-to-energy" },
   { label: "Contact", href: "/contact" },
 ] as const;
 
 export const ABOUT = {
   paragraphs: [
-    "Since 1998, Central Orbit's team has been dedicated to creating successful businesses around the globe, mostly in the APAC region. Our goal is to help companies overcome the hurdles faced in doing cross-country and cross-cultural business.",
-    "Our multinational and Chinese clients choose to work with us because we provide real understanding, deliver practical results, and know how to get things done.",
-    "Central Orbit has a sustainable team of local and Western professionals who have experience working in both China and overseas — and have offices and networks of professionals throughout China, the US, and Europe.",
+    "Central Orbit helps established Western companies build customers, sales channels and revenue in China.",
+    "We work with companies assessing China for the first time, businesses preparing to enter or expand, and leadership teams reassessing an approach that has not delivered the expected results.",
+    "Our model combines senior Western commercial leadership with trusted relationships and operational capabilities inside China. We focus on the decisions and execution required to turn market potential into a workable commercial path.",
   ],
 };
 
 export const SERVICES = [
   {
-    title: "Business Development & Market Entry",
+    title: "China Commercial Assessment",
     description:
-      "End-to-end support for companies entering new APAC markets — from feasibility studies to on-the-ground execution.",
+      "A clear view of customer demand, competitive position, channels, risks and the case for investment.",
     icon: "TrendingUp",
   },
   {
-    title: "Investment Advisory",
+    title: "Customers, Channels & Partners",
     description:
-      "Strategic guidance on cross-border investments, joint ventures, and M&A opportunities across China and Asia-Pacific.",
-    icon: "Landmark",
+      "Customer development, distributor selection, channel strategy and strategic partnership building.",
+    icon: "Handshake",
   },
   {
-    title: "Cross-Cultural Consulting",
+    title: "Market Entry & Growth",
     description:
-      "Bridging cultural gaps between Western and Asian business practices to build lasting, productive partnerships.",
+      "A practical route to market covering positioning, commercial model, launch priorities and execution.",
     icon: "Globe",
   },
   {
-    title: "Conference & Event Management",
+    title: "Fractional China Commercial Leadership",
     description:
-      "Organizing and managing international business conferences, trade delegations, and industry summits.",
-    icon: "CalendarDays",
+      "Senior commercial representation for companies that need China capability without building a full internal team.",
+    icon: "Users",
   },
 ] as const;
 
 export const STATS = [
-  { value: "25+", label: "Years of Experience" },
-  { value: "17+", label: "Industries Served" },
-  { value: "3", label: "Continents" },
+  { value: "20+", label: "Years in International Growth" },
+  { value: "China", label: "Customers, Channels & Partners" },
+  { value: "US + EU", label: "Client Development Markets" },
 ] as const;
 
 export const MARKETS = [
+  { name: "Industrial Automation", icon: "Cpu" },
+  { name: "Machinery & Specialized Equipment", icon: "Settings" },
+  { name: "Enterprise & Technical Solutions", icon: "Monitor" },
   { name: "Telecommunications", icon: "Radio" },
-  { name: "Mobile Providers", icon: "Smartphone" },
-  { name: "Mobile Technology", icon: "Cpu" },
-  { name: "Mobile Applications", icon: "AppWindow" },
-  { name: "Consumer Technology", icon: "Monitor" },
-  { name: "Cosmetics B2B — Raw Materials & Sourcing", icon: "FlaskConical" },
-  { name: "Cosmetics B2C", icon: "Sparkles" },
-  { name: "Fashion", icon: "Shirt" },
-  { name: "Food B2B", icon: "Wheat" },
-  { name: "Beauty", icon: "Heart" },
-  { name: "Public Security", icon: "ShieldCheck" },
-  { name: "Public Safety", icon: "Shield" },
-  { name: "Waste Management", icon: "Recycle" },
+  { name: "Agricultural Technology", icon: "Wheat" },
+  { name: "Consumer Products", icon: "ShoppingBag" },
+  { name: "Beauty & Skincare", icon: "Sparkles" },
+  { name: "Food & Ingredients", icon: "FlaskConical" },
   { name: "Information Security", icon: "Lock" },
-  { name: "Water", icon: "Droplets" },
-  { name: "Aviation", icon: "Plane" },
-  { name: "Renewable Energy", icon: "Zap" },
+  { name: "Public Safety", icon: "ShieldCheck" },
+  { name: "Water & Waste", icon: "Droplets" },
+  { name: "Energy & Sustainability", icon: "Zap" },
 ] as const;
 
 export const CLIENTS = [
@@ -93,8 +87,8 @@ export const OFFICES = [
     address: [
       "17th Floor, Building A",
       "Tsinghua Tongfang Hi-Tech Plaza",
-      "中国北京市海淀区王庄路1号",
-      "同方科技广场A座17楼 100083",
+      "Wangzhuang Road 1, Haidian District",
+      "Beijing 100083, China",
     ],
     phone: "+86 10 82390301",
   },
@@ -105,6 +99,6 @@ export const OFFICES = [
       "Covent Garden",
       "London, WC2H 9JQ",
     ],
-    phone: "+44 020 3897 2233",
+    phone: "+44 20 3897 2233",
   },
 ] as const;

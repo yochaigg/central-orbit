@@ -20,13 +20,15 @@ import {
   Droplets,
   Plane,
   Zap,
+  Settings,
+  ShoppingBag,
   Circle,
 } from "lucide-react";
 
 const iconMap: Record<string, React.ComponentType<{ className?: string; size?: number; strokeWidth?: number }>> = {
   Radio, Smartphone, Cpu, AppWindow, Monitor, FlaskConical,
   Sparkles, Shirt, Wheat, Heart, ShieldCheck, Shield,
-  Recycle, Lock, Droplets, Plane, Zap, Circle,
+  Recycle, Lock, Droplets, Plane, Zap, Circle, Settings, ShoppingBag,
 };
 
 export const metadata: Metadata = {
@@ -55,7 +57,7 @@ export default function MarketsPage() {
         <div className="mx-auto max-w-6xl px-6">
           <SectionHeading
             title="Industries We Serve"
-            subtitle="We provide services across a wide range of sectors, with deep expertise in each."
+            subtitle="Our work spans industrial, technical and consumer markets. We assess each opportunity on its own commercial merits."
           />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {MARKETS.map((market, i) => {

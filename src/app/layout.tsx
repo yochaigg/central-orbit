@@ -18,36 +18,24 @@ const montserrat = Montserrat({
 
 export const metadata: Metadata = {
   title: {
-    default: "Central Orbit — Where Impossible Becomes Possible",
+    default: "Central Orbit | Build Sales in China",
     template: "%s | Central Orbit",
   },
   description:
-    "International business consultancy helping companies navigate cross-cultural markets across the APAC region since 1998.",
+    "Central Orbit helps established Western companies build customers, sales channels and revenue in China.",
   keywords: [
-    "business consulting",
-    "APAC",
+    "China sales",
     "China market entry",
-    "cross-cultural business",
-    "international trade",
+    "China distributor strategy",
+    "China business development",
+    "China commercial advisory",
   ],
-  icons: {
-    icon: "/favicon.ico",
-  },
+  icons: { icon: "/favicon.ico" },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html
-      lang="en"
-      className={`${inter.variable} ${montserrat.variable} h-full antialiased`}
-    >
-      <head>
-        <link rel="icon" href="/favicon.ico" />
-      </head>
+    <html lang="en" className={`${inter.variable} ${montserrat.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col">
         <Navbar />
         <main className="flex-1">{children}</main>

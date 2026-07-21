@@ -17,7 +17,7 @@ export default function ClientsPage() {
         <div className="mx-auto max-w-6xl px-6">
           <FadeIn>
             <h1 className="font-heading text-4xl md:text-5xl font-bold text-primary">
-              Clients
+              Selected Experience
             </h1>
             <div className="mt-3 w-16 h-1 bg-primary rounded-full" />
           </FadeIn>
@@ -28,8 +28,8 @@ export default function ClientsPage() {
       <section className="py-16 bg-white">
         <div className="mx-auto max-w-6xl px-6">
           <SectionHeading
-            title="Trusted By"
-            subtitle="Our multinational and Chinese clients choose to work with us because we deliver practical results."
+            title="Organizations We Have Worked With"
+            subtitle="Experience across enterprise technology, industrial markets, industry organizations and complex cross-border activity."
           />
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
             {CLIENTS.map((client, i) => (
@@ -44,8 +44,8 @@ export default function ClientsPage() {
           </div>
           <FadeIn delay={0.5}>
             <p className="mt-12 text-center text-text-light text-sm">
-              And many more across telecommunications, technology, cosmetics,
-              and public sector industries.
+              Additional work spans industrial automation, technology, consumer products,
+              sustainability and public-sector environments.
             </p>
           </FadeIn>
         </div>

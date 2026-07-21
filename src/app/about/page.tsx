@@ -4,9 +4,9 @@ import { SectionHeading } from "@/components/ui/section-heading";
 import { ABOUT, SERVICES, STATS } from "@/lib/constants";
 import {
   TrendingUp,
-  Landmark,
+  Handshake,
   Globe,
-  CalendarDays,
+  Users,
 } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -17,9 +17,9 @@ export const metadata: Metadata = {
 
 const serviceIcons = {
   TrendingUp,
-  Landmark,
+  Handshake,
   Globe,
-  CalendarDays,
+  Users,
 } as const;
 
 export default function AboutPage() {
@@ -74,8 +74,8 @@ export default function AboutPage() {
       <section id="services" className="py-16 bg-white scroll-mt-24">
         <div className="mx-auto max-w-6xl px-6">
           <SectionHeading
-            title="Services"
-            subtitle="End-to-end support for companies doing business across borders."
+            title="How We Help"
+            subtitle="Commercial clarity first. Practical execution when the opportunity is credible."
           />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {SERVICES.map((service, i) => {
