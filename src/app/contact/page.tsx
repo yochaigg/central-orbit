@@ -2,8 +2,7 @@ import type { Metadata } from "next";
 import { FadeIn } from "@/components/ui/fade-in";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { OFFICES } from "@/lib/constants";
-import { MapPin, Phone } from "lucide-react";
-import { ContactForm } from "@/components/contact/contact-form";
+import { Mail, MapPin, Phone } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -30,13 +29,21 @@ export default function ContactPage() {
       <section className="py-16 bg-white">
         <div className="mx-auto max-w-6xl px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-            {/* Contact Form */}
+            {/* Direct Contact */}
             <div>
               <SectionHeading
-                title="Get in Touch"
-                subtitle="Tell us what you sell, where you operate and what you are trying to achieve in China. We will respond with an initial view of whether a conversation is worthwhile."
+                title="Start With an Email"
+                subtitle="Tell us briefly what your company does, where you operate, and what is happening in China. If the situation is relevant to our work, we will arrange a conversation."
               />
-              <ContactForm />
+              <FadeIn>
+                <a
+                  href="mailto:yochai.golan@central-orbit.com"
+                  className="inline-flex items-center gap-3 rounded-lg border border-border bg-surface px-6 py-5 text-lg font-medium text-text transition-colors hover:border-primary hover:text-primary"
+                >
+                  <Mail className="text-primary" size={21} strokeWidth={1.5} />
+                  yochai.golan@central-orbit.com
+                </a>
+              </FadeIn>
             </div>
 
             {/* Office Locations */}

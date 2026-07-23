@@ -68,35 +68,35 @@ export default function Home() {
           </FadeIn>
           <FadeIn delay={0.1}>
             <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl font-bold text-primary tracking-tight">
-              BUILD SALES IN CHINA
+              CHINA, IN PRACTICE
             </h1>
           </FadeIn>
           <FadeIn delay={0.2}>
             <p className="mt-4 text-xl md:text-2xl text-text-light font-light">
-              Western products. Chinese customers.
+              Commercial work for Western companies.
             </p>
           </FadeIn>
           <FadeIn delay={0.3}>
             <p className="mt-6 text-text-light max-w-xl leading-relaxed">
-              We help established Western companies assess opportunities, build
-              customers and channels, and turn China strategy into commercial
-              execution.
+              We work with companies entering China, already operating there,
+              or reconsidering an approach that has not worked. The focus is
+              practical: customers, channels, partners and the decisions behind them.
             </p>
           </FadeIn>
           <FadeIn delay={0.4}>
             <div className="mt-8 flex flex-wrap gap-4">
               <Link
-                href="/contact"
+                href="mailto:yochai.golan@central-orbit.com"
                 className="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-md font-medium hover:bg-primary-dark transition-colors"
               >
-                Discuss Your China Opportunity
+                Email Central Orbit
                 <ArrowRight size={16} />
               </Link>
               <Link
                 href="/about#services"
                 className="inline-flex items-center gap-2 border border-border text-text px-6 py-3 rounded-md font-medium hover:border-primary hover:text-primary transition-colors"
               >
-                See How We Work
+                How We Work
               </Link>
             </div>
           </FadeIn>
