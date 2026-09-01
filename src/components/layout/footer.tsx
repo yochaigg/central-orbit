@@ -52,7 +52,6 @@ export function Footer() {
                   <p className="text-sm font-medium text-text">
                     {office.city}
                   </p>
-                  <p className="text-sm text-text-light">{office.phone}</p>
                 </div>
               ))}
             </div>
