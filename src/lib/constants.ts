@@ -1,8 +1,8 @@
 export const SITE = {
   name: "Central Orbit",
-  tagline: "Western products. Chinese customers.",
+  tagline: "International products. Global customers.",
   description:
-    "Commercial advisory and execution for Western companies building customers, channels and revenue in China.",
+    "Commercial advisory and execution for international companies building customers, channels and revenue in China and Latin America.",
   url: "https://central-orbit.com",
 };
 
@@ -11,21 +11,21 @@ export const NAV_LINKS = [
   { label: "How We Help", href: "/about#services" },
   { label: "Experience", href: "/clients" },
   { label: "Industries", href: "/markets" },
+  { label: "LATAM", href: "/latam" },
   { label: "About", href: "/about" },
-  { label: "Contact", href: "/contact" },
 ] as const;
 
 export const ABOUT = {
   paragraphs: [
-    "Central Orbit helps established Western companies build customers, sales channels and revenue in China.",
-    "We work with companies assessing China for the first time, businesses preparing to enter or expand, and leadership teams reassessing an approach that has not delivered the expected results.",
-    "Our model combines senior Western commercial leadership with trusted relationships and operational capabilities inside China. We focus on the decisions and execution required to turn market potential into a workable commercial path.",
+    "Central Orbit helps established international companies build customers, sales channels and revenue in China and Latin America.",
+    "We work with companies assessing China or Latin America for the first time, businesses preparing to enter or expand, and leadership teams reassessing an approach that has not delivered the expected results.",
+    "Our model combines senior international commercial leadership with trusted relationships and operational capabilities in key markets—China and Latin America. We focus on the decisions and execution required to turn market potential into a workable commercial path.",
   ],
 };
 
 export const SERVICES = [
   {
-    title: "China Commercial Assessment",
+    title: "Market Assessment & Entry Strategy",
     description:
       "A clear view of customer demand, competitive position, channels, risks and the case for investment.",
     icon: "TrendingUp",
@@ -43,7 +43,7 @@ export const SERVICES = [
     icon: "Globe",
   },
   {
-    title: "Fractional China Commercial Leadership",
+    title: "Fractional Commercial Leadership",
     description:
       "Senior commercial representation for companies that need China capability without building a full internal team.",
     icon: "Users",
@@ -52,7 +52,7 @@ export const SERVICES = [
 
 export const STATS = [
   { value: "20+", label: "Years in International Growth" },
-  { value: "China", label: "Customers, Channels & Partners" },
+  { value: "Since 1998", label: "China Market Experience" },
   { value: "US + EU", label: "Client Development Markets" },
 ] as const;
 
@@ -90,7 +90,6 @@ export const OFFICES = [
       "Wangzhuang Road 1, Haidian District",
       "Beijing 100083, China",
     ],
-    phone: "+86 10 82390301",
   },
   {
     city: "London",
@@ -99,6 +98,12 @@ export const OFFICES = [
       "Covent Garden",
       "London, WC2H 9JQ",
     ],
-    phone: "+44 20 3897 2233",
+  },
+  {
+    city: "Montevideo",
+    address: [
+      "Bv. España 1087",
+      "Montevideo, Uruguay",
+    ],
   },
 ] as const;

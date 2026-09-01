@@ -12,7 +12,7 @@ import {
 const quickNav = [
   {
     title: "How We Help",
-    description: "Assessment, market entry, channels and commercial execution in China.",
+    description: "Assessment, market entry, channels and commercial execution in China and Latin America.",
     href: "/about#services",
     icon: TrendingUp,
   },
@@ -30,7 +30,7 @@ const quickNav = [
   },
   {
     title: "Contact Us",
-    description: "Discuss an active or unresolved China commercial question.",
+    description: "Discuss an active or unresolved commercial question.",
     href: "/contact",
     icon: Calendar,
   },
@@ -44,7 +44,7 @@ const valueProps = [
   },
   {
     icon: Globe,
-    value: "China Expertise",
+    value: "Regional Expertise",
     text: "Customers, distributors, channels and strategic partnerships.",
   },
   {
@@ -68,7 +68,7 @@ export default function Home() {
           </FadeIn>
           <FadeIn delay={0.1}>
             <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl font-bold text-primary tracking-tight">
-              CHINA, IN PRACTICE
+              MARKETS, IN PRACTICE
             </h1>
           </FadeIn>
           <FadeIn delay={0.2}>
@@ -78,20 +78,20 @@ export default function Home() {
           </FadeIn>
           <FadeIn delay={0.3}>
             <p className="mt-6 text-text-light max-w-xl leading-relaxed">
-              We work with companies entering China, already operating there,
+              We work with companies entering China or Latin America, already operating there,
               or reconsidering an approach that has not worked. The focus is
               practical: customers, channels, partners and the decisions behind them.
             </p>
           </FadeIn>
           <FadeIn delay={0.4}>
             <div className="mt-8 flex flex-wrap gap-4">
-              <Link
-                href="mailto:yochai.golan@central-orbit.com"
+              <a
+                href="mailto:info@central-orbit.com"
                 className="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-md font-medium hover:bg-primary-dark transition-colors"
               >
-                Email Central Orbit
+                Email Us
                 <ArrowRight size={16} />
-              </Link>
+              </a>
               <Link
                 href="/about#services"
                 className="inline-flex items-center gap-2 border border-border text-text px-6 py-3 rounded-md font-medium hover:border-primary hover:text-primary transition-colors"

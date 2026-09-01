@@ -17,8 +17,8 @@ export function Footer() {
               </span>
             </Link>
             <p className="mt-4 text-sm text-text-light leading-relaxed">
-              Helping Western companies build customers, channels and revenue
-              in China.
+              Helping international companies build customers, channels and revenue
+              in China and Latin America.
             </p>
           </div>
 

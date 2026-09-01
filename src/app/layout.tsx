@@ -18,19 +18,24 @@ const montserrat = Montserrat({
 
 export const metadata: Metadata = {
   title: {
-    default: "Central Orbit | Build Sales in China",
+    default: "Central Orbit | Global Commercial Gateway",
     template: "%s | Central Orbit",
   },
   description:
-    "Central Orbit helps established Western companies build customers, sales channels and revenue in China.",
+    "Central Orbit helps established international companies build customers, sales channels and revenue in China and Latin America.",
   keywords: [
     "China sales",
     "China market entry",
     "China distributor strategy",
     "China business development",
     "China commercial advisory",
+    "Latin America market entry",
+    "Uruguay business development",
+    "market entry strategy",
+    "distributor partnerships",
+    "international business growth",
   ],
-  icons: { icon: "/favicon.ico" },
+  icons: { icon: "/favicon.svg" },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
