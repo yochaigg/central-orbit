@@ -1,0 +1,8 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import { publishedGuides } from "./guides";
+import styles from "./guides.module.css";
+export const metadata: Metadata = { title: "China Skincare Guides", description: "Practical field guides for online B2C skincare sales in China.", alternates: { canonical: "https://www.central-orbit.com/china-skincare-guides/" } };
+export default function Collection() {
+ return <><header className={styles.masthead}><span>CENTRAL ORBIT / FIELD NOTES</span><span>CHINA · SKINCARE</span></header><main id="guide-content"><section className={styles.collectionIntro}><p className={styles.eyebrow}>THE GUIDE COLLECTION</p><h1>Skincare.<br/>A clearer <em>perspective.</em></h1><p className={styles.intro}>Practical field guides for online B2C skincare sales in China.</p></section>{publishedGuides.map(guide => <article className={styles.feature} key={guide.number}><Link href={guide.href} className={styles.cover} aria-label={`Read Guide ${guide.number}: ${guide.title}`}><span className={styles.coverLabel}>CENTRAL ORBIT<br/>CHINA SKINCARE GUIDES</span><div className={styles.art} aria-hidden="true"><i/><i/><i/><span>01</span></div><span className={styles.coverFoot}>THE PRODUCT STORY ISSUE <span>↗</span></span></Link><div className={styles.featureText}><p className={styles.eyebrow}>GUIDE {guide.number} / 9-PAGE PDF</p><h2>{guide.title}</h2><p>{guide.description}</p><Link className={styles.action} href={guide.href}>Explore the guide <span aria-hidden="true">↗</span></Link><p className={styles.small}>Open access. No registration required.</p></div></article>)}</main></>;
+}
