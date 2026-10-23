@@ -13,6 +13,7 @@ export const metadata: Metadata = {
   title: "About",
   description:
     "Since 1998, Central Orbit has helped companies navigate cross-cultural business in the APAC region.",
+  alternates: { canonical: "/about" },
 };
 
 const serviceIcons = {

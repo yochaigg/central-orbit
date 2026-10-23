@@ -8,6 +8,7 @@ import { Mail, MapPin } from "lucide-react";
 export const metadata: Metadata = {
   title: "Contact",
   description: "Get in touch with Central Orbit.",
+  alternates: { canonical: "/contact" },
 };
 
 export default function ContactPage() {

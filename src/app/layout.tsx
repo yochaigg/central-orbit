@@ -17,7 +17,7 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://central-orbit.com"),
+  metadataBase: new URL("https://www.central-orbit.com"),
   title: {
     default: "Central Orbit | Global Commercial Gateway",
     template: "%s | Central Orbit",
@@ -46,26 +46,16 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://central-orbit.com",
     title: "Central Orbit | Global Commercial Gateway",
     description:
       "Market entry strategy and commercial advisory for China and Latin America. 27 years of experience helping international companies build customers and revenue.",
     siteName: "Central Orbit",
-    images: [
-      {
-        url: "https://central-orbit.com/favicon.svg",
-        width: 1200,
-        height: 630,
-        alt: "Central Orbit",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Central Orbit | Global Commercial Gateway",
     description:
       "Market entry strategy and commercial advisory for China and Latin America",
-    creator: "@CentralOrbit",
   },
   robots: {
     index: true,
@@ -73,9 +63,6 @@ export const metadata: Metadata = {
     "max-image-preview": "large",
     "max-snippet": -1,
     "max-video-preview": -1,
-  },
-  alternates: {
-    canonical: "https://central-orbit.com",
   },
 };
 
@@ -85,7 +72,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${inter.variable} ${montserrat.variable} h-full antialiased`}>
       <head>
         {/* Global Schema Markup */}
         <script
@@ -95,8 +82,8 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Organization",
               name: "Central Orbit",
-              url: "https://central-orbit.com",
-              logo: "https://central-orbit.com/favicon.svg",
+              url: "https://www.central-orbit.com",
+              logo: "https://www.central-orbit.com/favicon.svg",
               description:
                 "Commercial advisory and execution for international companies building customers, channels and revenue in China and Latin America.",
               address: [
@@ -124,14 +111,11 @@ export default function RootLayout({
                 contactType: "Business Development",
                 email: "info@central-orbit.com",
               },
-              sameAs: ["https://central-orbit.com"],
             }),
           }}
         />
       </head>
-      <body
-        className={`${inter.variable} ${montserrat.variable} bg-background text-text font-body`}
-      >
+      <body className="min-h-full flex flex-col">
         <SiteShell>
         {children}
         </SiteShell>

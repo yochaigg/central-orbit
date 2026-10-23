@@ -4,14 +4,20 @@ import { FadeIn } from "@/components/ui/fade-in";
 import { SectionHeading } from "@/components/ui/section-heading";
 
 export const metadata: Metadata = {
-  title: "Skincare Brand China Market Entry — Central Orbit",
+  title: "Skincare Brand China Market Entry",
   description:
     "Central Orbit builds owned China B2C channels for Western skincare brands — retaining brand control, consumer data, and pricing from day one.",
   openGraph: {
     title: "Skincare Brand China Market Entry — Central Orbit",
     description:
       "A complete China B2C operation, run by us, owned by you. Brand assessment through to ongoing management.",
+    type: "website",
+    locale: "en_US",
+    siteName: "Central Orbit",
+    url: "https://www.central-orbit.com/skincare",
+    images: "/opengraph-image",
   },
+  alternates: { canonical: "/skincare" },
 };
 
 const whatWeBuild = [

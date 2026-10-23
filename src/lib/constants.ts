@@ -3,7 +3,7 @@ export const SITE = {
   tagline: "International products. Global customers.",
   description:
     "Commercial advisory and execution for international companies building customers, channels and revenue in China and Latin America.",
-  url: "https://central-orbit.com",
+  url: "https://www.central-orbit.com",
 };
 
 export const NAV_LINKS = [

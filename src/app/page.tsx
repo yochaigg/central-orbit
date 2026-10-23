@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { FadeIn } from "@/components/ui/fade-in";
 import {
@@ -8,6 +9,10 @@ import {
   TrendingUp,
   Users,
 } from "lucide-react";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
 
 const quickNav = [
   {

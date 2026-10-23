@@ -18,6 +18,7 @@ export const metadata: Metadata = {
   title: "Waste to Energy",
   description:
     "Central Orbit delivers advanced gasification solutions that convert municipal solid waste into clean energy — with near-zero landfill and minimal emissions.",
+  alternates: { canonical: "/waste-to-energy" },
 };
 
 const advantages = [

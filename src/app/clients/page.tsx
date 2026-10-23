@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: "Clients",
   description:
     "Trusted by multinational corporations and industry associations across the globe.",
+  alternates: { canonical: "/clients" },
 };
 
 export default function ClientsPage() {

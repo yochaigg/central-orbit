@@ -13,7 +13,7 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Doing Business in Latin America | Market Entry Strategy in Montevideo & LATAM | Central Orbit",
+  title: "Doing Business in Latin America | Market Entry Strategy in Montevideo & LATAM",
   description:
     "Expert Latin America market entry strategy and commercial advisory. Doing business in LATAM with operations in Montevideo, Uruguay. Help international companies build customers, sales channels, and revenue across Brazil, Argentina, and Latin America. Commercial advisory, distributor partnerships.",
   keywords: [
@@ -31,8 +31,12 @@ export const metadata: Metadata = {
     description:
       "Expert commercial advisory for international companies entering Latin America and LATAM markets. Operations in Montevideo, Uruguay with strategic reach across Brazil and Argentina.",
     type: "website",
-    url: "https://central-orbit.com/latam",
+    locale: "en_US",
+    siteName: "Central Orbit",
+    url: "https://www.central-orbit.com/latam",
+    images: "/opengraph-image",
   },
+  alternates: { canonical: "/latam" },
 };
 
 const services = [
@@ -124,11 +128,11 @@ export default function LatamPage() {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "Central Orbit",
-    url: "https://central-orbit.com",
-    logo: "https://central-orbit.com/favicon.svg",
+    url: "https://www.central-orbit.com",
+    logo: "https://www.central-orbit.com/favicon.svg",
     description:
       "Commercial advisory and execution for international companies building customers, channels and revenue in China and Latin America.",
-    sameAs: ["https://central-orbit.com"],
+    sameAs: ["https://www.central-orbit.com"],
     address: [
       {
         "@type": "PostalAddress",
@@ -158,7 +162,7 @@ export default function LatamPage() {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     name: "Central Orbit - Montevideo Office",
-    image: "https://central-orbit.com/favicon.svg",
+    image: "https://www.central-orbit.com/favicon.svg",
     description:
       "Latin America market entry advisory, commercial advisory, and business development in Montevideo and LATAM",
     address: {
@@ -181,13 +185,13 @@ export default function LatamPage() {
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: "https://central-orbit.com",
+        item: "https://www.central-orbit.com",
       },
       {
         "@type": "ListItem",
         position: 2,
         name: "Doing Business in Latin America",
-        item: "https://central-orbit.com/latam",
+        item: "https://www.central-orbit.com/latam",
       },
     ],
   };

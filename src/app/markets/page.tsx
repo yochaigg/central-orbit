@@ -35,6 +35,7 @@ export const metadata: Metadata = {
   title: "Markets",
   description:
     "Central Orbit provides services across 17+ industries including telecommunications, technology, cosmetics, and renewable energy.",
+  alternates: { canonical: "/markets" },
 };
 
 export default function MarketsPage() {

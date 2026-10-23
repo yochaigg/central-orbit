@@ -13,7 +13,7 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Doing Business in China | Market Entry Strategy & Commercial Advisory | Central Orbit",
+  title: "Doing Business in China | Market Entry Strategy & Commercial Advisory",
   description:
     "Expert China market entry strategy and commercial advisory. 27 years helping international companies build customers, sales channels, and revenue in China. Market assessment, distributor partnerships, regulatory compliance, and fractional leadership.",
   keywords: [
@@ -30,8 +30,12 @@ export const metadata: Metadata = {
     description:
       "27 years of hands-on experience helping international companies build customers, sales channels, and revenue in China.",
     type: "website",
-    url: "https://central-orbit.com/china",
+    locale: "en_US",
+    siteName: "Central Orbit",
+    url: "https://www.central-orbit.com/china",
+    images: "/opengraph-image",
   },
+  alternates: { canonical: "/china" },
 };
 
 const services = [
@@ -128,12 +132,12 @@ export default function ChinaPage() {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "Central Orbit",
-    url: "https://central-orbit.com",
-    logo: "https://central-orbit.com/favicon.svg",
+    url: "https://www.central-orbit.com",
+    logo: "https://www.central-orbit.com/favicon.svg",
     description:
       "Commercial advisory and execution for international companies building customers, channels and revenue in China and Latin America.",
     sameAs: [
-      "https://central-orbit.com",
+      "https://www.central-orbit.com",
     ],
     address: [
       {
@@ -164,7 +168,7 @@ export default function ChinaPage() {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     name: "Central Orbit - Beijing Office",
-    image: "https://central-orbit.com/favicon.svg",
+    image: "https://www.central-orbit.com/favicon.svg",
     description: "China market entry advisory and commercial execution",
     address: {
       "@type": "PostalAddress",
@@ -185,13 +189,13 @@ export default function ChinaPage() {
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: "https://central-orbit.com",
+        item: "https://www.central-orbit.com",
       },
       {
         "@type": "ListItem",
         position: 2,
         name: "Doing Business in China",
-        item: "https://central-orbit.com/china",
+        item: "https://www.central-orbit.com/china",
       },
     ],
   };
