@@ -147,6 +147,54 @@ p{margin-bottom:17px}
  .payment-row{align-items:flex-start;flex-direction:column;gap:6px}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* Warm beauty-editorial styling, with clear business details. */
+:root{--navy:#392a3d;--ink:#413444;--muted:#635662;--teal:#91475f;--line:#eadbdc;--soft:#faecea;--white:#fffdf9;--off:#fff9f3;--warm:#fff0e4}
+body{background:var(--off)}
+.site-header,.footer{background:#fffaf6}
+.hero{background:radial-gradient(circle at 86% 32%,#ffc7d270 0 16%,transparent 17%),radial-gradient(circle at 70% 68%,#e3d7ff7d 0 13%,transparent 14%),linear-gradient(130deg,#fff5ea,#fff9f3 68%);border-bottom:1px solid #ebd6d3}
+.hero .kicker{color:#a4445c}
+h1,h2{font-family:Georgia,"Times New Roman",serif;font-weight:600;letter-spacing:-.044em}
+h1{max-width:950px;line-height:1.07;font-size:clamp(42px,6.2vw,76px)}
+h1 em,.commercial h2 em{font-style:italic;color:#b65268}
+.hero .lead{font-size:20px;color:#514451}
+.btn{border-radius:27px}
+.btn.secondary{border-color:#ccafb6}
+.hero-actions .btn{box-shadow:2px 3px 0 #e6c9cb}
+.metadata{border-top:1px solid #e5ced2}
+.metadata dt{color:#895f70}
+.section.alt{background:#fffdf9}
+.overview-cards{gap:26px}
+.service{background:#fffaf6;border:1px solid #e6d0ce;border-radius:4px;padding:35px 36px;box-shadow:5px 6px 0 #edd8d9}
+.service.recommended{border:1px solid #d4c5e8;border-top:5px solid #9f81bc;background:#f9f4ff;padding-top:31px;box-shadow:5px 6px 0 #e5d9f1}
+.service .price{font-family:Georgia,"Times New Roman",serif;font-weight:700;font-size:41px;color:#38293b}
+.service .desc{min-height:63px}
+.service .btn.secondary{margin-top:auto;background:transparent}
+.service .btn.buy{margin-top:13px;border-radius:5px;align-self:stretch}
+.scope-banner{background:#fff2e7;border-left:3px solid #d78d79}
+.deliverable .num{font-family:Georgia,serif;font-size:21px;font-style:italic;color:#bd6a79}
+.output-note{background:#fff2eb}
+.step{background:#fffaf6;border-color:#e7d4d4;border-radius:4px}
+.step .number{color:#aa5870}
+.boundaries>div{background:#fffdf9;border-color:#e6d7d5;border-radius:4px}
+.commercial{background:#443147}
+.commercial .kicker{color:#f4b4c8}
+.commercial .lead,.booking-note{color:#f7e9ec}
+.commercial h2 em{color:#f0b3c8}
+.payment-panel{background:#523d54;border-color:#806984;border-radius:4px}
+.payment-row{border-color:#846d86}
+.payment-row a{color:#ffcfde}
+@media(max-width:720px){
+ .hero{background:radial-gradient(circle at 100% 5%,#ffd4df80 0 18%,transparent 19%),#fff5ec}
+ h1{font-size:clamp(40px,10vw,62px);line-height:1.11}
+ .service{padding:25px}
+ .service.recommended{padding-top:22px}
+ .hero .lead{font-size:18px}
+}
+@media(max-width:440px){
+ .container{width:calc(100% - 44px)}
+ h1{font-size:clamp(39px,10vw,48px)}
+}
 </style>
 </head>
 <body>
@@ -155,7 +203,7 @@ p{margin-bottom:17px}
    <a class="wordmark" href="https://www.central-orbit.com/">CENTRAL ORBIT</a>
    <nav class="nav-side" aria-label="Page navigation">
      <a href="#services">Services</a>
-     <a href="#process">How we work</a>
+     <a href="#process">How it works</a>
      <a href="/china-skincare-guides/shelf/">Free assessment</a>
      <a href="mailto:info@central-orbit.com">Contact</a>
    </nav>
@@ -165,9 +213,9 @@ p{margin-bottom:17px}
 <section class="hero">
   <div class="container hero-intro">
     <p class="kicker">China market entry / Skincare</p>
-    <h1>A clearer commercial plan for entering China.</h1>
-    <p class="lead">Independent skincare brands considering China need more than broad market statistics. They need to understand how their products compare, which routes to consumers deserve consideration, and what preparation a launch would require.</p>
-    <p>Central Orbit offers two fixed-fee, research-led services: an initial opportunity assessment and a detailed launch blueprint. Both start with your products and the decisions your team needs to make.</p>
+    <h1>China has plenty of skincare brands.<br><em>What about yours?</em></h1>
+    <p class="lead">There is room for a new skincare brand in China—but only with a reason to choose it. Explore the opportunities, the competition and what it would actually take to launch.</p>
+    <p>Two straightforward services. Start with a focused opportunity assessment or choose a detailed launch blueprint. Both are researched for your products, not generated from a standard checklist.</p>
     <div class="hero-actions">
       <a class="btn" href="#services">Explore the services</a>
       <a class="btn secondary" data-umami-event="brand-review-schedule-request-click" href="https://calendly.com/yochai-golan-central-orbit/china-brand-opportunity-review-introductory-call" target="_blank" rel="noopener noreferrer">Schedule an introductory call</a>
@@ -175,7 +223,7 @@ p{margin-bottom:17px}
     <dl class="metadata">
       <div><dt>Intended for</dt><dd>Established overseas skincare brands</dd></div>
       <div><dt>Market focus</dt><dd>China / Consumer skincare (B2C)</dd></div>
-      <div><dt>Engagement</dt><dd>Defined scope and fixed fee</dd></div>
+      <div><dt>Engagement</dt><dd>Defined scope · Fixed fee · Online checkout</dd></div>
     </dl>
   </div>
 </section>
@@ -184,8 +232,8 @@ p{margin-bottom:17px}
  <div class="container">
   <div class="section-head">
     <p class="kicker">Services at a glance</p>
-    <h2>Two levels of research and planning.</h2>
-    <p>Choose the depth that matches your current decision. Neither requires you to commit to a launch, and both begin with an agreed brief.</p>
+    <h2>Two ways to get a clearer picture.</h2>
+    <p>Choose the depth that matches your next decision. Both have a defined standard scope and a direct online checkout. No sales call required.</p>
   </div>
   <div class="overview-cards">
    <article class="service" id="assessment">
