@@ -109,7 +109,7 @@ footer div{display:flex;gap:20px}
 @media(max-width:870px){.hero,.columns,.mock-grid,.price-grid{grid-template-columns:1fr;gap:44px}.section-intro{position:static}.steps{grid-template-columns:repeat(2,1fr)}.hero{padding-top:48px}.lookbook{max-width:560px;width:100%;margin:0 auto}.price-box{max-width:650px}}
 @media(max-width:580px){.wrap{padding:0 18px}.hero{padding:38px 0 56px}.hero h1{font-size:clamp(51px,13vw,77px)}.lookbook{padding:16px;margin-top:18px}.lookbook:before{right:0;font-size:13px}.paper{height:340px;padding:18px}.paper .paper-h{font-size:29px}.paper .circle{width:100px;height:100px}.steps,.disclaimer .two{grid-template-columns:1fr;gap:15px}.step{min-height:0}.columns{gap:20px}section.content,.process,.price-section,.faq{padding:52px 0}.mock{padding:48px 0}.price-section .price-box{padding:25px 20px}.end{padding:49px 0}.top{align-items:flex-start}.back{max-width:135px;text-align:right}footer{flex-direction:column;align-items:flex-start}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
-.offers-two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:30px;margin-top:38px;align-items:start}.offers-two .price-box{height:100%}.offers-two .price-box .btn{margin:22px 0 12px}.blueprint-box{background:var(--lavender)!important}.offers-two .text-link{display:inline-block;font-weight:700;font-size:13px;line-height:1.45;margin:0 0 4px}.offers-two ul{margin-bottom:18px}.offers-two h3{min-height:56px}@media(max-width:760px){.offers-two{grid-template-columns:1fr}.offers-two h3{min-height:0}}
+.secure-checkout{border-top:1px solid #786d7c58;margin-top:21px;padding-top:15px}.secure-checkout .btn.checkout-btn{display:flex;width:100%;padding:13px 14px;margin:9px 0 9px;box-shadow:3px 4px 0 var(--ink)}.secure-checkout .small{margin:8px 0;font-size:12px;line-height:1.55}.offers-two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:30px;margin-top:38px;align-items:start}.offers-two .price-box{height:100%}.offers-two .price-box .btn{margin:22px 0 12px}.blueprint-box{background:var(--lavender)!important}.offers-two .text-link{display:inline-block;font-weight:700;font-size:13px;line-height:1.45;margin:0 0 4px}.offers-two ul{margin-bottom:18px}.offers-two h3{min-height:56px}@media(max-width:760px){.offers-two{grid-template-columns:1fr}.offers-two h3{min-height:0}}
 </style>
 </head>
 <body>
@@ -214,6 +214,11 @@ footer div{display:flex;gap:20px}
 <a class="btn cta-call" data-umami-event="brand-review-schedule-request-click" href="https://calendly.com/yochai-golan-central-orbit/china-brand-opportunity-review-introductory-call" target="_blank" rel="noopener noreferrer">Book a 20-minute call ↗</a>
 <p class="small">Free call. Booking and Google Meet details through Calendly.</p>
 <a class="text-link" data-umami-event="brand-review-scope-request-click" href="mailto:info@central-orbit.com?subject=China%20Brand%20Opportunity%20Assessment%20-%20Written%20Scope">Or request the written scope by email →</a>
+<div class="secure-checkout">
+<p class="small"><strong>Already agreed the scope with us?</strong></p>
+<a class="btn alt checkout-btn" data-umami-event="china-assessment-stripe-checkout-click" href="https://buy.stripe.com/cNi6oHd8eemd5u63kP00001" target="_blank" rel="noopener noreferrer">Pay US$950 securely ↗</a>
+<p class="small">Stripe-hosted checkout. Please pay only after the deliverables, product coverage and terms have been agreed in writing.</p>
+</div>
 </div>
 <div class="price-box blueprint-box" aria-label="China Skincare Launch Blueprint">
 <p class="kicker">THE DETAILED LAUNCH PLAN</p>
@@ -224,9 +229,14 @@ footer div{display:flex;gap:20px}
 <a class="btn cta-call" data-umami-event="china-blueprint-schedule-click" href="https://calendly.com/yochai-golan-central-orbit/china-brand-opportunity-review-introductory-call" target="_blank" rel="noopener noreferrer">Book a 20-minute call ↗</a>
 <p class="small">Same free Calendly introduction; we'll discuss the Blueprint.</p>
 <a class="text-link" data-umami-event="china-blueprint-scope-request-click" href="mailto:info@central-orbit.com?subject=China%20Skincare%20Launch%20Blueprint%20-%20Written%20Scope">Or request the written scope by email →</a>
+<div class="secure-checkout">
+<p class="small"><strong>Already agreed the scope with us?</strong></p>
+<a class="btn alt checkout-btn" data-umami-event="china-blueprint-stripe-checkout-click" href="https://buy.stripe.com/00w14ngkq2Dve0C1cH00000" target="_blank" rel="noopener noreferrer">Pay US$4,500 securely ↗</a>
+<p class="small">Stripe-hosted checkout. Please pay only after the deliverables, product coverage and terms have been agreed in writing.</p>
 </div>
 </div>
-<p class="small" style="margin-top:27px">Fixed fees apply to the agreed standard scope. Additional unrelated product lines or extra work require a separate quotation. Applicable taxes, terms and delivery timing are confirmed in writing. No payment is collected on this website.</p>
+</div>
+<p class="small" style="margin-top:27px">Fixed fees apply to the agreed standard scope. Additional unrelated product lines or extra work require a separate quotation. Applicable taxes, terms and delivery timing are confirmed in writing. Payments, when agreed, are handled by Stripe on its secure checkout page—not on this website.</p>
 </section>
 <section class="disclaimer">
 <div class="wrap two">
@@ -250,7 +260,7 @@ footer div{display:flex;gap:20px}
 <details><summary>What if something cannot be confirmed?</summary><p>We identify the unknown and explain what further verification is required. We do not turn indicative online prices, public listings or unverified assumptions into a promise of sales or profitability.</p></details>
 <details><summary>Do we have to share confidential financial information?</summary><p>No sensitive information is required for the initial conversation. Where deeper cost assumptions are relevant, you can decide what to share securely after the scope is agreed; unknown values will be labeled as such.</p></details>
 <details><summary>Can you guarantee a six-month launch?</summary><p>No. Time depends on the products, selected route, regulatory and logistical requirements and the client's resources. The Blueprint provides a researched sequence and indicative planning windows rather than an unconditional launch date.</p></details>
-<details><summary>When do we pay, and can we book without paying?</summary><p>The 20-minute Calendly call is free. After that, any project proceeds only when the written scope, fee, delivery expectations and payment terms have been agreed. There is no checkout or Stripe payment on this page.</p></details>
+<details><summary>When do we pay, and can we book without paying?</summary><p>The 20-minute Calendly call is free. After that, any project proceeds only when the written scope, fee, delivery expectations and payment terms have been agreed. If you choose to proceed, use the corresponding secure Stripe payment link above. Clicking a payment button opens Stripe in a new tab.</p></details>
 </section>
 <section class="end">
 <div class="wrap">
