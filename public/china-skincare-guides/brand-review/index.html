@@ -147,6 +147,59 @@ p{margin-bottom:17px}
  .payment-row{align-items:flex-start;flex-direction:column;gap:6px}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* Warm beauty-editorial styling, with clear business details. */
+:root{--navy:#392a3d;--ink:#413444;--muted:#635662;--teal:#91475f;--line:#eadbdc;--soft:#faecea;--white:#fffdf9;--off:#fff9f3;--warm:#fff0e4}
+body{background:var(--off)}
+.site-header,.footer{background:#fffaf6}
+.hero{background:radial-gradient(circle at 86% 32%,#ffc7d270 0 16%,transparent 17%),radial-gradient(circle at 70% 68%,#e3d7ff7d 0 13%,transparent 14%),linear-gradient(130deg,#fff5ea,#fff9f3 68%);border-bottom:1px solid #ebd6d3}
+.hero .kicker{color:#a4445c}
+h1,h2{font-family:Georgia,"Times New Roman",serif;font-weight:600;letter-spacing:-.044em}
+h1{max-width:950px;line-height:1.07;font-size:clamp(42px,6.2vw,76px)}
+h1 em,.commercial h2 em{font-style:italic;color:#b65268}
+.hero .lead{font-size:20px;color:#514451}
+.btn{border-radius:27px}
+.btn.secondary{border-color:#ccafb6}
+.hero-actions .btn{box-shadow:2px 3px 0 #e6c9cb}
+.metadata{border-top:1px solid #e5ced2}
+.metadata dt{color:#895f70}
+.section.alt{background:#fffdf9}
+.overview-cards{gap:26px}
+.service{background:#fffaf6;border:1px solid #e6d0ce;border-radius:4px;padding:35px 36px;box-shadow:5px 6px 0 #edd8d9}
+.service.recommended{border:1px solid #d4c5e8;border-top:5px solid #9f81bc;background:#f9f4ff;padding-top:31px;box-shadow:5px 6px 0 #e5d9f1}
+.service .price{font-family:Georgia,"Times New Roman",serif;font-weight:700;font-size:41px;color:#38293b}
+.service .desc{min-height:63px}
+.service .btn.secondary{margin-top:auto;background:transparent}
+.service .btn.buy{margin-top:13px;border-radius:5px;align-self:stretch}
+.scope-banner{background:#fff2e7;border-left:3px solid #d78d79}
+.deliverable .num{font-family:Georgia,serif;font-size:21px;font-style:italic;color:#bd6a79}
+.output-note{background:#fff2eb}
+.step{background:#fffaf6;border-color:#e7d4d4;border-radius:4px}
+.step .number{color:#aa5870}
+.boundaries>div{background:#fffdf9;border-color:#e6d7d5;border-radius:4px}
+.commercial{background:#443147}
+.commercial .kicker{color:#f4b4c8}
+.commercial .lead,.booking-note{color:#f7e9ec}
+.commercial h2 em{color:#f0b3c8}
+.payment-panel{background:#523d54;border-color:#806984;border-radius:4px}
+.payment-row{border-color:#846d86}
+.payment-row a{color:#ffcfde}
+@media(max-width:720px){
+ .hero{background:radial-gradient(circle at 100% 5%,#ffd4df80 0 18%,transparent 19%),#fff5ec}
+ h1{font-size:clamp(40px,10vw,62px);line-height:1.11}
+ .service{padding:25px}
+ .service.recommended{padding-top:22px}
+ .hero .lead{font-size:18px}
+}
+@media(max-width:440px){
+ .container{width:calc(100% - 44px)}
+ h1{font-size:clamp(39px,10vw,48px)}
+}
+
+/* Editorial calls to action: readable, reassuring and purchase-first. */
+.service .btn.buy{margin-top:14px;align-self:stretch;border-radius:5px;text-align:center;background:#aa526f;color:white}
+.service .btn.buy:hover{background:#873d59}
+.commercial h2 em{font-style:italic}
 </style>
 </head>
 <body>
@@ -155,7 +208,7 @@ p{margin-bottom:17px}
    <a class="wordmark" href="https://www.central-orbit.com/">CENTRAL ORBIT</a>
    <nav class="nav-side" aria-label="Page navigation">
      <a href="#services">Services</a>
-     <a href="#process">How we work</a>
+     <a href="#process">How it works</a>
      <a href="/china-skincare-guides/shelf/">Free assessment</a>
      <a href="mailto:info@central-orbit.com">Contact</a>
    </nav>
@@ -165,17 +218,17 @@ p{margin-bottom:17px}
 <section class="hero">
   <div class="container hero-intro">
     <p class="kicker">China market entry / Skincare</p>
-    <h1>A clearer commercial plan for entering China.</h1>
-    <p class="lead">Independent skincare brands considering China need more than broad market statistics. They need to understand how their products compare, which routes to consumers deserve consideration, and what preparation a launch would require.</p>
-    <p>Central Orbit offers two fixed-fee, research-led services: an initial opportunity assessment and a detailed launch blueprint. Both start with your products and the decisions your team needs to make.</p>
+    <h1>China has plenty of skincare brands.<br><em>What about yours?</em></h1>
+    <p class="lead">There is room for a new skincare brand in China—but only with a reason to choose it. Explore the opportunities, the competition and what it would actually take to launch.</p>
+    <p>Two straightforward services. Start with a focused opportunity assessment or choose a detailed launch blueprint. Both are researched for your products, not generated from a standard checklist.</p>
     <div class="hero-actions">
-      <a class="btn" href="#services">Explore the services</a>
-      <a class="btn secondary" data-umami-event="brand-review-schedule-request-click" href="https://calendly.com/yochai-golan-central-orbit/china-brand-opportunity-review-introductory-call" target="_blank" rel="noopener noreferrer">Schedule an introductory call</a>
+      <a class="btn" href="#services">Compare the two services ↓</a>
+      <a class="btn secondary" href="#process">How it works · No sales call</a>
     </div>
     <dl class="metadata">
       <div><dt>Intended for</dt><dd>Established overseas skincare brands</dd></div>
       <div><dt>Market focus</dt><dd>China / Consumer skincare (B2C)</dd></div>
-      <div><dt>Engagement</dt><dd>Defined scope and fixed fee</dd></div>
+      <div><dt>Engagement</dt><dd>Defined scope · Fixed fee · Online checkout</dd></div>
     </dl>
   </div>
 </section>
@@ -184,8 +237,8 @@ p{margin-bottom:17px}
  <div class="container">
   <div class="section-head">
     <p class="kicker">Services at a glance</p>
-    <h2>Two levels of research and planning.</h2>
-    <p>Choose the depth that matches your current decision. Neither requires you to commit to a launch, and both begin with an agreed brief.</p>
+    <h2>Two ways to get a clearer picture.</h2>
+    <p>Choose the depth that matches your next decision. Both have a defined standard scope and a direct online checkout. No sales call required.</p>
   </div>
   <div class="overview-cards">
    <article class="service" id="assessment">
@@ -200,8 +253,9 @@ p{margin-bottom:17px}
        <li>Key risks, unanswered questions and prioritized next steps</li>
        <li>Concise, sourced written report and one follow-up email clarification</li>
      </ul>
-     <a class="btn secondary" href="#assessment-detail">Review the deliverables</a>
-     <p class="timeframe">Target delivery: 10 business days after agreed scope, complete brief and payment.</p>
+     <a class="btn secondary" href="#assessment-detail">See exactly what’s included ↓</a>
+     <a class="btn buy" data-umami-event="china-assessment-stripe-checkout-click" href="https://buy.stripe.com/cNi6oHd8eemd5u63kP00001" target="_blank" rel="noopener noreferrer">Buy the Assessment · $950 ↗</a>
+     <p class="timeframe">Target delivery: 10 business days after confirmed payment and a completed brief, subject to standard scope.</p>
    </article>
    <article class="service recommended" id="blueprint">
      <p class="type">02 / Detailed market-entry planning</p>
@@ -215,11 +269,12 @@ p{margin-bottom:17px}
        <li>Regulatory preparation and specialist-verification requirements</li>
        <li>Launch cost categories and a detailed, phased roadmap</li>
      </ul>
-     <a class="btn" href="#blueprint-detail">Review the deliverables</a>
-     <p class="timeframe">Indicative delivery: 3–4 weeks after agreed scope, complete brief and payment.</p>
+     <a class="btn secondary" href="#blueprint-detail">See exactly what’s included ↓</a>
+     <a class="btn buy" data-umami-event="china-blueprint-stripe-checkout-click" href="https://buy.stripe.com/00w14ngkq2Dve0C1cH00000" target="_blank" rel="noopener noreferrer">Buy the Blueprint · $4,500 ↗</a>
+     <p class="timeframe">Indicative delivery: 3–4 weeks after confirmed payment and a completed brief, subject to standard scope.</p>
    </article>
   </div>
-  <div class="scope-banner"><strong>Flexible product coverage.</strong> Either engagement can examine two individual priority products or one coherent product line or skincare routine—for example, a cleanser, serum and moisturizer used together. The included products, SKUs and depth of analysis are defined in the written scope before work begins. Multiple unrelated product collections require a separate quotation.</div>
+  <div class="scope-banner"><strong>Flexible product coverage.</strong> Either engagement can examine two individual priority products or one coherent product line or skincare routine—for example, a cleanser, serum and moisturizer used together. The products and depth of analysis are confirmed during written intake within the selected service scope. If your brand has multiple unrelated ranges or unusual requirements, please contact us before purchasing.</div>
  </div>
 </section>
 
@@ -268,14 +323,14 @@ p{margin-bottom:17px}
   <div class="container">
     <div class="section-head">
       <p class="kicker">Engagement process</p>
-      <h2>A defined scope before any payment.</h2>
-      <p>The objective is to agree the work clearly before research begins, with no ambiguity about what is included.</p>
+      <h2>Choose, pay, then book your call.</h2>
+      <p>No introductory sales meeting. Read the standard scope, complete payment securely, then schedule a call after payment is confirmed.</p>
     </div>
     <div class="process">
-     <div class="step"><p class="number">STEP 01</p><h3>Introductory discussion</h3><p>Book a free 20-minute call or request a written scope by email. We identify your products, situation and the question you need answered.</p></div>
-     <div class="step"><p class="number">STEP 02</p><h3>Written scope</h3><p>Confirm the selected products or routine, output, fee, delivery timing, information required and terms in writing.</p></div>
-     <div class="step"><p class="number">STEP 03</p><h3>Research and analysis</h3><p>You provide an agreed brief. We examine relevant public market information and your supplied materials, recording evidence and open questions.</p></div>
-     <div class="step"><p class="number">STEP 04</p><h3>Delivery</h3><p>Receive a written report or Blueprint with findings and practical recommendations, subject to the agreed engagement scope.</p></div>
+     <div class="step"><p class="number">STEP 01</p><h3>Choose your service</h3><p>Read the deliverables and select the $950 Assessment or $4,500 Blueprint. No sales call needed.</p></div>
+     <div class="step"><p class="number">STEP 02</p><h3>Pay securely</h3><p>Use the Stripe checkout for your chosen standard service. Contact us first if your requested scope differs substantially from the offer.</p></div>
+     <div class="step"><p class="number">STEP 03</p><h3>Unlock your call</h3><p>After we verify payment, we email you the Calendly booking link for your project discussion.</p></div>
+     <div class="step"><p class="number">STEP 04</p><h3>Brief, research, delivery</h3><p>Confirm the product line or skincare routine in the written brief. We then carry out the research and deliver your report or Blueprint.</p></div>
     </div>
   </div>
 </section>
@@ -303,19 +358,19 @@ p{margin-bottom:17px}
 <section class="commercial" id="contact">
  <div class="container commercial-grid">
   <div>
-    <p class="kicker">Discuss your China plans</p>
-    <h2>Start with a short conversation.</h2>
-    <p class="lead">We can clarify which service fits the decision you're facing and agree the products or routine that would be covered. The introductory call is free and carries no purchase obligation.</p>
-    <p><a class="btn" data-umami-event="brand-review-schedule-request-click" href="https://calendly.com/yochai-golan-central-orbit/china-brand-opportunity-review-introductory-call" target="_blank" rel="noopener noreferrer">Book a free 20-minute call</a></p>
-    <p class="booking-note">Prefer email? <a class="text-link" data-umami-event="brand-review-scope-request-click" href="mailto:info@central-orbit.com?subject=China%20Skincare%20Services%20-%20Request%20for%20Scope">Request the written scope from info@central-orbit.com</a>.</p>
+    <p class="kicker">A little less sales talk. A lot more clarity.</p>
+    <h2>Find your starting point.<br><em>Then let's talk details.</em></h2>
+    <p class="lead">Both services can be purchased directly. You don't have to book a sales call, repeat your story or wait for a quote for the standard scope.</p>
+    <p class="booking-note"><strong>Calendly access follows payment confirmation.</strong> Once we verify your successful payment, we email your booking link for the project discussion. The booking link isn't published here.</p>
+    <p class="booking-note">Need an unusual scope, or have a question before purchasing? <a class="text-link" data-umami-event="brand-review-scope-request-click" href="mailto:info@central-orbit.com?subject=China%20Skincare%20Services%20-%20Scope%20Question">Email info@central-orbit.com</a>.</p>
   </div>
-  <aside class="payment-panel" aria-label="Payment links for agreed projects">
-    <p class="kicker">For agreed engagements only</p>
-    <h3>Secure payment</h3>
-    <p>Please use these links only after Central Orbit has confirmed the products, project scope, delivery terms and payment arrangements with you in writing.</p>
-    <div class="payment-row"><strong>Opportunity Assessment · $950</strong><a data-umami-event="china-assessment-stripe-checkout-click" href="https://buy.stripe.com/cNi6oHd8eemd5u63kP00001" target="_blank" rel="noopener noreferrer">Pay on Stripe</a></div>
-    <div class="payment-row"><strong>Launch Blueprint · $4,500</strong><a data-umami-event="china-blueprint-stripe-checkout-click" href="https://buy.stripe.com/00w14ngkq2Dve0C1cH00000" target="_blank" rel="noopener noreferrer">Pay on Stripe</a></div>
-    <p class="small" style="margin:15px 0 0">Payments are completed on Stripe's hosted checkout, not on this website. Clicking a link is not confirmation that payment has been made.</p>
+  <aside class="payment-panel" aria-label="Secure purchase links">
+    <p class="kicker">YOUR NEXT STEP</p>
+    <h3>Choose your service.</h3>
+    <p>Read the scope and limitations on this page. Pay securely with Stripe, then receive a booking link once payment has been verified.</p>
+    <div class="payment-row"><strong>Opportunity Assessment · $950</strong><a data-umami-event="china-assessment-stripe-checkout-click" href="https://buy.stripe.com/cNi6oHd8eemd5u63kP00001" target="_blank" rel="noopener noreferrer">Purchase ↗</a></div>
+    <div class="payment-row"><strong>Launch Blueprint · $4,500</strong><a data-umami-event="china-blueprint-stripe-checkout-click" href="https://buy.stripe.com/00w14ngkq2Dve0C1cH00000" target="_blank" rel="noopener noreferrer">Purchase ↗</a></div>
+    <p class="small" style="margin:15px 0 0">Payment takes place on Stripe. Booking access is provided after confirmed payment; checkout alone does not create an appointment.</p>
   </aside>
  </div>
 </section>
@@ -324,12 +379,13 @@ p{margin-bottom:17px}
   <div class="container faq">
     <p class="kicker">Frequently asked questions</p>
     <h2>Before commissioning the work.</h2>
-    <details><summary>Can the review cover a skincare routine rather than only two products?</summary><p>Yes. Either service can cover one coherent product line or routine, or two separate priority products. The actual included products, SKU count and level of analysis are confirmed in the written scope; multiple unrelated product ranges require a separate quotation.</p></details>
+    <details><summary>Can the review cover a skincare routine rather than only two products?</summary><p>Yes. Either service can cover one coherent product line or routine, or two separate priority products. The included products and analysis depth are established through the written intake within the standard service. For multiple unrelated ranges, please email us before purchasing.</p></details>
     <details><summary>What makes the Blueprint different from the Assessment?</summary><p>The $950 Assessment establishes the initial commercial case and the next questions to investigate. The $4,500 Blueprint goes further into B2C platform selection, logistics models, regulatory preparation, cost considerations and a detailed launch roadmap. The Blueprint includes the underlying opportunity analysis at greater depth.</p></details>
     <details><summary>Is the assessment based on consumer interviews or actual Chinese sales figures?</summary><p>No. Both standard services are based on desk research and supplied information. Public product listings and indicative prices are not evidence of actual units sold or achieved profitability. Unknowns are explicitly flagged.</p></details>
     <details><summary>Will you register our products or open an online store?</summary><p>No. The work identifies relevant requirements and recommends next steps, but regulatory filings, legal advice, customs clearance, platform account opening and hands-on operations are outside these fixed-fee services.</p></details>
-    <details><summary>Is confidential financial data required?</summary><p>No confidential financial information is needed for the introductory conversation. If later cost assumptions would materially improve the analysis, we will identify them in the brief. You decide what information to share; missing figures are labeled as unknown rather than estimated without evidence.</p></details>
-    <details><summary>When is payment due?</summary><p>Only after we agree on the project scope, deliverables and terms in writing. We then provide the relevant secure Stripe link. The introductory Calendly call is free.</p></details>
+    <details><summary>Is confidential financial data required?</summary><p>You do not need to provide financial data to purchase a standard service. If cost assumptions would improve the analysis, we will identify them in the written brief. You decide what to share; unknown figures are labeled as such.</p></details>
+    <details><summary>Can we purchase without a sales call?</summary><p>Yes. Select either standard service and complete payment on Stripe. Once payment is confirmed, we send the Calendly booking link for a project discussion. There is no separate scheduling charge. For nonstandard product scope, email before payment.</p></details>
+    <details><summary>When can we book the call?</summary><p>Calendly booking details are shared privately after we verify successful payment. A payment link, receipt or return to this page does not itself unlock an appointment automatically.</p></details>
     <details><summary>Can you guarantee a launch date?</summary><p>No. Launch timing depends on product requirements, the selected sales route, operations and the brand's own decisions. The Blueprint provides a staged roadmap and indicative planning windows, not an unconditional launch-date promise.</p></details>
   </div>
 </section>
