@@ -282,11 +282,11 @@
           <span class="sticker" style="background:#fff">A REAL SECOND OPINION?</span>
           <h2>Want us to check the shelf for real?</h2>
           <p>The free test considered your answers. A paid review looks at your actual brand, products, visible China competitors and commercial assumptions.</p>
-          <p class="smallprint">Separate professional service. Not required to use this tool. No sales call needed to request it.</p>
+          <p class="smallprint">Separate professional service. Not required to use this tool. See the full scope, price, example and next steps before deciding whether to talk.</p>
         </div>
         <div class="price-card">
           <p class="eyebrow">CHINA BRAND OPPORTUNITY REVIEW</p>
-          <div class="price">From US$950</div>
+          <div class="price">US$950</div>
           <p style="margin:0">A written, researched review, not another automated score.</p>
           <ul>
             <li>Review of up to two selected products</li>
@@ -294,8 +294,8 @@
             <li>Preliminary price and channel considerations</li>
             <li>Commercial questions and suggested next steps</li>
           </ul>
-          <a id="review-link" class="primary" style="display:inline-block;text-decoration:none;text-align:center" href="mailto:info@central-orbit.com?subject=China%20Brand%20Opportunity%20Review">Request a review ↗</a>
-          <p class="smallprint">This opens an email request—not a payment or confirmed booking. Scope and final price are confirmed in writing before invoicing. No sales call required.</p>
+          <a id="review-link" class="primary" style="display:inline-block;text-decoration:none;text-align:center" href="/china-skincare-guides/brand-review/">See what the review includes ↗</a>
+          <p class="smallprint">A clear written offer, delivery process, and optional 20-minute introductory call. No payment is collected on this page.</p>
         </div>
       </div>
     </section>
@@ -388,9 +388,6 @@
         $("next-steps").innerHTML=ranked.slice(0,3).map(function(it,i){return '<div class="advice"><strong>'+(i+1)+'.</strong> '+escapeHtml(it.q.next)+'</div>'}).join("");
         $("result-note").textContent=score>=70?"Nice. Now prove it.":"Earn your space! ↘";
         $("progress").style.width="100%";
-        var subject="China Brand Opportunity Review — request";
-        var body="Hello Central Orbit,\n\nI would like to request the paid China Brand Opportunity Review (starting at US$950). Please send the written scope and next steps without a preliminary sales call.\n\nBrand website:\nHero product(s):\nChina status (exploring / already selling):\n\nMy self-assessment score: "+score+"/100 (self-reported, not verified).\n\nThank you.";
-        $("review-link").href="mailto:info@central-orbit.com?subject="+encodeURIComponent(subject)+"&body="+encodeURIComponent(body);
         show("results");track("guide-02-assessment-complete");
       }
       $("start").addEventListener("click",start);
