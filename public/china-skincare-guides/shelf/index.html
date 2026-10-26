@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,follow">
+  <title>Is There Room for Your Brand? | China Skincare Shelf</title>
+  <meta name="description" content="A playful but practical three-minute self-assessment for established skincare brands considering China. Free results, no signup.">
+  <meta name="theme-color" content="#fff8e8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Kalam:wght@400;700&display=swap" rel="stylesheet">
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="59cc10e2-2ec1-45b9-a0da-46e14c6dc601"></script>
+  <style>
+    :root{--ink:#272334;--pink:#fa5b8b;--pink-light:#ffe1eb;--cream:#fff8e8;--butter:#ffe179;--mint:#a6e0cd;--lilac:#ccc0ff;--line:#322738;--card:#fffef9}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--cream);color:var(--ink);font-family:"DM Sans",Arial,sans-serif;overflow-x:hidden}
+    button,a{font:inherit}
+    button{cursor:pointer}
+    button:focus-visible,a:focus-visible{outline:4px solid #3b63cd;outline-offset:3px}
+    a{color:inherit}
+    .wrapper{max-width:1200px;margin:0 auto;padding:0 28px}
+    .topbar{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:25px 0;border-bottom:2px solid var(--ink)}
+    .logo{font-weight:800;font-size:13px;letter-spacing:.025em;text-decoration:none}
+    .topbar .back{font-size:12px;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:3px}
+    .sticker{display:inline-flex;align-items:center;font-family:"Kalam",cursive;font-weight:700;font-size:16px;transform:rotate(-4deg);background:var(--butter);padding:6px 12px;box-shadow:3px 3px 0 var(--ink);border:2px solid var(--ink)}
+    .hero{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(300px,.9fr);align-items:center;gap:56px;padding:62px 0 70px}
+    .eyebrow{font-weight:800;text-transform:uppercase;letter-spacing:.19em;font-size:11px;margin:0 0 18px}
+    h1{font-size:clamp(57px,7.6vw,114px);line-height:.93;letter-spacing:-.09em;margin:16px 0 27px;font-weight:800;max-width:650px}
+    h1 .pink{color:var(--pink);display:block;transform:rotate(-1.5deg);transform-origin:left}
+    .hero p.deck{font-size:clamp(17px,2vw,21px);line-height:1.48;max-width:490px;margin:0 0 26px}
+    .hand{font-family:"Kalam",cursive;font-size:21px;line-height:1.1}
+    .hero-notes{display:flex;gap:18px;flex-wrap:wrap;margin-top:18px;font-size:12px;font-weight:700}
+    .hero-notes span:before{content:"✦";color:#cf3266;margin-right:7px}
+    .primary{background:var(--pink);color:#201927;border:2px solid var(--ink);border-radius:99px;font-size:16px;font-weight:800;padding:17px 27px;box-shadow:5px 6px 0 var(--ink);transition:transform .15s,box-shadow .15s}
+    .primary:hover{transform:translate(2px,2px);box-shadow:3px 4px 0 var(--ink)}
+    .primary:disabled{opacity:.38;cursor:not-allowed;box-shadow:3px 4px 0 #888}
+    .secondary{border:2px solid var(--ink);background:transparent;border-radius:99px;font-weight:800;padding:13px 22px}
+    .scene-wrap{position:relative;padding:18px 8px 8px;transform:rotate(1.5deg)}
+    .note{position:absolute;top:-14px;right:-10px;background:var(--butter);z-index:3;transform:rotate(8deg);padding:12px 18px 6px;font-family:"Kalam",cursive;font-size:19px;line-height:1.15;box-shadow:3px 5px 0 #2e2533;border:2px solid var(--ink)}
+    .scene{height:490px;position:relative;overflow:hidden;border:3px solid var(--ink);border-radius:14px 14px 7px 7px;background-color:#ffd8d3;background-image:linear-gradient(to right,#ffffff83 1px,transparent 1px),linear-gradient(to bottom,#ffffff83 1px,transparent 1px);background-size:58px 58px;box-shadow:10px 11px 0 #2b2633}
+    .mirror{position:absolute;top:18px;left:22%;width:56%;height:135px;background:linear-gradient(130deg,#f9f4f3,#c8c1df 70%,#ebd5dc);border:9px solid #d9a6b2;border-radius:50% 50% 14px 14px;box-shadow:inset 0 0 0 3px #fff9}
+    .mirror:after{content:"hello, you ♡";position:absolute;top:39px;left:24%;font:23px "Kalam",cursive;color:#7e657b;transform:rotate(-10deg)}
+    .shelf{height:10px;background:#473542;border:2px solid var(--ink);box-shadow:0 7px 0 #c08373;position:absolute;left:3%;right:3%;z-index:2;border-radius:4px}
+    .shelf.one{top:236px}.shelf.two{top:438px}
+    .products{display:flex;align-items:flex-end;gap:9px;padding:0 14px;position:absolute;left:0;right:0;height:145px;z-index:3}
+    .products.upper{top:91px}
+    .products.lower{top:293px}
+    .bottle{--fill:#ffd085;position:relative;display:flex;align-items:center;justify-content:center;text-align:center;flex-direction:column;background:var(--fill);border:2px solid #3e2a37;min-width:0;flex:1;height:105px;border-radius:12px 12px 8px 8px;box-shadow:inset -10px 0 #00000010}
+    .bottle:before{content:"";position:absolute;bottom:100%;left:31%;width:38%;height:16px;background:#e8c7bb;border:2px solid #3e2a37;border-bottom:0;border-radius:3px 3px 0 0}
+    .bottle.tall{height:134px}.bottle.short{height:79px;border-radius:7px}
+    .bottle.round{border-radius:30px 30px 12px 12px}
+    .bottle.drop:before{width:20%;left:40%;height:25px;background:#48323c}
+    .bottle .label{font-size:clamp(8px,1vw,12px);font-weight:800;line-height:1.1;letter-spacing:.04em;max-width:95%;overflow-wrap:anywhere}
+    .bottle .tiny{font-size:8px;margin-top:5px;letter-spacing:.02em}
+    .pink-b{--fill:#f4a1bb}.cream-b{--fill:#fff1d6}.mint-b{--fill:#aedbb9}.lilac-b{--fill:#c5b7e9}.blue-b{--fill:#a9d7e7}.coral-b{--fill:#ffa678}.yellow-b{--fill:#ffe8a4}
+    .empty-spot{border:3px dashed #f83c74;background:#ffebf288;display:flex;flex:1;min-width:53px;align-items:center;justify-content:center;height:110px;position:relative;border-radius:9px;transition:background .3s}
+    .empty-spot span{font:16px "Kalam",cursive;transform:rotate(-8deg);text-align:center;padding:5px;line-height:1.1;color:#b82058}
+    .empty-spot.filled{background:#ffd6e5;border-style:solid}
+    .empty-spot.filled span{color:var(--ink)}
+    .scribble{position:absolute;z-index:5;bottom:4px;left:20px;background:#fff8ebd9;padding:8px 10px;transform:rotate(-5deg);font:18px "Kalam",cursive}
+    .smallprint{font-size:12px;line-height:1.65;color:#585264}
+    .section-band{border-top:2px solid var(--ink);background:var(--lilac);border-bottom:2px solid var(--ink)}
+    .section-band .wrapper{display:flex;flex-wrap:wrap;gap:18px;align-items:center;justify-content:space-between;padding-top:17px;padding-bottom:17px}
+    .section-band strong{font-size:18px}.section-band span{font-size:13px}
+    .quiz{padding:55px 0 60px;display:none}
+    .quiz.active{display:block}
+    .quiz-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(290px,.72fr);gap:45px;align-items:start}
+    .question-card{background:var(--card);border:2px solid var(--ink);border-radius:22px;padding:32px;box-shadow:8px 8px 0 #322737}
+    .number{font:21px "Kalam",cursive;color:#9c315f;margin:0}
+    h2{font-size:clamp(30px,4vw,50px);letter-spacing:-.055em;line-height:1.07;margin:12px 0 16px}
+    .hint{font-size:15px;line-height:1.55;margin:0 0 23px;color:#585064}
+    .progress-track{width:100%;height:10px;border:2px solid var(--ink);border-radius:20px;overflow:hidden;margin-bottom:20px;background:#f1e6e1}
+    .progress-track i{display:block;height:100%;background:var(--pink);transition:width .25s}
+    .options{display:grid;gap:11px}
+    .option{background:#fff9ec;border:2px solid #403342;border-radius:14px;padding:16px 17px;width:100%;text-align:left;display:flex;gap:15px;align-items:center}
+    .option:hover{background:#ffe6ed}
+    .option[aria-pressed="true"]{background:#ffd3df;box-shadow:4px 4px 0 var(--ink)}
+    .bubble{border:2px solid currentColor;border-radius:50%;height:22px;width:22px;flex-shrink:0;display:grid;place-items:center;font-weight:800}
+    .option[aria-pressed="true"] .bubble{background:var(--ink);color:white}
+    .option strong{display:block;font-size:15px}.option small{display:block;font-size:12px;line-height:1.35;margin-top:4px;color:#514958}
+    .question-actions{display:flex;gap:12px;align-items:center;justify-content:space-between;margin-top:28px;flex-wrap:wrap}
+    .mini-scene .scene{height:380px}
+    .mini-scene .mirror{height:105px}
+    .mini-scene .shelf.one{top:195px}.mini-scene .shelf.two{top:333px}
+    .mini-scene .products.upper{top:72px;height:123px}.mini-scene .products.lower{top:235px;height:98px}
+    .mini-scene .bottle{height:72px}.mini-scene .bottle.tall{height:100px}.mini-scene .bottle.short{height:58px}
+    .mini-scene .empty-spot{height:78px}
+    .mini-scene .scribble{font-size:15px}
+    .sidebar-note{font:19px "Kalam",cursive;transform:rotate(-2deg);margin-top:27px;padding-left:12px}
+    .results{display:none;padding:70px 0 85px}
+    .results.active{display:block}
+    .result-head{max-width:850px;margin-bottom:36px}
+    .results h2{font-size:clamp(50px,7vw,85px);margin:17px 0}
+    .results h2 em{color:#e74479;font-style:normal}
+    .result-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,.78fr);gap:48px;align-items:start}
+    .result-card{border:2px solid var(--ink);background:#fffef8;box-shadow:8px 8px 0 var(--ink);border-radius:19px;padding:28px}
+    .score-row{display:flex;align-items:center;gap:18px;margin-bottom:21px}
+    .score-stamp{background:var(--butter);border:2px solid var(--ink);transform:rotate(-7deg);font:700 40px "Kalam",cursive;padding:8px 14px 1px;white-space:nowrap}
+    .score-copy{font-size:12px;line-height:1.4}
+    .result-lead{font-size:17px;line-height:1.5;margin:0 0 25px}
+    .list-label{font-weight:800;font-size:11px;text-transform:uppercase;letter-spacing:.11em;margin:18px 0 6px;color:#9a315f}
+    .advice{padding:13px 0;border-bottom:1px solid #e1d9d9;font-size:14px;line-height:1.5}
+    .breakdown{margin:22px 0 8px;display:grid;gap:13px}
+    .breakdown-line{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:5px;font-size:12px;font-weight:800}
+    .bar{height:9px;background:#e8dde0;overflow:hidden;border-radius:20px}.bar span{display:block;height:100%;background:#ed6589}
+    .actions{display:flex;flex-wrap:wrap;gap:13px;align-items:center;margin-top:28px}
+    .offer{background:#c9f1de;border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);padding:62px 0 70px;position:relative}
+    .offer-grid{display:grid;grid-template-columns:1fr 1fr;gap:42px;align-items:center}
+    .offer h2{font-size:clamp(38px,5.5vw,68px);margin:14px 0 25px}
+    .offer p{line-height:1.65;font-size:16px}
+    .price-card{background:#fffef8;border:2px solid var(--ink);border-radius:20px;padding:29px;box-shadow:8px 8px 0 var(--ink);transform:rotate(1deg)}
+    .price{font-weight:800;font-size:35px;letter-spacing:-.04em;margin:13px 0}
+    .price-card ul{font-size:14px;line-height:1.8;padding-left:18px;margin-bottom:25px}
+    .foot{padding:28px 0 38px;display:flex;justify-content:space-between;gap:24px;font-size:12px;flex-wrap:wrap}
+    #shareFeedback{font-size:12px;font-weight:800;min-height:20px;color:#90315a}
+    [hidden]{display:none!important}
+    @media(max-width:920px){.hero{gap:28px}.scene{height:420px}.products.lower{top:246px}.shelf.one{top:205px}.shelf.two{top:385px}.products.upper{top:74px;height:131px}.bottle{height:89px}.bottle.tall{height:118px}.bottle.short{height:68px}.empty-spot{height:91px}}
+    @media(max-width:720px){
+      .wrapper{padding-left:18px;padding-right:18px}
+      .hero{grid-template-columns:1fr;padding:34px 0 48px;gap:22px}
+      h1{font-size:clamp(60px,13vw,88px)}
+      .scene-wrap{max-width:510px;width:100%;margin:20px auto 0}
+      .scene{height:430px}
+      .note{top:-15px;right:1px}
+      .products.upper{top:78px;height:134px}.products.lower{top:251px;height:135px}
+      .shelf.one{top:211px}.shelf.two{top:388px}
+      .bottle{height:90px}.bottle.tall{height:119px}.bottle.short{height:67px}
+      .quiz-grid,.result-grid,.offer-grid{grid-template-columns:1fr}
+      .quiz,.results{padding:40px 0 52px}
+      .question-card{padding:24px 18px}
+      .mini-scene{display:none}
+      .result-head{margin-bottom:24px}
+      .offer{padding:45px 0}
+      .price-card{transform:none}
+      .hero-notes{gap:9px 15px}
+    }
+    @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <header class="topbar">
+      <a class="logo" href="/china-skincare-guides/">CENTRAL ORBIT <span aria-hidden="true">✳</span> CHINA SKINCARE</a>
+      <a class="back" href="/china-skincare-guides/">← Back to field notes</a>
+    </header>
+  </div>
+  <main id="main">
+    <section class="wrapper hero" id="intro">
+      <div>
+        <span class="sticker">THE BATHROOM SHELF TEST</span>
+        <p class="eyebrow" style="margin-top:29px">For independent skincare brands</p>
+        <h1>IS THERE <span class="pink">ROOM FOR YOUR BRAND?</span></h1>
+        <p class="deck">China has plenty of skincare brands. But nobody's bathroom shelf is quite full. What would it take for yours to earn a spot?</p>
+        <button class="primary" id="start" type="button">Let's find out ↗</button>
+        <div class="hero-notes"><span>8 real questions</span><span>3 minutes</span><span>Free, no signup</span></div>
+        <p class="smallprint" style="max-width:460px;margin-top:24px">A self-assessment, not a prediction of sales or an official regulatory review. You'll get practical next steps based on your answers.</p>
+      </div>
+      <div class="scene-wrap" aria-label="Illustration of a crowded skincare shelf with space for a new brand" role="img">
+        <div class="note">One tiny<br>spot left! ↓</div>
+        <div class="scene">
+          <div class="mirror"></div>
+          <div class="products upper">
+            <div class="bottle pink-b tall"><span class="label">SOFT</span><span class="tiny">skin milk</span></div>
+            <div class="bottle blue-b short"><span class="label">SPF 50</span></div>
+            <div class="bottle mint-b round"><span class="label">CALM</span></div>
+            <div class="bottle lilac-b drop"><span class="label">GLOW</span><span class="tiny">drops</span></div>
+            <div class="bottle yellow-b short"><span class="label">CLOUD</span></div>
+            <div class="bottle coral-b tall"><span class="label">DEW</span><span class="tiny">serum</span></div>
+          </div>
+          <div class="shelf one"></div>
+          <div class="products lower">
+            <div class="bottle cream-b short"><span class="label">NIGHT</span></div>
+            <div class="bottle pink-b round"><span class="label">BLOOM</span></div>
+            <div class="bottle blue-b tall"><span class="label">BARRIER</span></div>
+            <div class="empty-spot"><span>YOUR<br>BRAND?</span></div>
+            <div class="bottle mint-b short"><span class="label">DAY</span></div>
+            <div class="bottle lilac-b"><span class="label">CLEAR</span></div>
+          </div>
+          <div class="shelf two"></div>
+          <div class="scribble">No celebrity campaign required.</div>
+        </div>
+      </div>
+    </section>
+    <div class="section-band" id="intro-band"><div class="wrapper"><strong>Small brand. Big shelf.</strong><span>No trick questions. No email gate. No 40-slide PowerPoint.</span></div></div>
+    <section class="wrapper quiz" id="quiz" aria-label="Skincare shelf assessment">
+      <div class="quiz-grid">
+        <div class="question-card">
+          <div class="progress-track" aria-label="Assessment progress"><i id="progress" style="width:0"></i></div>
+          <p class="number" id="question-number">01 / 08</p>
+          <h2 id="question-title" tabindex="-1"></h2>
+          <p class="hint" id="question-hint"></p>
+          <div class="options" id="options" role="group" aria-label="Choose one answer"></div>
+          <div class="question-actions">
+            <button class="secondary" id="previous" type="button">← Back</button>
+            <button class="primary" id="next" type="button" disabled>Next question →</button>
+          </div>
+        </div>
+        <div class="mini-scene">
+          <div class="scene-wrap" style="padding-top:33px">
+            <div class="note" id="side-note">We're making room…</div>
+            <div class="scene">
+              <div class="mirror"></div>
+              <div class="products upper">
+                <div class="bottle pink-b tall"><span class="label">SOFT</span></div>
+                <div class="bottle blue-b short"><span class="label">SPF 50</span></div>
+                <div class="bottle mint-b round"><span class="label">CALM</span></div>
+                <div class="bottle lilac-b drop"><span class="label">GLOW</span></div>
+                <div class="bottle coral-b"><span class="label">DEW</span></div>
+              </div>
+              <div class="shelf one"></div>
+              <div class="products lower">
+                <div class="bottle cream-b short"><span class="label">NIGHT</span></div>
+                <div class="bottle pink-b"><span class="label">BLOOM</span></div>
+                <div class="empty-spot" id="quiz-spot"><span>YOU?</span></div>
+                <div class="bottle mint-b short"><span class="label">DAY</span></div>
+                <div class="bottle lilac-b"><span class="label">CLEAR</span></div>
+              </div>
+              <div class="shelf two"></div>
+              <div class="scribble">One step at a time.</div>
+            </div>
+          </div>
+          <p class="sidebar-note">Psst. Being from Paris is lovely. It isn't a product benefit.</p>
+        </div>
+      </div>
+    </section>
+    <section class="wrapper results" id="results" aria-live="polite">
+      <div class="result-head">
+        <span class="sticker">YOUR SHELF REPORT ✳</span>
+        <h2 id="result-title">There's room.</h2>
+        <p class="deck" id="result-subtitle" style="font-size:19px;line-height:1.5;max-width:770px"></p>
+      </div>
+      <div class="result-grid">
+        <div class="result-card">
+          <div class="score-row">
+            <span class="score-stamp" id="score" aria-label="Your self-assessment score">0/100</span>
+            <span class="score-copy">Self-reported commercial preparation<br><strong>Not a probability of success</strong></span>
+          </div>
+          <p class="result-lead" id="result-lead"></p>
+          <div class="breakdown" id="breakdown"></div>
+          <p class="list-label">What you already have</p>
+          <div id="strengths"></div>
+          <p class="list-label">What deserves a closer look</p>
+          <div id="next-steps"></div>
+          <div class="actions">
+            <button type="button" class="primary" id="share">Copy my shelf result ↗</button>
+            <button type="button" class="secondary" id="restart">Try again</button>
+          </div>
+          <p id="shareFeedback" aria-live="polite"></p>
+          <p class="smallprint">Your answers stay in this browser page and aren't submitted to us. We record anonymous usage events (start, completion, sharing, review interest). This tool is a quick reflection based on your answers, not verified market research, legal advice or a regulatory determination.</p>
+        </div>
+        <aside>
+          <div class="scene-wrap" style="margin-top:20px">
+            <div class="note" id="result-note">Your spot?</div>
+            <div class="scene">
+              <div class="mirror"></div>
+              <div class="products upper">
+                <div class="bottle blue-b"><span class="label">SPF 50</span></div>
+                <div class="bottle lilac-b tall"><span class="label">GLOW</span></div>
+                <div class="bottle yellow-b round"><span class="label">CALM</span></div>
+                <div class="bottle coral-b"><span class="label">DEW</span></div>
+              </div>
+              <div class="shelf one"></div>
+              <div class="products lower">
+                <div class="bottle cream-b short"><span class="label">NIGHT</span></div>
+                <div class="bottle mint-b"><span class="label">DAY</span></div>
+                <div class="empty-spot filled"><span>YOUR<br>BRAND<br>✳</span></div>
+                <div class="bottle pink-b tall"><span class="label">BLOOM</span></div>
+                <div class="bottle blue-b short"><span class="label">MIST</span></div>
+              </div>
+              <div class="shelf two"></div>
+              <div class="scribble">That place has to be earned.</div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+    <section class="offer" id="offer" hidden>
+      <div class="wrapper offer-grid">
+        <div>
+          <span class="sticker" style="background:#fff">A REAL SECOND OPINION?</span>
+          <h2>Want us to check the shelf for real?</h2>
+          <p>The free test considered your answers. A paid review looks at your actual brand, products, visible China competitors and commercial assumptions.</p>
+          <p class="smallprint">Separate professional service. Not required to use this tool. No sales call needed to request it.</p>
+        </div>
+        <div class="price-card">
+          <p class="eyebrow">CHINA BRAND OPPORTUNITY REVIEW</p>
+          <div class="price">From US$950</div>
+          <p style="margin:0">A written, researched review, not another automated score.</p>
+          <ul>
+            <li>Review of up to two selected products</li>
+            <li>Positioning against publicly visible alternatives</li>
+            <li>Preliminary price and channel considerations</li>
+            <li>Commercial questions and suggested next steps</li>
+          </ul>
+          <a id="review-link" class="primary" style="display:inline-block;text-decoration:none;text-align:center" href="mailto:info@central-orbit.com?subject=China%20Brand%20Opportunity%20Review">Request a review ↗</a>
+          <p class="smallprint">This opens an email request—not a payment or confirmed booking. Scope and final price are confirmed in writing before invoicing. No sales call required.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div class="wrapper"><footer class="foot"><span>© Central Orbit · China skincare field notes</span><span><a href="mailto:info@central-orbit.com">info@central-orbit.com</a> · <a href="/china-skincare-guides/">More field notes</a></span></footer></div>
+  <script>
+    (function(){
+      "use strict";
+      var questions=[
+        {title:"Which product is fighting for shelf space?",hint:"Think about the first product you'd actually introduce, not your full catalogue.",weight:14,category:"Product & customer",win:"You have a clear candidate product.",next:"Choose one candidate product and document why it deserves to lead.",options:[
+          ["One clear hero product","With evidence of sales and repeat purchases",1],
+          ["A likely hero","It sells, but we've not fully tested why people choose it",.65],
+          ["Several products","We haven't decided which should lead",.25],
+          ["No idea yet","We'd need to start there",0]]},
+        {title:"Who is supposed to reach for it?",hint:"A skincare product for 'everyone' tends to be a hard sell.",weight:12,category:"Product & customer",win:"Your target customer is reasonably well defined.",next:"Write down one specific customer, skin need and purchase occasion.",options:[
+          ["We know the buyer","Defined from real purchases, feedback or research",1],
+          ["We have a specific hypothesis","But haven't tested it in China",.6],
+          ["Pretty much anyone","It's for all ages and skin types",.15],
+          ["We're not sure","We haven't narrowed it down",0]]},
+        {title:"Why yours, and not the next bottle?",hint:"'Made overseas' can help a story, but can't carry it alone.",weight:16,category:"Difference & proof",win:"You can articulate a product-level advantage.",next:"Compare the product promise with at least three current alternatives in China.",options:[
+          ["A specific, tested advantage","We can show how it differs from alternatives",1],
+          ["A clear benefit","But we haven't compared it with China-market products",.62],
+          ["Origin or beautiful branding","That's mostly what sets us apart",.15],
+          ["Hard to say","We haven't found the strongest reason yet",0]]},
+        {title:"Can you back up what the bottle promises?",hint:"We're talking about the finished product, not just an exciting ingredient.",weight:14,category:"Difference & proof",win:"You have useful evidence behind key product claims.",next:"Make a list of each claim and the supporting finished-product evidence; flag gaps for local review.",options:[
+          ["Yes, on the product","Relevant finished-product tests or defensible evidence",1],
+          ["Some support","Ingredient research, customer feedback or limited testing",.55],
+          ["Mostly supplier claims","Our evidence is still thin",.2],
+          ["We haven't checked","This needs work",0]]},
+        {title:"What happens to the margin in China?",hint:"Retail price minus production cost isn't the whole calculation.",weight:16,category:"Money & resources",win:"You've considered channel costs as well as retail price.",next:"Model a plausible retail price after shipping, taxes, marketplace/channel fees, promotions and returns.",options:[
+          ["We've modeled it","Price, landed costs, channel fees and promotion economics",1],
+          ["Rough numbers","We have a preliminary scenario",.6],
+          ["Our home-market margin looks good","We assume China will be similar",.2],
+          ["Still a blank page","We haven't run a China scenario",0]]},
+        {title:"How would someone buy it?",hint:"Cross-border e-commerce, domestic marketplaces and general trade are not interchangeable.",weight:10,category:"Market route",win:"You have thought through how the product could reach buyers.",next:"Compare one realistic sales route and its operational and regulatory requirements with a qualified local adviser.",options:[
+          ["A defined route","And we've examined the practical requirements",1],
+          ["A shortlist","We're comparing possible channels",.6],
+          ["We'll find a distributor","No route or requirements reviewed yet",.2],
+          ["Not sure","We haven't looked at sales routes",0]]},
+        {title:"Have real China customers weighed in?",hint:"A few people with genuine buying context are better than guesses.",weight:10,category:"Market route",win:"You have some China-market evidence beyond assumptions.",next:"Test your product story and indicative price with a small, relevant China-market audience.",options:[
+          ["Yes","Consumer research, a test sale or relevant buyer feedback",1],
+          ["Desk research","We've reviewed products and consumer discussion online",.55],
+          ["An anecdote or two","No structured validation yet",.2],
+          ["Not yet","It's unexplored",0]]},
+        {title:"Who's doing the work after launch day?",hint:"The real test is what happens after the announcement.",weight:8,category:"Money & resources",win:"You have execution resources beyond launch week.",next:"Identify a person responsible for China execution and a budget for a controlled test and follow-up.",options:[
+          ["An owner and a budget","With resources for testing and follow-up",1],
+          ["Partly allocated","Some capacity, not a dedicated plan",.6],
+          ["We can launch once","Ongoing execution isn't budgeted",.2],
+          ["No one yet","We haven't assigned it",0]]}
+      ];
+      var answers=new Array(questions.length).fill(null);
+      var step=0;
+      var started=false;
+      var $=function(id){return document.getElementById(id)};
+      var track=function(event){try{if(window.umami&&typeof window.umami.track==="function")window.umami.track(event)}catch(e){}};
+      var escapeHtml=function(s){return String(s).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})};
+      function show(id){["intro","quiz","results"].forEach(function(name){$(name).classList.toggle("active",name===id);if(name==="intro")$(name).hidden=id!=="intro"});$("intro-band").hidden=id!=="intro";$("offer").hidden=id!=="results";window.scrollTo({top:0,behavior:"smooth"})}
+      function start(){if(!started){track("guide-02-assessment-start");started=true}step=0;show("quiz");renderQuestion()}
+      function renderQuestion(){
+        var q=questions[step];$("question-number").textContent=String(step+1).padStart(2,"0")+" / "+String(questions.length).padStart(2,"0");
+        $("question-title").textContent=q.title;$("question-hint").textContent=q.hint;
+        $("progress").style.width=(step/questions.length*100)+"%";
+        $("side-note").textContent=step<3?"Pick your strongest answers ↓":step<6?"The shelf is listening…":"Almost there! ✳";
+        var selected=answers[step];
+        $("options").innerHTML=q.options.map(function(a,i){return '<button type="button" class="option" data-choice="'+i+'" aria-pressed="'+(selected===i?'true':'false')+'"><span class="bubble" aria-hidden="true">'+(selected===i?'✓':'')+'</span><span><strong>'+escapeHtml(a[0])+'</strong><small>'+escapeHtml(a[1])+'</small></span></button>'}).join("");
+        $("next").disabled=selected===null;$("next").textContent=step===questions.length-1?"See my shelf report →":"Next question →";
+        $("previous").textContent=step===0?"← Start over":"← Back";
+        $("options").querySelectorAll("button").forEach(function(b){b.addEventListener("click",function(){answers[step]=Number(b.getAttribute("data-choice"));renderQuestion();b=$("options").querySelector('[data-choice="'+answers[step]+'"]');if(b)b.focus()})});
+        $("question-title").focus({preventScroll:true});
+      }
+      function finish(){
+        var weighted=questions.map(function(q,i){return q.weight*q.options[answers[i]][2]});
+        var score=Math.round(weighted.reduce(function(sum,n){return sum+n},0));
+        var groupNames=["Product & customer","Difference & proof","Money & resources","Market route"];
+        var groupHtml=groupNames.map(function(name){
+          var possible=0,earned=0;
+          questions.forEach(function(q,i){if(q.category===name){possible+=q.weight;earned+=weighted[i]}});
+          return '<div><div class="breakdown-line"><span>'+escapeHtml(name)+'</span><span>'+Math.round(earned)+' / '+possible+'</span></div><div class="bar"><span style="width:'+(100*earned/possible)+'%"></span></div></div>';
+        }).join("");
+        var ranked=questions.map(function(q,i){return {q:q,earned:weighted[i],lost:q.weight-weighted[i]}}).sort(function(a,b){return b.lost-a.lost});
+        var strengths=questions.map(function(q,i){return {q:q,ratio:weighted[i]/q.weight}}).sort(function(a,b){return b.ratio-a.ratio}).slice(0,2);
+        var title,sub,lead;
+        if(score>=80){title="You've earned a closer look.";sub="Your answers suggest a strong starting position. The real-world test is whether customers in China agree.";lead="There's substance behind the story. Now the work is verifying it in the market, not celebrating the score."}
+        else if(score>=60){title="There's a possible opening.";sub="You have some promising pieces. A few important questions still need answers.";lead="This isn't a green light to launch. It is a useful shortlist of what to verify before you spend."}
+        else if(score>=35){title="Let's clear a little space.";sub="Something about your brand may work here. First, give it a sharper reason to belong.";lead="Pick the strongest product and work through the biggest gaps. You don't need to solve everything this week."}
+        else{title="Start with one bottle.";sub="A China launch isn't a product-range beauty contest. Start with a product, a buyer and a reason to choose it.";lead="Not having the answers yet is perfectly fine. Pretending to have them is expensive."}
+        $("result-title").textContent=title;$("result-subtitle").textContent=sub;$("result-lead").textContent=lead;
+        $("score").textContent=score+"/100";$("breakdown").innerHTML=groupHtml;
+        $("strengths").innerHTML=strengths.map(function(it){return '<div class="advice">'+escapeHtml(it.ratio>=.55?it.q.win:"A useful starting point: "+it.q.title)+'</div>'}).join("");
+        $("next-steps").innerHTML=ranked.slice(0,3).map(function(it,i){return '<div class="advice"><strong>'+(i+1)+'.</strong> '+escapeHtml(it.q.next)+'</div>'}).join("");
+        $("result-note").textContent=score>=70?"Nice. Now prove it.":"Earn your space! ↘";
+        $("progress").style.width="100%";
+        var subject="China Brand Opportunity Review — request";
+        var body="Hello Central Orbit,\n\nI would like to request the paid China Brand Opportunity Review (starting at US$950). Please send the written scope and next steps without a preliminary sales call.\n\nBrand website:\nHero product(s):\nChina status (exploring / already selling):\n\nMy self-assessment score: "+score+"/100 (self-reported, not verified).\n\nThank you.";
+        $("review-link").href="mailto:info@central-orbit.com?subject="+encodeURIComponent(subject)+"&body="+encodeURIComponent(body);
+        show("results");track("guide-02-assessment-complete");
+      }
+      $("start").addEventListener("click",start);
+      $("previous").addEventListener("click",function(){if(step===0){show("intro")}else{step--;renderQuestion()}});
+      $("next").addEventListener("click",function(){if(answers[step]===null)return;if(step<questions.length-1){step++;renderQuestion()}else finish()});
+      $("restart").addEventListener("click",function(){answers=new Array(questions.length).fill(null);step=0;start()});
+      $("review-link").addEventListener("click",function(){track("guide-02-paid-review-interest")});
+      $("share").addEventListener("click",function(){
+        var message="I tried the China Skincare Shelf Test. Could your brand earn a place on the shelf? https://www.central-orbit.com/china-skincare-guides/shelf/";
+        var done=function(){track("guide-02-result-share");$("shareFeedback").textContent="Link copied. Share it with someone who works in skincare."};
+        if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(message).then(done).catch(function(){$("shareFeedback").textContent=message});
+        else $("shareFeedback").textContent=message;
+      });
+    })();
+  </script>
+</body>
+</html>
