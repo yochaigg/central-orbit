@@ -12,6 +12,7 @@ export const NAV_LINKS = [
   { label: "Experience", href: "/clients" },
   { label: "Industries", href: "/markets" },
   { label: "China", href: "/china" },
+  { label: "China Skincare", href: "/china-skincare" },
   { label: "LATAM", href: "/latam" },
   { label: "About", href: "/about" },
 ] as const;
