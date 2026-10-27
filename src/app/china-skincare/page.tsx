@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "China Skincare | Turnkey Services | Central Orbit",
     description:
-      "Central Orbit operates China skincare logistics, approvals, e-commerce platforms, campaigns, KOLs and compliance as a brand-owned service, not a distributor.",
+      "Central Orbit manages China skincare logistics, approvals, e-commerce platforms, campaigns, KOLs and compliance while the brand retains ownership.",
     url: "https://www.central-orbit.com/china-skincare",
     type: "website",
     locale: "en_US",
