@@ -137,17 +137,17 @@ export default function Home() {
                 </h2>
                 <p className="mt-4 text-[#675566] max-w-2xl leading-relaxed">
                   Our skincare work connects product positioning, competing offers,
-                  channels and practical commercial planning. Start with a free
-                  three-minute Shelf Test or explore a researched next step.
+                  channels and practical commercial planning for overseas skincare
+                  brands entering China or looking to grow there.
                 </p>
               </div>
               <div className="flex flex-col gap-3 md:items-start">
                 <Link href="/china-skincare" className="inline-flex items-center gap-2 font-semibold text-sm text-[#914763] hover:underline">
                   Explore China skincare <ArrowRight size={17} />
                 </Link>
-                <Link href="/china-skincare-guides/shelf/" className="inline-flex items-center gap-2 font-semibold text-sm text-[#914763] hover:underline">
-                  Try the free Shelf Test <ArrowRight size={17} />
-                </Link>
+                <a href="mailto:info@central-orbit.com?subject=China%20Skincare%20Inquiry" className="inline-flex items-center gap-2 font-semibold text-sm text-[#914763] hover:underline">
+                  Discuss a skincare question <ArrowRight size={17} />
+                </a>
               </div>
             </div>
           </FadeIn>

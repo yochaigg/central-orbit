@@ -6,7 +6,7 @@ import { FadeIn } from "@/components/ui/fade-in";
 export const metadata: Metadata = {
   title: "China Skincare Market Entry & Growth",
   description:
-    "Commercial research and China market planning for established overseas skincare brands entering China or looking to grow there. Free Shelf Test, Opportunity Assessment and Launch Blueprint.",
+    "Commercial research, channel assessment and China market-entry and growth planning for established overseas skincare brands, including brands already operating in China.",
   openGraph: {
     title: "China Skincare Market Entry & Growth | Central Orbit",
     description:
@@ -64,21 +64,21 @@ export default function SkincarePage() {
               and practical commercial planning.
             </p>
             <div className="mt-9 flex flex-wrap gap-3">
-              <Link
-                href="/china-skincare-guides/shelf/"
+              <a
+                href="mailto:info@central-orbit.com?subject=China%20Skincare%20Commercial%20Inquiry"
                 className="inline-flex items-center gap-2 rounded-md bg-[#a44c6a] hover:bg-[#883954] text-white px-6 py-3 font-semibold text-sm transition-colors"
               >
-                Try the free Shelf Test <ArrowUpRight size={17} />
-              </Link>
+                Discuss a commercial question <ArrowUpRight size={17} />
+              </a>
               <Link
-                href="/china-skincare-guides/brand-review/"
+                href="/china"
                 className="inline-flex items-center gap-2 rounded-md border border-[#bc909e] text-[#643f54] hover:bg-white px-6 py-3 font-semibold text-sm transition-colors"
               >
-                Explore our services <ArrowRight size={17} />
+                More on China <ArrowRight size={17} />
               </Link>
             </div>
-            <p className="mt-4 text-xs text-[#76646f]">
-              Eight questions. About three minutes. No sign-up or email required for the free test.
+            <p className="mt-4 text-sm text-[#76646f]">
+              Commercial advice and research focused on product position, routes to market and the next decisions for your brand.
             </p>
           </FadeIn>
         </div>
@@ -153,69 +153,53 @@ export default function SkincarePage() {
         </div>
       </section>
 
-      <section className="py-18 lg:py-24 bg-white" id="next-steps">
+      <section className="py-18 lg:py-24 bg-white" id="commercial-focus">
         <div className="mx-auto max-w-6xl px-6">
           <FadeIn>
             <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#a15571] mb-3">
-              Choose how far to go
+              How we can help
             </p>
             <h2 className="font-serif text-3xl md:text-5xl text-[#3d2e3f] tracking-tight">
-              Start with a question. Leave with a clearer direction.
+              A clearer commercial path in China.
             </h2>
             <p className="mt-4 text-[#665866] max-w-3xl leading-relaxed">
-              Our services build on the same principle as the free Shelf Test:
-              start with your products and the decisions you actually need to make.
+              Different brands need different answers. Our work focuses on
+              examining the market, identifying practical options and turning
+              the findings into decisions that make commercial sense.
             </p>
           </FadeIn>
-          <div className="mt-12 space-y-0 border-t border-[#e9d6d8]">
-            <div className="py-9 border-b border-[#e9d6d8] grid grid-cols-1 lg:grid-cols-[1fr_1.25fr_auto] gap-5 items-start">
-              <div>
-                <p className="text-xs uppercase tracking-widest font-semibold text-[#a15571] mb-2">First look / Free</p>
-                <h3 className="font-serif text-2xl md:text-3xl text-[#3d2e3f]">Skincare Shelf Test</h3>
-              </div>
+          <div className="mt-12 border-t border-[#e9d6d8]">
+            <div className="py-9 border-b border-[#e9d6d8] grid grid-cols-1 lg:grid-cols-[1fr_1.5fr] gap-5 items-start">
+              <h3 className="font-serif text-2xl md:text-3xl text-[#3d2e3f]">
+                Product positioning
+              </h3>
               <p className="text-[#635664] leading-relaxed">
-                Eight questions about your product foundations, with immediate
-                notes and practical starting points. A self-assessment, not a
-                prediction of sales or market readiness.
+                Examine how your product benefits, supporting evidence,
+                price position and brand story compare with relevant
+                alternatives visible in China.
               </p>
-              <Link href="/china-skincare-guides/shelf/" className="text-sm font-semibold text-[#9a4868] inline-flex items-center gap-2 hover:underline whitespace-nowrap">
-                Take the test <ArrowUpRight size={16} />
-              </Link>
             </div>
-            <div className="py-9 border-b border-[#e9d6d8] grid grid-cols-1 lg:grid-cols-[1fr_1.25fr_auto] gap-5 items-start">
-              <div>
-                <p className="text-xs uppercase tracking-widest font-semibold text-[#a15571] mb-2">Research / US$950</p>
-                <h3 className="font-serif text-2xl md:text-3xl text-[#3d2e3f]">Opportunity Assessment</h3>
-              </div>
+            <div className="py-9 border-b border-[#e9d6d8] grid grid-cols-1 lg:grid-cols-[1fr_1.5fr] gap-5 items-start">
+              <h3 className="font-serif text-2xl md:text-3xl text-[#3d2e3f]">
+                Customer access and channels
+              </h3>
               <p className="text-[#635664] leading-relaxed">
-                A sourced review of your products, up to five relevant China-market
-                alternatives, price positioning, risks and recommended next decisions.
+                Assess online B2C routes and channel requirements,
+                including operational considerations and the questions
+                that need local specialist verification.
               </p>
-              <Link href="/china-skincare-guides/brand-review/#assessment" className="text-sm font-semibold text-[#9a4868] inline-flex items-center gap-2 hover:underline whitespace-nowrap">
-                See the scope <ArrowUpRight size={16} />
-              </Link>
             </div>
-            <div className="py-9 border-b border-[#e9d6d8] grid grid-cols-1 lg:grid-cols-[1fr_1.25fr_auto] gap-5 items-start">
-              <div>
-                <p className="text-xs uppercase tracking-widest font-semibold text-[#a15571] mb-2">Planning / US$4,500</p>
-                <h3 className="font-serif text-2xl md:text-3xl text-[#3d2e3f]">Launch Blueprint</h3>
-              </div>
+            <div className="py-9 border-b border-[#e9d6d8] grid grid-cols-1 lg:grid-cols-[1fr_1.5fr] gap-5 items-start">
+              <h3 className="font-serif text-2xl md:text-3xl text-[#3d2e3f]">
+                Entry and growth planning
+              </h3>
               <p className="text-[#635664] leading-relaxed">
-                Deeper competitive research, B2C channel and platform choices,
-                logistics and regulatory preparation, cost categories and a phased
-                launch or growth roadmap.
+                Prioritize commercial research, preparation and next actions
+                for brands considering China, preparing to launch or seeking
+                stronger performance from an existing presence.
               </p>
-              <Link href="/china-skincare-guides/brand-review/#blueprint" className="text-sm font-semibold text-[#9a4868] inline-flex items-center gap-2 hover:underline whitespace-nowrap">
-                See the scope <ArrowUpRight size={16} />
-              </Link>
             </div>
           </div>
-          <p className="mt-7 text-sm text-[#70616e] leading-relaxed max-w-4xl">
-            The paid services are research-led commercial work, not a promise of
-            market success, regulatory approval or operating an online store.
-            Once payment is confirmed, clients receive a private Calendly link
-            for their project discussion.
-          </p>
         </div>
       </section>
 
@@ -230,9 +214,9 @@ export default function SkincarePage() {
               your brand deserves a commercially grounded next step.
             </p>
             <div className="mt-7 flex flex-wrap gap-4">
-              <Link href="/china-skincare-guides/shelf/" className="inline-flex gap-2 items-center px-6 py-3 bg-[#f7d5df] text-[#432b40] font-semibold rounded-md hover:bg-white transition-colors">
-                Start with the free test <ArrowRight size={17} />
-              </Link>
+              <a href="mailto:info@central-orbit.com?subject=China%20Skincare%20Commercial%20Inquiry" className="inline-flex gap-2 items-center px-6 py-3 bg-[#f7d5df] text-[#432b40] font-semibold rounded-md hover:bg-white transition-colors">
+                Email us about your brand <ArrowRight size={17} />
+              </a>
               <a href="mailto:info@central-orbit.com?subject=China%20Skincare%20Market%20Inquiry" className="inline-flex gap-2 items-center px-6 py-3 border border-[#ead4de] text-white font-semibold rounded-md hover:bg-[#5b415a] transition-colors">
                 Ask about your situation <ArrowUpRight size={17} />
               </a>
