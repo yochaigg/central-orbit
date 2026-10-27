@@ -14,10 +14,10 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     siteName: "Central Orbit",
-    url: "https://www.central-orbit.com/skincare",
+    url: "https://www.central-orbit.com/china-skincare",
     images: "/opengraph-image",
   },
-  alternates: { canonical: "/skincare" },
+  alternates: { canonical: "/china-skincare" },
 };
 
 const questions = [
