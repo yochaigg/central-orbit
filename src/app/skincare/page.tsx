@@ -69,24 +69,6 @@ const services = [
   },
 ] as const;
 
-const principles = [
-  {
-    title: "The brand owns its business",
-    body:
-      "The brand retains ownership of its products, trademarks, intellectual property and commercial assets. Storefront accounts, consumer relationships and data rights are structured for the brand's benefit and control, subject to applicable platform rules and local law.",
-  },
-  {
-    title: "Central Orbit runs the operation",
-    body:
-      "We manage and coordinate the work from manufacturer to consumer: registration and regulatory administration, imports, fulfillment, online stores, platform promotion, campaigns, KOL activity, customer operations and ongoing reporting.",
-  },
-  {
-    title: "We are not a distributor",
-    body:
-      "Central Orbit works as a service and operating partner, not as a distributor purchasing the brand's products for resale. The agreed structure sets out which legal entities, regulated providers and platform accounts are required while keeping the brand's ownership at the center.",
-  },
-] as const;
-
 export default function SkincarePage() {
   return (
     <>
@@ -157,34 +139,13 @@ export default function SkincarePage() {
               Our operating model
             </p>
             <h2 className="font-serif text-3xl md:text-4xl tracking-tight text-[#3e3040]">
-              Your brand. Your assets. Our execution.
+              The brand retains ownership.
             </h2>
-            <p className="mt-4 text-[#675968] leading-relaxed max-w-3xl">
-              We do not replace the brand or take on the role of a traditional
-              importer-distributor. The operating arrangement is designed to keep
-              the brand in control while Central Orbit manages delivery.
-            </p>
-          </FadeIn>
-          <div className="mt-9 grid grid-cols-1 md:grid-cols-3 gap-8">
-            {principles.map((item, index) => (
-              <FadeIn key={item.title} delay={index * 0.08}>
-                <div className="border-t-2 border-[#b66c82] pt-5">
-                  <h3 className="font-serif text-xl md:text-2xl text-[#413144]">
-                    {item.title}
-                  </h3>
-                  <p className="mt-4 text-[#675968] leading-relaxed">
-                    {item.body}
-                  </p>
-                </div>
-              </FadeIn>
-            ))}
-          </div>
-          <FadeIn>
-            <p className="mt-10 text-sm leading-relaxed text-[#796b76] max-w-4xl">
-              Product approvals, customs, tax filings and other regulated activities
-              depend on the relevant authorities, platform rules and appropriately
-              licensed local parties. Central Orbit manages these workstreams;
-              approvals and commercial outcomes are not guaranteed.
+            <p className="mt-5 text-[#675968] leading-relaxed max-w-3xl">
+              The brand owns its products, trademarks, online stores and commercial
+              assets. Central Orbit manages the China operation on its behalf,
+              from regulatory work and logistics to sales platforms, campaigns
+              and day-to-day customer operations.
             </p>
           </FadeIn>
         </div>
