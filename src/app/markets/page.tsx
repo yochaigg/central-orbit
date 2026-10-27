@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { FadeIn } from "@/components/ui/fade-in";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { MARKETS } from "@/lib/constants";
@@ -22,6 +23,7 @@ import {
   Zap,
   Settings,
   ShoppingBag,
+  ArrowRight,
   Circle,
 } from "lucide-react";
 
@@ -65,16 +67,24 @@ export default function MarketsPage() {
               const Icon = iconMap[market.icon] ?? Circle;
               return (
                 <FadeIn key={market.name} delay={Math.min(i * 0.05, 0.4)}>
-                  <div className="group flex items-center gap-4 bg-surface rounded-lg px-6 py-5 border border-border hover:border-primary/30 hover:shadow-sm transition-all">
-                    <Icon
-                      className="text-primary shrink-0"
-                      size={24}
-                      strokeWidth={1.5}
-                    />
-                    <span className="text-text font-medium text-sm group-hover:text-primary transition-colors">
-                      {market.name}
-                    </span>
-                  </div>
+                  {market.name === "Beauty & Skincare" ? (
+                    <Link
+                      href="/skincare"
+                      aria-label="Explore China skincare services"
+                      className="group flex items-center gap-4 bg-[#fff5f2] rounded-lg px-6 py-5 border border-[#e8cdcf] hover:border-[#ad6880] hover:shadow-sm transition-all"
+                    >
+                      <Icon className="text-[#a0506a] shrink-0" size={24} strokeWidth={1.5} />
+                      <span className="text-[#55394d] font-semibold text-sm flex-1">Beauty & Skincare</span>
+                      <ArrowRight size={18} className="text-[#a0506a]" />
+                    </Link>
+                  ) : (
+                    <div className="group flex items-center gap-4 bg-surface rounded-lg px-6 py-5 border border-border hover:border-primary/30 hover:shadow-sm transition-all">
+                      <Icon className="text-primary shrink-0" size={24} strokeWidth={1.5} />
+                      <span className="text-text font-medium text-sm group-hover:text-primary transition-colors">
+                        {market.name}
+                      </span>
+                    </div>
+                  )}
                 </FadeIn>
               );
             })}

@@ -1,16 +1,16 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { FadeIn } from "@/components/ui/fade-in";
-import { SectionHeading } from "@/components/ui/section-heading";
 
 export const metadata: Metadata = {
-  title: "Skincare Brand China Market Entry",
+  title: "China Skincare Market Entry & Growth",
   description:
-    "Central Orbit builds owned China B2C channels for Western skincare brands — retaining brand control, consumer data, and pricing from day one.",
+    "Commercial research and China market planning for established overseas skincare brands entering China or looking to grow there. Free Shelf Test, Opportunity Assessment and Launch Blueprint.",
   openGraph: {
-    title: "Skincare Brand China Market Entry — Central Orbit",
+    title: "China Skincare Market Entry & Growth | Central Orbit",
     description:
-      "A complete China B2C operation, run by us, owned by you. Brand assessment through to ongoing management.",
+      "From product positioning to channels and practical next steps. China skincare research and planning for overseas brands entering or growing in China.",
     type: "website",
     locale: "en_US",
     siteName: "Central Orbit",
@@ -20,226 +20,222 @@ export const metadata: Metadata = {
   alternates: { canonical: "/skincare" },
 };
 
-const whatWeBuild = [
+const questions = [
   {
-    title: "Brand Assessment",
-    body: "We assess whether your brand, ingredients and management approach are genuinely ready for China. We say no when the fit is not right.",
+    num: "01",
+    heading: "Why would someone choose your product?",
+    body: "Start with the product, the people who buy it today, its strengths and the proof supporting its benefits.",
   },
   {
-    title: "Regulatory Approval",
-    body: "Full product registration, trademark protection, CSAR compliance and legal entity setup handled by our on-ground agents.",
+    num: "02",
+    heading: "What would it compete against?",
+    body: "Understand relevant alternatives already offered in China, their visible claims, positioning and listed prices.",
   },
   {
-    title: "WeChat Mini App",
-    body: "Your brand's digital home in China. Built and operated within the WeChat ecosystem where Chinese consumers live.",
-  },
-  {
-    title: "Platform Launch",
-    body: "Douyin, Little Red Book and Tmall as you scale. We set up, operate and optimise every platform.",
-  },
-  {
-    title: "Marketing Execution",
-    body: "Campaign management, content creation, KOL and KOC relationships. Your story adapted for Chinese consumers without losing what makes your brand distinctive.",
-  },
-  {
-    title: "Ongoing Operations",
-    body: "Logistics, inventory, consumer data, CRM and repeat purchase management. From your factory door to the Chinese consumer.",
-  },
-];
-
-const years = [
-  {
-    label: "Year 1",
-    title: "Validate",
-    body: "Trademark registration, regulatory approval, WeChat mini app build, platform setup, brand story adaptation, initial launch and review generation.",
-  },
-  {
-    label: "Year 2",
-    title: "Scale",
-    body: "Push hero SKUs, expand paid activity, build monthly campaign rhythm and repeat purchase evidence.",
-  },
-  {
-    label: "Year 3",
-    title: "Operate",
-    body: "Mature CRM, festival playbooks, platform expansion into Tier 2 and Tier 3 cities, full operating scale.",
+    num: "03",
+    heading: "How would customers find and buy it?",
+    body: "Look at possible online B2C routes, operating requirements, fulfillment and the costs of making them work.",
   },
 ];
 
 export default function SkincarePage() {
   return (
     <>
-      {/* Hero */}
-      <section className="pt-28 pb-16 lg:pt-36 lg:pb-20 bg-surface">
+      <section className="bg-[#fff7f0] pt-28 pb-18 lg:pt-36 lg:pb-24 border-b border-[#e9d8d5]">
         <div className="mx-auto max-w-6xl px-6">
           <FadeIn>
-            <h1 className="font-heading text-4xl md:text-5xl font-bold text-primary max-w-3xl leading-tight">
-              Own the Brand. Own the Channel. Own the Consumer Relationship.
+            <p className="text-xs font-bold uppercase tracking-[0.19em] text-[#9a5269] mb-6">
+              Central Orbit / China skincare
+            </p>
+            <h1 className="font-serif text-4xl sm:text-5xl lg:text-7xl tracking-tight leading-[1.08] text-[#3c2d3e] max-w-4xl">
+              China skincare is crowded.
+              <span className="block italic text-[#a85270] mt-2">
+                Your next move should be deliberate.
+              </span>
             </h1>
-            <div className="mt-3 w-16 h-1 bg-primary rounded-full" />
-            <p className="mt-8 text-text-light text-lg max-w-2xl leading-relaxed">
-              Most Western skincare brands entering China hand control to a
-              distributor. We do the opposite. We build your owned China B2C
-              channel so you keep the brand, the data, the pricing and the
-              consumer relationship.
+            <p className="mt-8 text-lg md:text-xl text-[#5e4c5b] max-w-3xl leading-relaxed">
+              There may be room for your skincare brand in China. The useful question
+              is how to compete: which products, which consumers, which channels
+              and what preparation would make commercial sense.
+            </p>
+            <p className="mt-4 text-base text-[#665866] max-w-3xl leading-relaxed">
+              We help established overseas skincare brands explore a first move
+              into China or improve an existing presence, using focused research
+              and practical commercial planning.
+            </p>
+            <div className="mt-9 flex flex-wrap gap-3">
+              <Link
+                href="/china-skincare-guides/shelf/"
+                className="inline-flex items-center gap-2 rounded-md bg-[#a44c6a] hover:bg-[#883954] text-white px-6 py-3 font-semibold text-sm transition-colors"
+              >
+                Try the free Shelf Test <ArrowUpRight size={17} />
+              </Link>
+              <Link
+                href="/china-skincare-guides/brand-review/"
+                className="inline-flex items-center gap-2 rounded-md border border-[#bc909e] text-[#643f54] hover:bg-white px-6 py-3 font-semibold text-sm transition-colors"
+              >
+                Explore our services <ArrowRight size={17} />
+              </Link>
+            </div>
+            <p className="mt-4 text-xs text-[#76646f]">
+              Eight questions. About three minutes. No sign-up or email required for the free test.
             </p>
           </FadeIn>
         </div>
       </section>
 
-      {/* Two Routes */}
-      <section className="py-16 bg-white">
+      <section className="py-18 lg:py-24 bg-white">
         <div className="mx-auto max-w-6xl px-6">
-          <SectionHeading title="Two Routes Into China. Very Different Outcomes." />
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10">
+          <FadeIn>
+            <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#a15571] mb-3">
+              Who we work with
+            </p>
+            <h2 className="font-serif text-3xl md:text-5xl text-[#3d2e3f] tracking-tight max-w-3xl">
+              Different starting points. The same need for clarity.
+            </h2>
+          </FadeIn>
+          <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-8">
             <FadeIn>
-              <div className="bg-surface rounded-lg p-8 border border-border h-full">
-                <h3 className="font-heading text-lg font-semibold text-text mb-6">
-                  Traditional Distributor Route
+              <div className="border-t-2 border-[#bd788e] pt-6 pr-4">
+                <h3 className="font-serif text-2xl text-[#422f42]">
+                  Considering China?
                 </h3>
-                <ul className="space-y-4">
-                  {[
-                    "A purchase order, then limited visibility",
-                    "Shelf priority and campaign timing sit with the importer",
-                    "Competing brands can be promoted harder in the same quarter",
-                    "You rarely learn who buys, why they buy or when they repurchase",
-                    "Each shipment is a transaction, not an owned China asset",
-                  ].map((item) => (
-                    <li
-                      key={item}
-                      className="flex items-start gap-3 text-sm text-text-light leading-relaxed"
-                    >
-                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-text-light/40" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
+                <p className="mt-4 text-[#625463] leading-relaxed">
+                  Before investing in a launch, examine your lead products,
+                  differentiated benefits, relevant competitors, likely pricing
+                  and possible routes to consumers.
+                </p>
               </div>
             </FadeIn>
             <FadeIn delay={0.1}>
-              <div className="bg-surface rounded-lg p-8 border border-primary/30 h-full">
-                <h3 className="font-heading text-lg font-semibold text-primary mb-6">
-                  Central Orbit Direct B2C Channel
+              <div className="border-t-2 border-[#b7a0c8] pt-6 pr-4">
+                <h3 className="font-serif text-2xl text-[#422f42]">
+                  Already selling in China?
                 </h3>
-                <ul className="space-y-4">
-                  {[
-                    "You retain full brand architecture, story and pricing control",
-                    "Our team operates the channel on your behalf",
-                    "Campaign calendar and platform focus agreed in advance",
-                    "Consumer data, reviews and CRM become your assets",
-                    "Volume growth tied to a clear 3-year plan",
-                  ].map((item) => (
-                    <li
-                      key={item}
-                      className="flex items-start gap-3 text-sm text-text-light leading-relaxed"
-                    >
-                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
+                <p className="mt-4 text-[#625463] leading-relaxed">
+                  Reassess positioning, channels, competing products and
+                  commercial priorities. The next opportunity might come from
+                  improving what is already there, not starting again.
+                </p>
               </div>
             </FadeIn>
           </div>
         </div>
       </section>
 
-      {/* What We Build */}
-      <section className="py-16 bg-surface">
+      <section className="py-18 lg:py-24 bg-[#faf4f5]">
         <div className="mx-auto max-w-6xl px-6">
-          <SectionHeading
-            title="A Complete China Operation. Run by Us. Owned by You."
-          />
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
-            {whatWeBuild.map((item, i) => (
-              <FadeIn key={item.title} delay={Math.min(i * 0.08, 0.4)}>
-                <div className="bg-white rounded-lg p-6 border border-border h-full">
-                  <h3 className="font-heading text-base font-semibold text-text">
-                    {item.title}
-                  </h3>
-                  <p className="mt-3 text-sm text-text-light leading-relaxed">
-                    {item.body}
-                  </p>
-                </div>
-              </FadeIn>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Three Year Path */}
-      <section className="py-16 bg-white">
-        <div className="mx-auto max-w-6xl px-6">
-          <SectionHeading title="Validate. Scale. Operate." />
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
-            {years.map((year, i) => (
-              <FadeIn key={year.title} delay={i * 0.1}>
-                <div className="bg-surface rounded-lg p-6 border border-border h-full">
-                  <span className="text-xs font-medium uppercase tracking-widest text-primary">
-                    {year.label}
-                  </span>
-                  <h3 className="font-heading text-xl font-semibold text-text mt-1">
-                    {year.title}
-                  </h3>
-                  <p className="mt-4 text-sm text-text-light leading-relaxed">
-                    {year.body}
-                  </p>
-                </div>
-              </FadeIn>
-            ))}
-          </div>
-          <FadeIn delay={0.3}>
-            <p className="mt-8 text-sm text-text-light max-w-2xl leading-relaxed italic">
-              Timeline from assessment to first sale is typically 12 to 18
-              months. China is a strategic investment, not a marketing sprint.
+          <FadeIn>
+            <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#a15571] mb-3">
+              From possibility to evidence
+            </p>
+            <h2 className="font-serif text-3xl md:text-5xl text-[#3d2e3f] tracking-tight">
+              Three questions worth answering.
+            </h2>
+            <p className="mt-4 text-[#635664] max-w-3xl leading-relaxed">
+              A promising product alone is not a market-entry strategy. These
+              are some of the decisions we help brands examine.
             </p>
           </FadeIn>
+          <div className="mt-10 border-t border-[#e3ced4]">
+            {questions.map((item, i) => (
+              <FadeIn key={item.num} delay={i * 0.06}>
+                <div className="grid grid-cols-1 md:grid-cols-[70px_1fr_1.15fr] md:gap-8 gap-3 py-7 border-b border-[#e3ced4]">
+                  <span className="font-serif text-xl italic text-[#a15571]">{item.num}</span>
+                  <h3 className="font-serif text-xl md:text-2xl text-[#3f3040]">
+                    {item.heading}
+                  </h3>
+                  <p className="text-[#635664] leading-relaxed">{item.body}</p>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* Who We Work With */}
-      <section className="py-16 bg-surface">
+      <section className="py-18 lg:py-24 bg-white" id="next-steps">
         <div className="mx-auto max-w-6xl px-6">
-          <SectionHeading title="We Are Selective by Design." />
           <FadeIn>
-            <div className="max-w-2xl space-y-4 text-text-light leading-relaxed">
-              <p>
-                We work with a maximum of ten skincare brands at any time. Each
-                engagement is a full operational partnership, not a consulting
-                retainer. We currently have capacity for three to four new
-                brands.
-              </p>
-              <p>
-                The brands we take on have a strong product, a defensible
-                ingredient story, an established home market and management that
-                understands China requires patience and long-term commitment. If
-                you are looking for quick results, we are not the right partner.
-              </p>
-            </div>
+            <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#a15571] mb-3">
+              Choose how far to go
+            </p>
+            <h2 className="font-serif text-3xl md:text-5xl text-[#3d2e3f] tracking-tight">
+              Start with a question. Leave with a clearer direction.
+            </h2>
+            <p className="mt-4 text-[#665866] max-w-3xl leading-relaxed">
+              Our services build on the same principle as the free Shelf Test:
+              start with your products and the decisions you actually need to make.
+            </p>
           </FadeIn>
+          <div className="mt-12 space-y-0 border-t border-[#e9d6d8]">
+            <div className="py-9 border-b border-[#e9d6d8] grid grid-cols-1 lg:grid-cols-[1fr_1.25fr_auto] gap-5 items-start">
+              <div>
+                <p className="text-xs uppercase tracking-widest font-semibold text-[#a15571] mb-2">First look / Free</p>
+                <h3 className="font-serif text-2xl md:text-3xl text-[#3d2e3f]">Skincare Shelf Test</h3>
+              </div>
+              <p className="text-[#635664] leading-relaxed">
+                Eight questions about your product foundations, with immediate
+                notes and practical starting points. A self-assessment, not a
+                prediction of sales or market readiness.
+              </p>
+              <Link href="/china-skincare-guides/shelf/" className="text-sm font-semibold text-[#9a4868] inline-flex items-center gap-2 hover:underline whitespace-nowrap">
+                Take the test <ArrowUpRight size={16} />
+              </Link>
+            </div>
+            <div className="py-9 border-b border-[#e9d6d8] grid grid-cols-1 lg:grid-cols-[1fr_1.25fr_auto] gap-5 items-start">
+              <div>
+                <p className="text-xs uppercase tracking-widest font-semibold text-[#a15571] mb-2">Research / US$950</p>
+                <h3 className="font-serif text-2xl md:text-3xl text-[#3d2e3f]">Opportunity Assessment</h3>
+              </div>
+              <p className="text-[#635664] leading-relaxed">
+                A sourced review of your products, up to five relevant China-market
+                alternatives, price positioning, risks and recommended next decisions.
+              </p>
+              <Link href="/china-skincare-guides/brand-review/#assessment" className="text-sm font-semibold text-[#9a4868] inline-flex items-center gap-2 hover:underline whitespace-nowrap">
+                See the scope <ArrowUpRight size={16} />
+              </Link>
+            </div>
+            <div className="py-9 border-b border-[#e9d6d8] grid grid-cols-1 lg:grid-cols-[1fr_1.25fr_auto] gap-5 items-start">
+              <div>
+                <p className="text-xs uppercase tracking-widest font-semibold text-[#a15571] mb-2">Planning / US$4,500</p>
+                <h3 className="font-serif text-2xl md:text-3xl text-[#3d2e3f]">Launch Blueprint</h3>
+              </div>
+              <p className="text-[#635664] leading-relaxed">
+                Deeper competitive research, B2C channel and platform choices,
+                logistics and regulatory preparation, cost categories and a phased
+                launch or growth roadmap.
+              </p>
+              <Link href="/china-skincare-guides/brand-review/#blueprint" className="text-sm font-semibold text-[#9a4868] inline-flex items-center gap-2 hover:underline whitespace-nowrap">
+                See the scope <ArrowUpRight size={16} />
+              </Link>
+            </div>
+          </div>
+          <p className="mt-7 text-sm text-[#70616e] leading-relaxed max-w-4xl">
+            The paid services are research-led commercial work, not a promise of
+            market success, regulatory approval or operating an online store.
+            Once payment is confirmed, clients receive a private Calendly link
+            for their project discussion.
+          </p>
         </div>
       </section>
 
-      {/* How to Start */}
-      <section className="py-16 bg-white">
+      <section className="bg-[#423145] py-16 lg:py-20 text-white">
         <div className="mx-auto max-w-6xl px-6">
-          <SectionHeading title="Start with a Conversation." />
           <FadeIn>
-            <div className="max-w-2xl space-y-4 text-text-light leading-relaxed">
-              <p>
-                We begin every engagement with an honest assessment of whether
-                your brand is ready for China and whether we are the right
-                partner for each other. There is no cost to that conversation.
-              </p>
-              <p>
-                To start,{" "}
-                <Link
-                  href="/contact"
-                  className="text-primary hover:text-primary-dark transition-colors underline underline-offset-2"
-                >
-                  contact us here
-                </Link>
-                .
-              </p>
+            <h2 className="font-serif text-3xl md:text-5xl max-w-3xl leading-tight">
+              A better China decision starts with the right questions.
+            </h2>
+            <p className="mt-5 max-w-3xl text-[#f0e2e9] leading-relaxed">
+              Whether you are considering the market or already working in it,
+              your brand deserves a commercially grounded next step.
+            </p>
+            <div className="mt-7 flex flex-wrap gap-4">
+              <Link href="/china-skincare-guides/shelf/" className="inline-flex gap-2 items-center px-6 py-3 bg-[#f7d5df] text-[#432b40] font-semibold rounded-md hover:bg-white transition-colors">
+                Start with the free test <ArrowRight size={17} />
+              </Link>
+              <a href="mailto:info@central-orbit.com?subject=China%20Skincare%20Market%20Inquiry" className="inline-flex gap-2 items-center px-6 py-3 border border-[#ead4de] text-white font-semibold rounded-md hover:bg-[#5b415a] transition-colors">
+                Ask about your situation <ArrowUpRight size={17} />
+              </a>
             </div>
           </FadeIn>
         </div>
