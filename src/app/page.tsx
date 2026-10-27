@@ -124,6 +124,36 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="py-14 md:py-20 bg-[#fff8f3] border-y border-[#ecd9d7]">
+        <div className="mx-auto max-w-6xl px-6">
+          <FadeIn>
+            <div className="grid grid-cols-1 md:grid-cols-[1.35fr_0.65fr] gap-8 md:gap-12 items-center">
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.15em] text-[#9a516b] mb-3">
+                  Focus / China skincare
+                </p>
+                <h2 className="font-serif text-3xl md:text-4xl text-[#3e2d3f] leading-tight">
+                  Thinking about China—or looking to grow there?
+                </h2>
+                <p className="mt-4 text-[#675566] max-w-2xl leading-relaxed">
+                  Our skincare work connects product positioning, competing offers,
+                  channels and practical commercial planning. Start with a free
+                  three-minute Shelf Test or explore a researched next step.
+                </p>
+              </div>
+              <div className="flex flex-col gap-3 md:items-start">
+                <Link href="/skincare" className="inline-flex items-center gap-2 font-semibold text-sm text-[#914763] hover:underline">
+                  Explore China skincare <ArrowRight size={17} />
+                </Link>
+                <Link href="/china-skincare-guides/shelf/" className="inline-flex items-center gap-2 font-semibold text-sm text-[#914763] hover:underline">
+                  Try the free Shelf Test <ArrowRight size={17} />
+                </Link>
+              </div>
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+
       <section className="py-20 bg-surface">
         <div className="mx-auto max-w-6xl px-6">
           <FadeIn>
