@@ -94,6 +94,7 @@
     .result-next-offer{border:2px solid var(--ink);border-radius:18px;background:var(--lilac);padding:18px 22px;display:flex;gap:18px;align-items:center;justify-content:space-between;box-shadow:5px 5px 0 var(--ink);margin-bottom:35px}
     .result-next-offer strong{font-weight:800;font-size:20px;line-height:1.18;display:block;letter-spacing:-.035em}
     .result-next-offer span{font-size:14px;line-height:1.6;display:block;margin-top:5px}
+    .result-next-offer .journey-priority{margin-top:11px;font-size:13px;font-weight:800;color:#403046;line-height:1.5}
     .result-next-offer small{display:block;font-size:12px;margin-top:4px;color:#514958}
     .result-next-cta{display:inline-block;flex-shrink:0;background:var(--pink);color:var(--ink);border:2px solid var(--ink);border-radius:99px;padding:14px 19px;font-size:14px;line-height:1.25;text-align:center;font-weight:800;text-decoration:none}
     .result-next-cta:hover{background:var(--butter)}
@@ -252,11 +253,12 @@
         <p class="deck" id="result-subtitle" style="font-size:17px;line-height:1.5;max-width:770px"></p>
         <div class="result-next-offer" aria-label="Your next step for China skincare">
           <div>
-            <strong id="offer-journey-title">Now let's explore what comes next.</strong>
-            <span id="offer-journey-copy">A researched assessment or a practical launch plan.</span>
-            <small id="offer-journey-note">An optional next step. Your full free report is below.</small>
+            <strong id="offer-journey-title">A possible opening. Now the real work begins.</strong>
+            <span id="offer-journey-copy">Move from what you know about your product to what matters in the Chinese market.</span>
+            <small id="offer-journey-priority" class="journey-priority">Based on your answers: identify your next evidence gap.</small>
+            <small id="offer-journey-note">The free report and recommendations remain below.</small>
           </div>
-          <a class="result-next-cta" id="result-offer-link" href="/china-skincare-guides/brand-review/">Explore the next step ↗</a>
+          <a class="result-next-cta" id="result-offer-link" href="/china-skincare-guides/brand-review/">Explore the next step · from US$950 ↗</a>
         </div>
       </div>
       <div class="result-grid">
@@ -427,7 +429,7 @@
         }
       ];
       var answers=new Array(questions.length).fill(null);
-      var step=0,started=false;
+      var step=0,started=false,lastResultStage=null;
       var $=function(id){return document.getElementById(id)};
       function track(name){try{if(window.umami && typeof window.umami.track==="function")window.umami.track(name)}catch(e){}}
       function escapeHtml(v){return String(v).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})}
@@ -527,17 +529,20 @@
         ][a[6]];
         $("score").textContent=foundation;
         var stage=foundation==="SOLID START"?"solid":foundation==="TAKING SHAPE"?"shape":"first";
+        lastResultStage=stage;
         var journeyUrl="/china-skincare-guides/brand-review/?from=shelf&stage="+stage;
         $("result-offer-link").setAttribute("href",journeyUrl);
         $("review-link").setAttribute("href",journeyUrl);
         if(stage==="first"){
           $("result-title").textContent="Build the foundations first.";
-          $("offer-journey-title").textContent="Before choosing a route into China, strengthen your starting point.";
-          $("offer-journey-copy").textContent="Begin with a lead product or routine, buyer evidence and supported benefits. Once those basics are identified, the $950 Assessment can help examine the China opportunity.";
+          $("offer-journey-title").textContent="A good China plan starts with a clear product case.";
+          $("offer-journey-priority").textContent="Your first move: "+(gaps[0]||"Identify a product or routine to evaluate.");
+          $("offer-journey-copy").textContent="Your answers suggest a few basics to strengthen before investing in a detailed China plan. Work through your free recommendations, then decide whether a sourced review would help.";
+          $("offer-journey-priority").style.display="block";
           $("offer-journey-note").textContent="No rush toward a launch plan. Your practical free recommendations are below.";
-          $("result-offer-link").textContent="Explore the first steps ↗";
+          $("result-offer-link").textContent="Explore the $950 Assessment ↗";
           $("offer-bottom-title").textContent="Start with the basics. Then explore China.";
-          $("offer-bottom-copy").textContent="Your answers suggest there are product foundations worth strengthening before detailed China launch planning. A focused review can help clarify the gaps.";
+          $("offer-bottom-copy").textContent="Start by identifying a lead product, buyer evidence and supported claims. The Opportunity Assessment can then help examine the China opportunity with external evidence.";
           $("offer-card-subline").textContent="The $950 Opportunity Assessment is the more suitable starting point.";
           $("blueprint-price-line").hidden=true;
           $("offer-blueprint-bullet").hidden=true;
@@ -545,13 +550,15 @@
           $("result-note").textContent="Start with what you know.";
         }else{
           $("result-title").textContent=stage==="solid"?"There's room worth exploring.":"Your brand has a possible opening.";
-          $("offer-journey-title").textContent="You've found a starting point. Now let's explore how to make it work in China.";
-          $("offer-journey-copy").textContent="Your answers suggest foundations to build on. Next comes real research: competitors, positioning, channels and fulfillment.";
-          $("offer-journey-note").textContent="Your free report and next steps are below. This is an opportunity to investigate, not a promise of sales.";
-          $("result-offer-link").textContent="Let's explore how ↗";
-          $("offer-bottom-title").textContent="There may be room for your brand. Now let's see how.";
+          $("offer-journey-title").textContent="You've found a possible opening. Now, how could your brand compete?";
+          $("offer-journey-priority").textContent="What the free test cannot check: actual Chinese-market competitors, listed prices or the route to consumers.";
+          $("offer-journey-priority").style.display="block";
+          $("offer-journey-copy").textContent="Your answers describe your product foundation. A researched review compares it with real China-market alternatives and identifies what deserves a closer look before you commit."
+          $("offer-journey-note").textContent="Start with the $950 Opportunity Assessment, or explore the detailed $4,500 Blueprint. Neither guarantees a market result."
+          $("result-offer-link").textContent="See how to compete in China · from $950 ↗";
+          $("offer-bottom-title").textContent="You've spotted a possible space. How do you turn it into a plan?"
           $("offer-bottom-copy").textContent="Take your first look further with evidence on your products, Chinese-market competitors, sales channels and the route forward.";
-          $("offer-card-subline").textContent="Begin with an opportunity review—or choose a more detailed launch or growth plan.";
+          $("offer-card-subline").textContent="Compare your brand with China-market alternatives first—or map a launch or growth plan."
           $("blueprint-price-line").hidden=false;
           $("offer-blueprint-bullet").hidden=false;
           $("review-link").textContent="View your options ↗";
@@ -582,8 +589,8 @@
         answers=new Array(questions.length).fill(null);
         step=0;start();
       });
-      $("review-link").addEventListener("click",function(){track("guide-02-paid-review-interest")});
-      $("result-offer-link").addEventListener("click",function(){track("guide-02-results-offer-click")});
+      $("review-link").addEventListener("click",function(){track("guide-02-paid-review-interest");if(lastResultStage)track("guide-02-paid-review-interest-"+lastResultStage)});
+      $("result-offer-link").addEventListener("click",function(){track("guide-02-results-offer-click");if(lastResultStage)track("guide-02-results-offer-click-"+lastResultStage)});
       $("share").addEventListener("click",function(){
         var message="I tried the China Skincare Shelf Test. What would your brand need before entering China? https://www.central-orbit.com/china-skincare-guides/shelf/";
         var done=function(){track("guide-02-result-share");$("shareFeedback").textContent="Link copied. Share it with someone working in skincare."};
