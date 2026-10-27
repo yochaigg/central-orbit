@@ -136,9 +136,9 @@ export default function Home() {
                   Thinking about China—or looking to grow there?
                 </h2>
                 <p className="mt-4 text-[#675566] max-w-2xl leading-relaxed">
-                  Our skincare work connects product positioning, competing offers,
-                  channels and practical commercial planning for overseas skincare
-                  brands entering China or looking to grow there.
+                  For overseas skincare brands, we manage the China operation from
+                  regulatory work and logistics to online stores, platform promotions,
+                  KOL campaigns and ongoing compliance. The brand retains ownership.
                 </p>
               </div>
               <div className="flex flex-col gap-3 md:items-start">
