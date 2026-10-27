@@ -133,7 +133,6 @@
     .conversion-note{font-size:12px!important;line-height:1.6;color:#514958;margin:0}
     .result-next-cta{display:inline-block;background:var(--pink);border:2px solid var(--ink);border-radius:999px;padding:13px 18px;box-shadow:3px 4px 0 var(--ink);font-size:14px;font-weight:800;text-decoration:none;text-align:center;line-height:1.3;margin-top:auto}
     .result-next-cta:hover{background:var(--butter)}
-    .offer-details-link{font-weight:700;font-size:12px;margin-top:14px;align-self:center}
     .offer-panel .smallprint{font-size:11px;margin:12px 0 0}
     .full-report{padding-top:42px;max-width:1050px}
     .full-report h2{font-size:clamp(29px,4vw,44px);letter-spacing:-.05em;line-height:1.1;margin:0 0 13px}
@@ -597,14 +596,16 @@
           "3. "+logistics
         ].map(detail).join("");
         var journeyUrl="/china-skincare-guides/brand-review/?from=shelf&stage="+stage;
-        $("offer-details-link").setAttribute("href",journeyUrl);
+        $("assessment-purchase-link").setAttribute("href",journeyUrl+"#assessment");
+        $("blueprint-purchase-link").setAttribute("href",journeyUrl+"#blueprint");
+        $("result-offer-link").setAttribute("href",journeyUrl);
         if(stage==="first"){
           $("offer-journey-title").textContent="Start with a clearer product case.";
           $("offer-journey-copy").textContent="Your product foundations need work before committing to an extensive China plan. Your free report below identifies the first steps.";
           $("offer-journey-priority").textContent="Priority: "+first;
-          $("result-offer-link").setAttribute("href","#next-steps");
-          $("result-offer-link").textContent="Review your free next steps ↓";
-          $("offer-details-link").hidden=false;
+          $("result-offer-link").textContent="See scopes & purchase options ↗";
+          $("report-offer-title").textContent="Explore the next step when your product case is clearer.";
+          $("report-offer-intro").textContent="Start with the recommendations above. If you need outside research, the Opportunity Assessment can help examine the evidence and China-market alternatives; a detailed Blueprint is more useful once the basics are established.";
         }else{
           $("offer-journey-title").textContent=stage==="solid"
             ?"Now test the China-market evidence."
@@ -613,9 +614,11 @@
             ?"Your self-reported product foundations are encouraging, but competitors, prices, consumers and channel options in China still need independent assessment."
             :"You have useful product information but some gaps remain. Research can help examine China-market competitors and the practical route forward.";
           $("offer-journey-priority").textContent="The quiz cannot confirm Chinese demand, market fit or future sales.";
-          $("result-offer-link").setAttribute("href",journeyUrl);
-          $("result-offer-link").textContent="Explore the research options ↗";
-          $("offer-details-link").hidden=true;
+          $("result-offer-link").textContent="See scopes & purchase options ↗";
+          $("report-offer-title").textContent=stage==="solid"
+            ?"Take the next step with China-market evidence."
+            :"Investigate the gaps with a researched review.";
+          $("report-offer-intro").textContent="Your answers identify product foundations. The paid services examine China-market competitors, pricing and commercial options beyond this self-assessment.";
         }
         $("progress").style.width="100%";
         show("results");
@@ -633,17 +636,19 @@
         answers=new Array(questions.length).fill(null);
         step=0;start();
       });
-      $("offer-details-link").addEventListener("click",function(){
-        track("guide-02-paid-review-interest");
-        if(lastResultStage)track("guide-02-paid-review-interest-"+lastResultStage);
+      $("free-steps-link").addEventListener("click",function(){
+        track("guide-02-results-free-next-steps-click");
       });
-      $("result-offer-link").addEventListener("click",function(){
-        if(lastResultStage==="first"){track("guide-02-results-free-next-steps-click");return}
+      function trackProposalClick(source){
         track("guide-02-results-offer-click");
         if(lastResultStage)track("guide-02-results-offer-click-"+lastResultStage);
         track("guide-02-paid-review-interest");
         if(lastResultStage)track("guide-02-paid-review-interest-"+lastResultStage);
-      });
+        track("guide-02-"+source+"-click");
+      }
+      $("result-offer-link").addEventListener("click",function(){trackProposalClick("top-offer")});
+      $("assessment-purchase-link").addEventListener("click",function(){trackProposalClick("assessment-purchase")});
+      $("blueprint-purchase-link").addEventListener("click",function(){trackProposalClick("blueprint-purchase")});
       $("share").addEventListener("click",function(){
         var message="My China Skincare Shelf Test product-foundations score: "+lastScore+"/100 (self-reported, not China market readiness). Try it: https://www.central-orbit.com/china-skincare-guides/shelf/";
         var done=function(){track("guide-02-result-share");$("shareFeedback").textContent="Link copied. Share it with someone working in skincare."};
