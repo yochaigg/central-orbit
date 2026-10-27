@@ -204,6 +204,16 @@ h1 em,.commercial h2 em{font-style:italic;color:#b65268}
 /* The free Shelf Test connects to a distinct, contextual proposal introduction. */
 .journey-hint{display:inline-block;margin:8px 0 4px;padding:10px 15px;background:#ffecdc;border-left:3px solid #b45a78;color:#503a47;font-size:14px;font-weight:700;line-height:1.5}
 .journey-hint[hidden]{display:none}
+
+/* Bridge from a free self-assessment to researched market decisions. */
+.research-bridge{background:#fff4e9;border-left:4px solid #b45273;padding:20px 24px;margin:20px 0 9px;max-width:790px}
+.research-bridge[hidden],.suggested-service[hidden]{display:none}
+.research-bridge .bridge-label{display:block;color:#88495e;font-size:11px;letter-spacing:.11em;font-weight:800;margin-bottom:8px}
+.research-bridge strong{font-size:20px;color:#37283b;display:block;line-height:1.3}
+.research-bridge p{font-size:15px;line-height:1.6;color:#554753;margin:9px 0 13px}
+.service-fit{font-weight:700;color:#77556a;font-size:14px;min-height:0;margin:-2px 0 12px}
+.suggested-service{border-radius:3px;background:#fce5d9;color:#5e324b;font-size:12px;font-weight:800;line-height:1.5;padding:8px 11px;margin:0 0 12px}
+@media(max-width:720px){.research-bridge{padding:18px 18px}.research-bridge strong{font-size:18px}}
 </style>
 </head>
 <body>
@@ -226,6 +236,12 @@ h1 em,.commercial h2 em{font-style:italic;color:#b65268}
     <p class="lead" id="proposal-lead">Whether you're considering China for the first time or already selling there, the questions are similar: where does your brand stand, what could make it more competitive, and which opportunities are worth pursuing?</p>
     <p id="proposal-context-text">Two focused, research-led services to help you evaluate your position and plan the next move. Both start with your products, your customers and the market you're trying to reach.</p>
     <p class="journey-hint" id="from-shelf-note" hidden></p>
+    <div class="research-bridge" id="research-bridge" hidden>
+      <span class="bridge-label" id="bridge-label">THE NEXT QUESTION</span>
+      <strong id="bridge-title">What does the real China market tell us?</strong>
+      <p id="bridge-copy">Your answers are the starting point; comparable products, pricing and possible routes to customers require independent research.</p>
+      <a href="#services" id="bridge-cta" class="text-link">See the research options ↓</a>
+    </div>
     <div class="hero-actions">
       <a class="btn" href="#services">View options ↓</a>
       <a class="btn secondary" href="#process">How it works</a>
@@ -250,7 +266,9 @@ h1 em,.commercial h2 em{font-style:italic;color:#b65268}
      <p class="type">01 / Opportunity evaluation</p>
      <h3>China Brand Opportunity Assessment</h3>
      <p class="price">US$950</p>
-     <p class="desc">A focused review of your brand, products and competitive position—whether you are weighing market entry or looking for ways to grow.</p>
+     <p class="service-fit">For your first evidence-based China decision.</p>
+     <p class="suggested-service" id="assessment-suggested" hidden>Suggested next step after your Shelf Test</p>
+     <p class="desc">A sourced look at your products and where they might fit in China, before you commit to a bigger market-entry or growth plan.</p>
      <ul>
        <li>Product proposition, benefits, positioning and supporting evidence</li>
        <li>Comparison with up to five relevant products publicly available in China</li>
@@ -259,14 +277,15 @@ h1 em,.commercial h2 em{font-style:italic;color:#b65268}
        <li>Concise, sourced written report and one follow-up email clarification</li>
      </ul>
      <a class="btn secondary" href="#assessment-detail">See exactly what’s included ↓</a>
-     <a class="btn buy" data-umami-event="china-assessment-stripe-checkout-click" href="https://buy.stripe.com/cNi6oHd8eemd5u63kP00001" target="_blank" rel="noopener noreferrer">Buy the Assessment · $950 ↗</a>
+     <a class="btn buy" data-umami-event="china-assessment-stripe-checkout-click" href="https://buy.stripe.com/cNi6oHd8eemd5u63kP00001" target="_blank" rel="noopener noreferrer">Start with the Assessment · $950 ↗</a>
      <p class="timeframe">Target delivery: 10 business days after confirmed payment and a completed brief, subject to standard scope.</p>
    </article>
    <article class="service recommended" id="blueprint">
      <p class="type">02 / Detailed commercial planning</p>
      <h3>China Skincare Launch Blueprint</h3>
      <p class="price">US$4,500</p>
-     <p class="desc">A more detailed plan for entering China or strengthening an existing presence, covering channels, logistics, priorities and execution steps.</p>
+     <p class="service-fit">For a team ready to plan a launch or growth phase.</p>
+     <p class="desc">A structured route from market evidence to channel decisions, logistics, priorities and a phased action plan.</p>
      <ul>
        <li>Deeper product, consumer and competitive research</li>
        <li>Recommended B2C platform or sales route, with alternatives</li>
@@ -275,7 +294,7 @@ h1 em,.commercial h2 em{font-style:italic;color:#b65268}
        <li>Launch cost categories and a detailed, phased roadmap</li>
      </ul>
      <a class="btn secondary" href="#blueprint-detail">See exactly what’s included ↓</a>
-     <a class="btn buy" data-umami-event="china-blueprint-stripe-checkout-click" href="https://buy.stripe.com/00w14ngkq2Dve0C1cH00000" target="_blank" rel="noopener noreferrer">Buy the Blueprint · $4,500 ↗</a>
+     <a class="btn buy" data-umami-event="china-blueprint-stripe-checkout-click" href="https://buy.stripe.com/00w14ngkq2Dve0C1cH00000" target="_blank" rel="noopener noreferrer">Get the Launch Blueprint · $4,500 ↗</a>
      <p class="timeframe">Indicative delivery: 3–4 weeks after confirmed payment and a completed brief, subject to standard scope.</p>
    </article>
   </div>
@@ -387,21 +406,37 @@ h1 em,.commercial h2 em{font-style:italic;color:#b65268}
   if(stage!=="solid"&&stage!=="shape"&&stage!=="first")return;
   var byId=function(id){return document.getElementById(id)};
   var label=byId("from-shelf-note");
+  try{if(window.umami&&typeof window.umami.track==="function")window.umami.track("china-services-arrival-from-shelf-"+stage)}catch(e){}
   label.hidden=false;
   if(stage==="first"){
-    byId("proposal-headline").innerHTML="Before mapping China,<br><em>strengthen the foundations.</em>";
+    byId("proposal-headline").innerHTML="The opportunity starts<br><em>with a stronger product case.</em>";
+    byId("research-bridge").hidden=false;
+    byId("bridge-label").textContent="YOUR BEST NEXT STEP";
+    byId("bridge-title").textContent="What should you clarify before investing in China?";
+    byId("bridge-copy").textContent="Start with a chosen product or routine, evidence about its buyers and support for its main claims. With those basics in hand, a sourced China opportunity review becomes more useful.";
+    byId("bridge-cta").textContent="See what the Assessment examines ↓";
+    byId("bridge-cta").setAttribute("href","#assessment");
     byId("proposal-lead").textContent="Your Shelf Test suggests a few fundamentals to clarify first: the product you want to lead with, who buys it and the evidence behind its benefits.";
     byId("proposal-context-text").textContent="A detailed launch plan may be premature. First identify the product or routine you want to evaluate and gather the buyer and claims evidence you have. The focused Assessment can then help you research the China opportunity.";
     label.textContent="YOUR SHELF TEST RESULT · FIRST STEPS";
     byId("services-heading").textContent="Start with a clearer product case.";
-    byId("services-description").textContent="If you have a specific product or routine to evaluate, the $950 Opportunity Assessment can help clarify the commercial questions. If you haven't selected one yet, start there before commissioning a review.";
+    byId("services-description").textContent="If you have a product or routine selected, the $950 Opportunity Assessment can test the commercial case. If not, clarify that foundation before commissioning a paid review.";
+    byId("assessment-suggested").hidden=false;
+    byId("assessment-suggested").textContent="The more appropriate first paid step—once your product is selected.";
   }else{
-    byId("proposal-headline").innerHTML="There's room worth exploring.<br><em>Now, let's work out how.</em>";
+    byId("proposal-headline").innerHTML="You found a possible place.<br><em>Now, how could your brand earn it?</em>";
+    byId("research-bridge").hidden=false;
+    byId("bridge-label").textContent="FROM YOUR FREE TEST TO REAL MARKET EVIDENCE";
+    byId("bridge-title").textContent="Your product story is only half the picture.";
+    byId("bridge-copy").textContent="Which Chinese-market products compete for the same buyer, how are they priced, and where could your brand reach customers? Those questions need research, not another quiz.";
+    byId("bridge-cta").textContent="Explore how we investigate this ↓";
     byId("proposal-lead").textContent="Your Shelf Test showed a starting point. Now the real question is how your products could compete in China—and which consumers, channels and commercial choices make sense.";
     byId("proposal-context-text").textContent="From the first possibility to a practical route: independent research can test the product position, compare actual alternatives and shape your next move, whether you're entering China or looking to grow there.";
     label.textContent="YOU'VE COMPLETED THE SHELF TEST · NEXT: THE REAL MARKET";
     byId("services-heading").textContent="From a place on the shelf to a practical plan.";
-    byId("services-description").textContent="Start by testing the opportunity with a focused assessment, or explore the platforms, logistics and priorities with a more detailed Blueprint.";
+    byId("services-description").textContent="The $950 Opportunity Assessment tests the product and competitive case. The $4,500 Blueprint goes further into choosing channels, operations and a staged market-entry or growth plan.";
+    byId("assessment-suggested").hidden=false;
+    byId("assessment-suggested").textContent="Start here to test the opportunity before a bigger commitment.";
   }
 })();
 </script>
