@@ -200,6 +200,10 @@ h1 em,.commercial h2 em{font-style:italic;color:#b65268}
 .service .btn.buy{margin-top:14px;align-self:stretch;border-radius:5px;text-align:center;background:#aa526f;color:white}
 .service .btn.buy:hover{background:#873d59}
 .commercial h2 em{font-style:italic}
+
+/* The free Shelf Test connects to a distinct, contextual proposal introduction. */
+.journey-hint{display:inline-block;margin:8px 0 4px;padding:10px 15px;background:#ffecdc;border-left:3px solid #b45a78;color:#503a47;font-size:14px;font-weight:700;line-height:1.5}
+.journey-hint[hidden]{display:none}
 </style>
 </head>
 <body>
@@ -218,9 +222,10 @@ h1 em,.commercial h2 em{font-style:italic;color:#b65268}
 <section class="hero">
   <div class="container hero-intro">
     <p class="kicker">China skincare / Market entry and growth</p>
-    <h1>China has plenty of skincare brands.<br><em>What about yours?</em></h1>
-    <p class="lead">Whether you're considering China for the first time or already selling there, the questions are similar: where does your brand stand, what could make it more competitive, and which opportunities are worth pursuing?</p>
-    <p>Two focused, research-led services to help you evaluate your position and plan the next move. Both start with your products, your customers and the market you're trying to reach.</p>
+    <h1 id="proposal-headline">China has plenty of skincare brands.<br><em>What about yours?</em></h1>
+    <p class="lead" id="proposal-lead">Whether you're considering China for the first time or already selling there, the questions are similar: where does your brand stand, what could make it more competitive, and which opportunities are worth pursuing?</p>
+    <p id="proposal-context-text">Two focused, research-led services to help you evaluate your position and plan the next move. Both start with your products, your customers and the market you're trying to reach.</p>
+    <p class="journey-hint" id="from-shelf-note" hidden></p>
     <div class="hero-actions">
       <a class="btn" href="#services">View options ↓</a>
       <a class="btn secondary" href="#process">How it works</a>
@@ -237,8 +242,8 @@ h1 em,.commercial h2 em{font-style:italic;color:#b65268}
  <div class="container">
   <div class="section-head">
     <p class="kicker">Services at a glance</p>
-    <h2>Two ways to get a clearer picture.</h2>
-    <p>For brands evaluating a first move into China or reviewing how to improve their position in the market. Choose the level of analysis your next decision needs.</p>
+    <h2 id="services-heading">Two ways to get a clearer picture.</h2>
+    <p id="services-description">For brands evaluating a first move into China or reviewing how to improve their position in the market. Choose the level of analysis your next decision needs.</p>
   </div>
   <div class="overview-cards">
    <article class="service" id="assessment">
@@ -373,5 +378,32 @@ h1 em,.commercial h2 em{font-style:italic;color:#b65268}
   <p>© Central Orbit LTD · China Skincare Market Entry &amp; Growth Services</p>
   <div class="footer-links"><a href="/china-skincare-guides/">China skincare guides</a><a href="/china-skincare-guides/shelf/">Free Shelf Test</a><a href="mailto:info@central-orbit.com">info@central-orbit.com</a></div>
 </div></footer>
+<script>
+(function(){
+  "use strict";
+  var q=new URLSearchParams(window.location.search);
+  if(q.get("from")!=="shelf")return;
+  var stage=q.get("stage");
+  if(stage!=="solid"&&stage!=="shape"&&stage!=="first")return;
+  var byId=function(id){return document.getElementById(id)};
+  var label=byId("from-shelf-note");
+  label.hidden=false;
+  if(stage==="first"){
+    byId("proposal-headline").innerHTML="Before mapping China,<br><em>strengthen the foundations.</em>";
+    byId("proposal-lead").textContent="Your Shelf Test suggests a few fundamentals to clarify first: the product you want to lead with, who buys it and the evidence behind its benefits.";
+    byId("proposal-context-text").textContent="This is not the moment to assume you need a full launch plan. A focused Opportunity Assessment can help you examine the product case and decide what deserves attention next.";
+    label.textContent="YOUR SHELF TEST RESULT · FIRST STEPS";
+    byId("services-heading").textContent="Start with a clearer product case.";
+    byId("services-description").textContent="The $950 Opportunity Assessment is the natural first step when product and customer foundations need attention. The Blueprint is available for brands ready for broader entry or growth planning.";
+  }else{
+    byId("proposal-headline").innerHTML="There's room worth exploring.<br><em>Now, let's work out how.</em>";
+    byId("proposal-lead").textContent="Your Shelf Test showed a starting point. Now the real question is how your products could compete in China—and which consumers, channels and commercial choices make sense.";
+    byId("proposal-context-text").textContent="From the first possibility to a practical route: independent research can test the product position, compare actual alternatives and shape your next move, whether you're entering China or looking to grow there.";
+    label.textContent="YOU'VE COMPLETED THE SHELF TEST · NEXT: THE REAL MARKET";
+    byId("services-heading").textContent="From a place on the shelf to a practical plan.";
+    byId("services-description").textContent="Start by testing the opportunity with a focused assessment, or explore the platforms, logistics and priorities with a more detailed Blueprint.";
+  }
+})();
+</script>
 </body>
 </html>
