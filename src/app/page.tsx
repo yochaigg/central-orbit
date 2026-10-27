@@ -142,7 +142,7 @@ export default function Home() {
                 </p>
               </div>
               <div className="flex flex-col gap-3 md:items-start">
-                <Link href="/skincare" className="inline-flex items-center gap-2 font-semibold text-sm text-[#914763] hover:underline">
+                <Link href="/china-skincare" className="inline-flex items-center gap-2 font-semibold text-sm text-[#914763] hover:underline">
                   Explore China skincare <ArrowRight size={17} />
                 </Link>
                 <Link href="/china-skincare-guides/shelf/" className="inline-flex items-center gap-2 font-semibold text-sm text-[#914763] hover:underline">
