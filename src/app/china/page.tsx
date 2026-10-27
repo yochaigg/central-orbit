@@ -270,7 +270,7 @@ export default function ChinaPage() {
                   Bringing a skincare brand to China—or growing one already there?
                 </h2>
                 <p className="mt-2 text-[#685568] max-w-2xl leading-relaxed">
-                  Explore a dedicated approach to product positioning, competition, B2C routes and practical commercial planning.
+                  Our turnkey service covers regulatory approvals, logistics, online stores, platform promotion, KOL campaigns and compliance. The brand retains ownership; we manage the operation.
                 </p>
               </div>
               <Link
