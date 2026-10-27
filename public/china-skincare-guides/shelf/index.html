@@ -458,105 +458,121 @@
         else $("question-title").focus({preventScroll:true});
       }
       function detail(text){return '<div class="advice">'+escapeHtml(text)+'</div>'}
+
       function finish(){
-        var strong=[], gaps=[],a=answers;
-        if(a[0]===0)strong.push("Your product choice is grounded in sales performance or customer response.");
-        else if(a[0]===1)strong.push("You have a potential lead product to investigate for China.");
-        else gaps.push("Choose the product or coherent routine you want to evaluate first.");
-        if(a[1]===0)strong.push("You have customer and sales information about your existing buyers.");
-        else if(a[1]===1)strong.push("You have customer reviews or feedback to work from.");
-        else gaps.push(a[1]===4?"Check internally what customer information is available.":"Clarify who currently buys the product and what evidence supports that picture.");
-        if(a[2]===0||a[2]===1)strong.push("You have customer feedback that helps explain why people choose the product.");
-        else gaps.push(a[2]===4?"Find out whether existing customer reviews or research explain why people buy.":"Test what makes the product meaningfully different to current customers.");
-        if(a[3]===0)strong.push("You have documented material supporting your product's main benefits.");
-        else if(a[3]===1)strong.push("You already have some support for your main product claims.");
-        else gaps.push(a[3]===4?"Confirm internally which tests or supporting documents are available.":"List the main product claims and identify what evidence supports each.");
-        var evidenceCount=strong.length;
-        if(strong.length===0)strong.push("You have an established brand to work from. The next task is choosing which product to investigate.");
-        if(gaps.length===0)gaps.push("The China-specific questions still need independent checking: comparable products, pricing and the right sales route.");
-        var foundation=evidenceCount>=3?"SOLID START":evidenceCount===2?"TAKING SHAPE":"FIRST STEPS";
+        var a=answers;
+        // Only questions 1–4 describe product foundations. Questions 5–8
+        // personalize the report and do not contribute points.
+        var pointScales=[
+          [25,15,5,0],       // Lead product selected using existing customer/sales evidence
+          [25,17,8,0,0],    // Knowledge of current buyers
+          [25,17,8,0,0],    // Evidence for differentiation
+          [25,15,6,0,0]     // Evidence for product benefits
+        ];
+        var labels=["Product selection","Customer knowledge","Differentiation","Claims evidence"];
+        var points=pointScales.map(function(scale,i){return scale[a[i]]===undefined?0:scale[a[i]]});
+        var score=points.reduce(function(total,value){return total+value},0);
+        lastScore=score;
+        var stage=score>=75?"solid":score>=45?"shape":"first";
+        lastResultStage=stage;
+        var stageLabel={solid:"SOLID START",shape:"TAKING SHAPE",first:"FIRST STEPS"}[stage];
+        $("score").textContent=score+"/100";
+        $("result-title").textContent=stageLabel;
+        $("score-summary").textContent={
+          solid:"Your answers describe substantial product foundations. China-specific fit still needs evidence.",
+          shape:"Your answers identify some useful foundations and important gaps to address.",
+          first:"Your answers suggest that fundamental product evidence needs attention before detailed China planning."
+        }[stage];
+        $("breakdown").innerHTML=labels.map(function(label,i){
+          return '<div><div class="breakdown-line"><span>'+escapeHtml(label)+'</span><span>'+points[i]+' / 25</span></div><div class="bar"><span style="width:"'+(points[i]*4)+'%"></span></div></div>';
+        }).join("");
+        var strong=[],gaps=[];
+        if(a[0]===0)strong.push("Lead product: You selected a product based on existing sales performance and customer response.");
+        else if(a[0]===1)strong.push("Lead product: You have a preferred product to examine for China.");
+        else gaps.push("Lead product: Select one product or coherent routine, and record why it deserves priority.");
+        if(a[1]===0)strong.push("Customer knowledge: You report customer and sales data about existing buyers.");
+        else if(a[1]===1)strong.push("Customer knowledge: You have customer reviews or partner feedback to work from.");
+        else gaps.push(a[1]===4
+          ?"Customer knowledge: Confirm which customer information is available internally."
+          :"Customer knowledge: Identify who currently buys your product and what supports that picture.");
+        if(a[2]===0)strong.push("Differentiation: You report customer research or consistent feedback explaining product choice.");
+        else if(a[2]===1)strong.push("Differentiation: Existing reviews suggest why customers choose your product.");
+        else gaps.push(a[2]===4
+          ?"Differentiation: Check whether current reviews or research explain why people buy."
+          :"Differentiation: Identify a specific product benefit and obtain customer evidence supporting it.");
+        if(a[3]===0)strong.push("Claims evidence: You report relevant testing or documents supporting your main product claims.");
+        else if(a[3]===1)strong.push("Claims evidence: You have some supporting evidence, though not for every claim.");
+        else gaps.push(a[3]===4
+          ?"Claims evidence: Confirm which relevant tests and supporting documents are available."
+          :"Claims evidence: List the main product claims and identify what substantiates each one.");
+        if(!strong.length)strong.push("No evidence-backed strengths were identified in the first four answers yet. Use the gaps opposite as a starting checklist.");
+        if(!gaps.length)gaps.push("China-market evidence is still missing: verify actual competing offers, comparable prices, customer needs and suitable sales routes.");
         var timing=[
-          "Your preferred timing is within six months; verify the practical requirements before setting a launch date.",
-          "You are considering a six-to-twelve-month window; map the research and preparation before committing.",
-          "You have a longer planning horizon; use it to investigate your options and test assumptions.",
-          "You haven't fixed a date; establishing the basic market facts is a useful first step.",
-          "You're deciding whether to enter China at all; the first decision is whether deeper research is justified."
+          "Your preferred timing is within six months. Verify operational and regulatory requirements before making that a launch commitment.",
+          "You're considering a six-to-twelve-month window. Use it to investigate the market and prepare the operating requirements.",
+          "You have a longer planning horizon. There is time to test assumptions and compare approaches.",
+          "You haven't decided on a timeline. Begin with market facts before setting one.",
+          "You're still deciding whether to enter China. Evidence should inform that decision before a launch plan."
         ][a[7]];
         var motive=[
-          "You're exploring expansion through international sales.",
-          "You've received interest connected to China; it's worth checking what that interest actually represents.",
-          "You see a possible match between your products and Chinese consumers; that still needs market evidence.",
-          "You're comparing markets, so a like-for-like comparison of potential routes and requirements will be useful.",
-          "You're at the exploration stage; there's no need to commit to a launch yet."
+          "You selected international sales expansion as the reason for considering China.",
+          "You reported inquiries or interest connected to China. Verify what that interest means in terms of actual demand.",
+          "You selected potential consumer appeal as your reason for exploring China; that is a hypothesis, not measured Chinese demand.",
+          "You're comparing China with other markets; compare evidence, costs and requirements across them.",
+          "You're exploring China without a fixed plan; this is an appropriate point to assess the available evidence."
         ][a[4]];
         var channels=Array.isArray(a[5])?a[5]:[];
         var channelAdvice=channels.indexOf(1)!==-1
-          ?"Compare relevant Chinese online platforms and their operating requirements, starting from your experience selling on marketplaces."
+          ?"Compare relevant Chinese marketplaces and their requirements, starting from your experience on third-party platforms."
           :channels.indexOf(0)!==-1
-          ?"Compare options for reaching Chinese consumers online; your own-store experience is useful, but the local route may be different."
+          ?"Investigate Chinese online routes; experience running your own store is useful, but local platforms can work differently."
           :channels.indexOf(2)!==-1
-          ?"Investigate suitable consumer-facing online channels as well as retail, rather than assuming your current retail model transfers directly."
+          ?"Compare consumer-facing online channels and retail instead of assuming your home-market retail model transfers directly."
           :channels.indexOf(3)!==-1
-          ?"Examine whether your professional-channel strengths can support a consumer-focused China proposition."
-          :"Map your existing sales channels and examine which China consumer channels could make sense.";
+          ?"Check whether your professional-channel strengths can support a proposition for Chinese consumers."
+          :"Map your current sales channels and assess which Chinese consumer channels may fit.";
         var logistics=[
-          "Compare direct international shipping with fulfillment options in China, including delivery times and returns.",
-          "Investigate which China fulfillment models fit your existing third-party warehousing experience, and what requires local verification.",
-          "Clarify which logistics, customer-service and returns responsibilities a potential China partner would handle.",
-          "Compare your existing fulfillment approaches with the requirements of one prospective China sales channel.",
-          "Start with a basic shipping, fulfillment and returns overview for an initial international market.",
-          "Check internally how international shipping is currently handled before deciding on a China fulfillment approach."
+          "Compare cross-border shipping with fulfillment options in China, including delivery times and returns.",
+          "Investigate China fulfillment models using your experience with third-party warehouses.",
+          "Clarify who would handle import, fulfillment, customer service and returns under any China operating arrangement.",
+          "Compare your current fulfillment approaches with the practical requirements of a potential China channel.",
+          "Build a basic shipping, fulfillment and returns plan before making an international launch decision.",
+          "Check internally how international shipping is currently managed before choosing a China logistics model."
         ][a[6]];
-        $("score").textContent=foundation;
-        var stage=foundation==="SOLID START"?"solid":foundation==="TAKING SHAPE"?"shape":"first";
-        lastResultStage=stage;
-        var journeyUrl="/china-skincare-guides/brand-review/?from=shelf&stage="+stage;
-        $("result-offer-link").setAttribute("href",journeyUrl);
-        $("review-link").setAttribute("href",journeyUrl);
-        if(stage==="first"){
-          $("result-title").textContent="Build the foundations first.";
-          $("offer-journey-title").textContent="A good China plan starts with a clear product case.";
-          $("offer-journey-priority").textContent="Your first move: "+(gaps[0]||"Identify a product or routine to evaluate.");
-          $("offer-journey-copy").textContent="Your answers suggest a few basics to strengthen before investing in a detailed China plan. Work through your free recommendations, then decide whether a sourced review would help.";
-          $("offer-journey-priority").style.display="block";
-          $("offer-journey-note").textContent="No rush toward a launch plan. Your practical free recommendations are below.";
-          $("result-offer-link").setAttribute("href","#next-steps");
-          $("result-offer-link").textContent="See what to strengthen first ↓";
-          $("offer-bottom-title").textContent="Start with the basics. Then explore China.";
-          $("offer-bottom-copy").textContent="Start by identifying a lead product, buyer evidence and supported claims. The Opportunity Assessment can then help examine the China opportunity with external evidence.";
-          $("offer-card-subline").textContent="The $950 Opportunity Assessment is the more suitable starting point.";
-          $("blueprint-price-line").hidden=true;
-          $("offer-blueprint-bullet").hidden=true;
-          $("review-link").textContent="Explore the Opportunity Assessment ↗";
-          $("result-note").textContent="Start with what you know.";
-        }else{
-          $("result-title").textContent=stage==="solid"?"There's room worth exploring.":"Your brand has a possible opening.";
-          $("offer-journey-title").textContent="You've found a possible opening. Now, how could your brand compete?";
-          $("offer-journey-priority").textContent="What the free test cannot check: actual Chinese-market competitors, listed prices or the route to consumers.";
-          $("offer-journey-priority").style.display="block";
-          $("offer-journey-copy").textContent="Your answers describe your product foundation. A researched review compares it with real China-market alternatives and identifies what deserves a closer look before you commit."
-          $("offer-journey-note").textContent="Start with the $950 Opportunity Assessment, or explore the detailed $4,500 Blueprint. Neither guarantees a market result."
-          $("result-offer-link").textContent="See how to compete in China · from $950 ↗";
-          $("offer-bottom-title").textContent="You've spotted a possible space. How do you turn it into a plan?"
-          $("offer-bottom-copy").textContent="Take your first look further with evidence on your products, Chinese-market competitors, sales channels and the route forward.";
-          $("offer-card-subline").textContent="Compare your brand with China-market alternatives first—or map a launch or growth plan."
-          $("blueprint-price-line").hidden=false;
-          $("offer-blueprint-bullet").hidden=false;
-          $("review-link").textContent="View your options ↗";
-          $("result-note").textContent="An opening to explore.";
-        }
         $("result-subtitle").textContent=motive;
         $("result-lead").textContent=timing;
-        $("strengths").innerHTML=strong.slice(0,3).map(detail).join("");
-        $("gaps").innerHTML=gaps.slice(0,3).map(detail).join("");
-        var first=gaps[0]||"Compare the main claims and positioning with products already sold in China.";
+        $("strengths").innerHTML=strong.map(detail).join("");
+        $("gaps").innerHTML=gaps.map(detail).join("");
+        var first=gaps[0]||"Compare your strongest product claims and positioning with products already sold in China.";
         $("next-steps").innerHTML=[
           "1. "+first,
           "2. "+channelAdvice,
           "3. "+logistics
         ].map(detail).join("");
+        var journeyUrl="/china-skincare-guides/brand-review/?from=shelf&stage="+stage;
+        $("offer-details-link").setAttribute("href",journeyUrl);
+        if(stage==="first"){
+          $("offer-journey-title").textContent="Start with a clearer product case.";
+          $("offer-journey-copy").textContent="Your product foundations need work before committing to an extensive China plan. Your free report below identifies the first steps.";
+          $("offer-journey-priority").textContent="Priority: "+first;
+          $("result-offer-link").setAttribute("href","#next-steps");
+          $("result-offer-link").textContent="Review your free next steps ↓";
+          $("offer-details-link").hidden=false;
+        }else{
+          $("offer-journey-title").textContent=stage==="solid"
+            ?"Now test the China-market evidence."
+            :"Investigate the remaining gaps.";
+          $("offer-journey-copy").textContent=stage==="solid"
+            ?"Your self-reported product foundations are encouraging, but competitors, prices, consumers and channel options in China still need independent assessment."
+            :"You have useful product information but some gaps remain. Research can help examine China-market competitors and the practical route forward.";
+          $("offer-journey-priority").textContent="The quiz cannot confirm Chinese demand, market fit or future sales.";
+          $("result-offer-link").setAttribute("href",journeyUrl);
+          $("result-offer-link").textContent="Explore the research options ↗";
+          $("offer-details-link").hidden=true;
+        }
         $("progress").style.width="100%";
-        show("results");track("guide-02-assessment-complete");
+        show("results");
+        track("guide-02-assessment-complete");
       }
       $("start").addEventListener("click",start);
       $("previous").addEventListener("click",function(){
@@ -570,10 +586,19 @@
         answers=new Array(questions.length).fill(null);
         step=0;start();
       });
-      $("review-link").addEventListener("click",function(){track("guide-02-paid-review-interest");if(lastResultStage)track("guide-02-paid-review-interest-"+lastResultStage)});
-      $("result-offer-link").addEventListener("click",function(){if(lastResultStage==="first"){track("guide-02-results-free-next-steps-click");return}track("guide-02-results-offer-click");if(lastResultStage)track("guide-02-results-offer-click-"+lastResultStage)});
+      $("offer-details-link").addEventListener("click",function(){
+        track("guide-02-paid-review-interest");
+        if(lastResultStage)track("guide-02-paid-review-interest-"+lastResultStage);
+      });
+      $("result-offer-link").addEventListener("click",function(){
+        if(lastResultStage==="first"){track("guide-02-results-free-next-steps-click");return}
+        track("guide-02-results-offer-click");
+        if(lastResultStage)track("guide-02-results-offer-click-"+lastResultStage);
+        track("guide-02-paid-review-interest");
+        if(lastResultStage)track("guide-02-paid-review-interest-"+lastResultStage);
+      });
       $("share").addEventListener("click",function(){
-        var message="I tried the China Skincare Shelf Test. What would your brand need before entering China? https://www.central-orbit.com/china-skincare-guides/shelf/";
+        var message="My China Skincare Shelf Test product-foundations score: "+lastScore+"/100 (self-reported, not China market readiness). Try it: https://www.central-orbit.com/china-skincare-guides/shelf/";
         var done=function(){track("guide-02-result-share");$("shareFeedback").textContent="Link copied. Share it with someone working in skincare."};
         if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(message).then(done).catch(function(){$("shareFeedback").textContent=message});
         else $("shareFeedback").textContent=message;
