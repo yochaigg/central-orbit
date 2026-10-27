@@ -33,42 +33,36 @@ const services = [
   },
   {
     number: "03",
-    title: "Manufacturer and supply-chain coordination",
-    description:
-      "Coordinate with the brand and its manufacturers on product readiness, packaging, production schedules, stock planning, product documents and movement of finished goods into the China supply chain.",
-  },
-  {
-    number: "04",
     title: "International logistics and customer fulfillment",
     description:
       "Manage freight coordination, import and customs processes, warehouse arrangements, inventory, domestic distribution, consumer order fulfillment, deliveries and returns—from the manufacturer's dispatch to the customer.",
   },
   {
-    number: "05",
+    number: "04",
     title: "Online stores and platform management",
     description:
       "Set up and operate the agreed brand storefronts and e-commerce channels, including online marketplaces and relevant social-commerce platforms. Manage product listings, merchandising, pricing implementation, stock availability, orders, platform administration and store performance.",
   },
   {
-    number: "06",
+    number: "05",
     title: "Platform promotion, campaigns and KOLs",
     description:
       "Plan and execute platform promotions and digital marketing campaigns, including seasonal events, content localization, influencer and KOL/KOC collaborations, paid media coordination and campaign performance reporting.",
   },
   {
-    number: "07",
+    number: "06",
     title: "Online presence and customer relationships",
     description:
       "Manage the brand's agreed digital presence in China, including official brand content, social-platform activity, community interactions, customer service, ratings, reviews, consumer engagement and repeat-purchase programs.",
   },
   {
-    number: "08",
+    number: "07",
     title: "Tax, reporting and regulatory compliance",
     description:
       "Oversee the tax, accounting, regulatory reporting and continuing compliance work required by the agreed operating structure, coordinating filings and specialist work with appropriately qualified local service providers.",
   },
   {
-    number: "09",
+    number: "08",
     title: "Ongoing operations and commercial growth",
     description:
       "Coordinate local service providers and day-to-day delivery, monitor commercial and operational indicators, report to the brand and adjust channel, campaign, inventory and growth priorities over time.",
