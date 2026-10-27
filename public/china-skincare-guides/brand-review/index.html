@@ -214,6 +214,88 @@ h1 em,.commercial h2 em{font-style:italic;color:#b65268}
 .service-fit{font-weight:700;color:#77556a;font-size:14px;min-height:0;margin:-2px 0 12px}
 .suggested-service{border-radius:3px;background:#fce5d9;color:#5e324b;font-size:12px;font-weight:800;line-height:1.5;padding:8px 11px;margin:0 0 12px}
 @media(max-width:720px){.research-bridge{padding:18px 18px}.research-bridge strong{font-size:18px}}
+
+/* Skincare editorial service spreads, not software subscription cards. */
+.editorial-options .section-head{max-width:785px}
+.editorial-offers{border-top:1px solid #dfc9cb}
+.editorial-service,.service.editorial-service.recommended{
+  display:grid;grid-template-columns:minmax(0,1.1fr) minmax(260px,.82fr);gap:clamp(28px,5vw,64px);
+  align-items:center;box-shadow:none;border:0;border-bottom:1px solid #dfc9cb;border-radius:0;
+  padding:63px 0;background:transparent;min-width:0}
+.editorial-service.blueprint{background:linear-gradient(110deg,#faf4fa 0%,#fff7f4 98%);padding:55px clamp(24px,4vw,42px);margin-top:0}
+.editorial-service .type{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.13em;color:#9b5367}
+.editorial-service h3{font-family:Georgia,"Times New Roman",serif;font-size:clamp(28px,3.8vw,43px);font-weight:600;line-height:1.15;letter-spacing:-.047em;max-width:565px;margin:0 0 17px}
+.editorial-service .offer-one-liner{font-family:Georgia,"Times New Roman",serif;font-size:clamp(20px,2.25vw,25px);line-height:1.4;color:#a4566f;margin-bottom:14px}
+.editorial-service .service-fit{font-size:14px;font-weight:700;color:#725767;margin:0 0 16px}
+.editorial-service .offer-provides{font-size:15px;line-height:1.75;margin:0 0 15px;color:#564856}
+.editorial-service .editorial-points{list-style:none;margin:0 0 22px;padding:0;border-top:1px solid #e9d9d8}
+.editorial-service .editorial-points li{font-size:14px;line-height:1.55;padding:10px 0 10px 25px;margin:0;border-bottom:1px solid #e9d9d8;position:relative}
+.editorial-service .editorial-points li:before{content:"•";position:absolute;left:7px;color:#af5877;font-size:18px;top:6px}
+.editorial-price{display:flex;align-items:baseline;gap:17px;margin:14px 0 22px}
+.editorial-price strong{font-family:Georgia,"Times New Roman",serif;color:#3c2e3f;font-size:clamp(32px,3.8vw,46px);line-height:1.1;letter-spacing:-.035em}
+.editorial-price span{font-size:13px;color:#776774}
+.editorial-actions{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.editorial-service .editorial-actions .btn.buy{margin:0;align-self:auto;width:auto;display:inline-flex;padding:14px 23px;border-radius:5px}
+.editorial-detail-link{font-size:13px;color:#8a475b;font-weight:800;text-decoration:underline;text-underline-offset:4px;line-height:1.65}
+.editorial-service .timeframe{font-size:12px;color:#766875;margin:16px 0 0}
+.report-preview{min-width:0;padding:20px 11px 24px 0;position:relative}
+.report-preview:before{content:"";position:absolute;left:18px;right:-4px;top:34px;bottom:11px;background:#dfb8b9;transform:rotate(3deg);border:1px solid #d5a8ae}
+.blueprint-preview:before{background:#cfc0db}
+.preview-sheet{position:relative;background:#fffcf8;border:1px solid #dbc5c6;box-shadow:0 7px 18px #3a293017;padding:36px clamp(22px,3vw,35px) 21px;min-height:455px;transform:rotate(-1.6deg)}
+.blueprint-preview .preview-sheet{background:#fffdfa}
+.preview-top{display:flex;align-items:center;justify-content:space-between;gap:10px;border-bottom:1px solid #e5d8d6;padding-bottom:15px;font-size:10px;font-weight:800;letter-spacing:.11em;color:#70566d}
+.preview-label{font-size:10px;text-transform:uppercase;font-weight:800;letter-spacing:.13em;color:#ac5a74;margin:28px 0 9px}
+.preview-title{font-family:Georgia,"Times New Roman",serif;font-size:clamp(25px,2.5vw,35px);line-height:1.18;color:#3e2c42;letter-spacing:-.045em;margin:0 0 28px}
+.preview-title em{color:#ad5a72}
+.preview-line{border-top:1px solid #eddfde;display:flex;gap:15px;align-items:center;padding:12px 0}
+.preview-line b{font-family:Georgia,serif;font-size:13px;color:#a96279;font-weight:600}
+.preview-line span{font-size:13px;line-height:1.4;color:#473646}
+.preview-caveat{font-size:11px;line-height:1.55;color:#81727b;margin:22px 0 0}
+.questions-section{border-top:1px solid #edd9d7}
+.faq .faq-lead{color:#665763;max-width:700px;font-size:16px;line-height:1.7;margin-bottom:25px}
+.faq details{padding:21px 0}
+.faq summary{font-family:Georgia,"Times New Roman",serif;font-size:clamp(18px,2vw,22px);font-weight:600;line-height:1.4;letter-spacing:-.02em;cursor:pointer}
+.faq details[open] summary{color:#a74d69}
+.faq details p{margin:13px 0 0;font-size:15px;line-height:1.85;max-width:785px}
+.faq details p a{font-weight:700;color:#93465f;text-decoration:underline;text-underline-offset:3px}
+.closing-offer{background:#443147;color:#fff4f5;padding:74px 0 77px}
+.closing-inner{max-width:1030px}
+.closing-offer .kicker{color:#f2b5c5}
+.closing-offer h2{font-family:Georgia,"Times New Roman",serif;font-size:clamp(39px,5.1vw,61px);line-height:1.08;letter-spacing:-.055em;color:#fffaf6;margin:0 0 16px}
+.closing-offer h2 em{color:#f4b6cd}
+.closing-lead{max-width:740px;color:#f1dfe8;font-size:17px;line-height:1.72;margin:0 0 32px}
+.closing-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.closing-choice{display:flex;flex-direction:column;align-items:flex-start;min-width:0;background:#fff9f6;color:#463546;padding:29px;border-top:4px solid #d794a2}
+.closing-choice.closing-blueprint{background:#faf3fc;border-color:#bda8d2}
+.closing-index{font-size:11px;text-transform:uppercase;font-weight:800;letter-spacing:.12em;color:#95536b;margin:0 0 14px}
+.closing-choice h3{font-family:Georgia,"Times New Roman",serif;font-size:clamp(25px,2.8vw,34px);font-weight:600;letter-spacing:-.035em;line-height:1.2;margin:0 0 12px;color:#37283b}
+.closing-choice>p:not(.closing-index){color:#61515f;font-size:14px;line-height:1.65;margin:0 0 16px}
+.closing-price{margin-top:auto;font-family:Georgia,"Times New Roman",serif;font-size:34px;letter-spacing:-.04em;color:#37283b;padding-top:15px}
+.closing-choice .btn.buy{background:#a94e6c;color:#fff;border:1px solid #a94e6c;border-radius:5px;padding:14px 20px;margin:15px 0 0;width:100%;display:flex}
+.closing-choice .btn.buy:hover{background:#873e58;color:#fff}
+.closing-support{margin-top:23px;color:#f2e5e9;font-size:13px;line-height:1.75}
+.closing-support a{color:#ffe6e3;font-weight:800;text-underline-offset:4px}
+.closing-stage-note{margin:0 0 23px;background:#ffeadc;color:#553b4d;padding:15px 18px;border-left:4px solid #d8829e;font-size:14px;line-height:1.65;max-width:840px}
+.closing-stage-note[hidden]{display:none}
+@media(max-width:840px){
+ .editorial-service,.service.editorial-service.recommended{grid-template-columns:1fr;gap:24px;padding:43px 0}
+ .editorial-service.blueprint{padding:35px 25px}
+ .report-preview{max-width:460px;width:100%;margin-inline:auto}
+ .preview-sheet{min-height:0}
+}
+@media(max-width:670px){
+ .closing-options{grid-template-columns:1fr}
+ .closing-offer{padding:55px 0}
+ .closing-choice{padding:24px 21px}
+ .editorial-actions{flex-direction:column;align-items:stretch;gap:12px}
+ .editorial-service .editorial-actions .btn.buy{width:100%}
+ .editorial-detail-link{text-align:center;padding:8px}
+}
+@media(max-width:440px){
+ .editorial-service.blueprint{padding:32px 18px}
+ .report-preview{padding-right:7px}
+ .preview-sheet{padding:26px 19px 20px}
+}
 </style>
 </head>
 <body>
@@ -254,51 +336,83 @@ h1 em,.commercial h2 em{font-style:italic;color:#b65268}
   </div>
 </section>
 
-<section class="section" id="services">
+<section class="section editorial-options" id="services">
  <div class="container">
   <div class="section-head">
-    <p class="kicker">Services at a glance</p>
+    <p class="kicker">Choose your next step</p>
     <h2 id="services-heading">Two ways to get a clearer picture.</h2>
-    <p id="services-description">For brands evaluating a first move into China or reviewing how to improve their position in the market. Choose the level of analysis your next decision needs.</p>
+    <p id="services-description">For brands evaluating a first move into China or reviewing how to improve their position in the market. Choose the depth of work your next decision needs.</p>
   </div>
-  <div class="overview-cards">
-   <article class="service" id="assessment">
-     <p class="type">01 / Opportunity evaluation</p>
+  <div class="editorial-offers">
+   <article class="service editorial-service" id="assessment">
+    <div class="offer-story">
+     <p class="type">01 / Understand the opportunity</p>
      <h3>China Brand Opportunity Assessment</h3>
-     <p class="price">US$950</p>
-     <p class="service-fit">For your first evidence-based China decision.</p>
+     <p class="offer-one-liner">Before you decide where to go, get a better view of where you stand.</p>
+     <p class="service-fit">For a first evidence-based look at entering China—or strengthening your position there.</p>
      <p class="suggested-service" id="assessment-suggested" hidden>Suggested next step after your Shelf Test</p>
-     <p class="desc">A sourced look at your products and where they might fit in China, before you commit to a bigger market-entry or growth plan.</p>
-     <ul>
-       <li>Product proposition, benefits, positioning and supporting evidence</li>
-       <li>Comparison with up to five relevant products publicly available in China</li>
-       <li>Indicative pricing context and possible consumer segments</li>
-       <li>Key risks, unanswered questions and prioritized next steps</li>
-       <li>Concise, sourced written report and one follow-up email clarification</li>
+     <p class="offer-provides">We look at your product story, relevant alternatives already offered in China, visible price positioning and the questions worth answering next.</p>
+     <ul class="editorial-points">
+       <li>Your product proposition and the evidence supporting it</li>
+       <li>Comparison with up to five publicly listed competing products</li>
+       <li>Pricing context, main risks and prioritized next decisions</li>
+       <li>A concise, sourced PDF report and one follow-up email clarification</li>
      </ul>
-     <a class="btn secondary" href="#assessment-detail">See exactly what’s included ↓</a>
-     <a class="btn buy" data-umami-event="china-assessment-stripe-checkout-click" href="https://buy.stripe.com/cNi6oHd8eemd5u63kP00001" target="_blank" rel="noopener noreferrer">Start with the Assessment · $950 ↗</a>
-     <p class="timeframe">Target delivery: 10 business days after confirmed payment and a completed brief, subject to standard scope.</p>
+     <div class="editorial-price"><strong>US$950</strong><span>One-time project fee</span></div>
+     <div class="editorial-actions">
+      <a class="btn buy" data-umami-event="china-assessment-stripe-checkout-click" href="https://buy.stripe.com/cNi6oHd8eemd5u63kP00001" target="_blank" rel="noopener noreferrer">Start with the Assessment ↗</a>
+      <a class="editorial-detail-link" href="#assessment-detail">View the full scope ↓</a>
+     </div>
+     <p class="timeframe">Target delivery: 10 business days after confirmed payment and a completed brief, within the standard scope.</p>
+    </div>
+    <aside class="report-preview assessment-preview" aria-label="Illustrative assessment contents">
+      <div class="preview-sheet">
+       <div class="preview-top"><span>CENTRAL ORBIT</span><span>FIELD NOTE / 01</span></div>
+       <p class="preview-label">Inside your assessment</p>
+       <div class="preview-title">A closer look at<br><em>your brand in China.</em></div>
+       <div class="preview-line"><b>01</b><span>Product story &amp; evidence</span></div>
+       <div class="preview-line"><b>02</b><span>China-market alternatives</span></div>
+       <div class="preview-line"><b>03</b><span>Price &amp; positioning</span></div>
+       <div class="preview-line"><b>04</b><span>What to investigate next</span></div>
+       <p class="preview-caveat">Illustrative table of contents, not sample research findings.</p>
+      </div>
+    </aside>
    </article>
-   <article class="service recommended" id="blueprint">
-     <p class="type">02 / Detailed commercial planning</p>
+   <article class="service editorial-service blueprint" id="blueprint">
+    <div class="offer-story">
+     <p class="type">02 / Build the plan</p>
      <h3>China Skincare Launch Blueprint</h3>
-     <p class="price">US$4,500</p>
-     <p class="service-fit">For a team ready to plan a launch or growth phase.</p>
-     <p class="desc">A structured route from market evidence to channel decisions, logistics, priorities and a phased action plan.</p>
-     <ul>
-       <li>Deeper product, consumer and competitive research</li>
-       <li>Recommended B2C platform or sales route, with alternatives</li>
-       <li>Logistics, warehousing, delivery and returns overview</li>
-       <li>Regulatory preparation and specialist-verification requirements</li>
-       <li>Launch cost categories and a detailed, phased roadmap</li>
+     <p class="offer-one-liner">Turn what you know into a practical route forward.</p>
+     <p class="service-fit">For a brand planning its China launch or the next stage of its existing business.</p>
+     <p class="offer-provides">A deeper view of customers and competitors, the most relevant B2C routes, operating needs and a staged commercial plan.</p>
+     <ul class="editorial-points">
+       <li>Deeper product, consumer and competitive analysis</li>
+       <li>Recommended B2C sales routes and platform considerations</li>
+       <li>Logistics, regulatory preparation and launch cost categories</li>
+       <li>A phased roadmap with priorities, dependencies and next actions</li>
      </ul>
-     <a class="btn secondary" href="#blueprint-detail">See exactly what’s included ↓</a>
-     <a class="btn buy" data-umami-event="china-blueprint-stripe-checkout-click" href="https://buy.stripe.com/00w14ngkq2Dve0C1cH00000" target="_blank" rel="noopener noreferrer">Get the Launch Blueprint · $4,500 ↗</a>
-     <p class="timeframe">Indicative delivery: 3–4 weeks after confirmed payment and a completed brief, subject to standard scope.</p>
+     <div class="editorial-price"><strong>US$4,500</strong><span>One-time project fee</span></div>
+     <div class="editorial-actions">
+       <a class="btn buy" data-umami-event="china-blueprint-stripe-checkout-click" href="https://buy.stripe.com/00w14ngkq2Dve0C1cH00000" target="_blank" rel="noopener noreferrer">Get the Launch Blueprint ↗</a>
+       <a class="editorial-detail-link" href="#blueprint-detail">View the full scope ↓</a>
+     </div>
+     <p class="timeframe">Indicative delivery: 3–4 weeks after confirmed payment and a completed brief, within the standard scope.</p>
+    </div>
+    <aside class="report-preview blueprint-preview" aria-label="Illustrative launch blueprint contents">
+      <div class="preview-sheet">
+       <div class="preview-top"><span>CENTRAL ORBIT</span><span>FIELD NOTE / 02</span></div>
+       <p class="preview-label">Inside your blueprint</p>
+       <div class="preview-title">From opportunity<br><em>to action.</em></div>
+       <div class="preview-line"><b>01</b><span>Competitive landscape</span></div>
+       <div class="preview-line"><b>02</b><span>Channels &amp; platforms</span></div>
+       <div class="preview-line"><b>03</b><span>Operations &amp; preparation</span></div>
+       <div class="preview-line"><b>04</b><span>Launch or growth roadmap</span></div>
+       <p class="preview-caveat">Illustrative table of contents, not sample research findings.</p>
+      </div>
+    </aside>
    </article>
   </div>
-  <div class="scope-banner"><strong>Flexible product coverage.</strong> Either engagement can examine two individual priority products or one coherent product line or skincare routine—for example, a cleanser, serum and moisturizer used together. The products and depth of analysis are confirmed during written intake within the selected service scope. If your brand has multiple unrelated ranges or unusual requirements, please contact us before purchasing.</div>
+  <div class="scope-banner"><strong>What can we cover?</strong> Either engagement can examine two priority products or one coherent product line or skincare routine—for example, a cleanser, serum and moisturizer used together. The included products and depth of analysis are confirmed through written intake within the standard service scope. For unrelated product collections or nonstandard requirements, please <a href="mailto:info@central-orbit.com?subject=China%20Skincare%20Services%20-%20Scope%20Question">email us</a> before purchasing.</div>
  </div>
 </section>
 
@@ -359,38 +473,65 @@ h1 em,.commercial h2 em{font-style:italic;color:#b65268}
   </div>
 </section>
 
-<section class="commercial" id="contact">
- <div class="container commercial-grid">
-  <div>
-    <p class="kicker">Next steps</p>
-    <h2>A clearer next step<br><em>for your brand.</em></h2>
-    <p class="lead">The scope, pricing and deliverables are outlined above. Once you choose a service, we can focus the discussion on your brand's priorities.</p>
-    <p class="booking-note">After payment is confirmed, we email you a Calendly link to schedule your project discussion.</p>
-    <p class="booking-note">Have a question about the scope before purchasing? <a class="text-link" data-umami-event="brand-review-scope-request-click" href="mailto:info@central-orbit.com?subject=China%20Skincare%20Services%20-%20Scope%20Question">Email info@central-orbit.com</a>.</p>
-  </div>
-  <aside class="payment-panel" aria-label="Secure purchase links">
-    <p class="kicker">YOUR NEXT STEP</p>
-    <h3>Choose your service.</h3>
-    <p>Choose the service that fits your needs. Payment is handled securely by Stripe, with booking details provided afterward.</p>
-    <div class="payment-row"><strong>Opportunity Assessment · $950</strong><a data-umami-event="china-assessment-stripe-checkout-click" href="https://buy.stripe.com/cNi6oHd8eemd5u63kP00001" target="_blank" rel="noopener noreferrer">Purchase ↗</a></div>
-    <div class="payment-row"><strong>Launch Blueprint · $4,500</strong><a data-umami-event="china-blueprint-stripe-checkout-click" href="https://buy.stripe.com/00w14ngkq2Dve0C1cH00000" target="_blank" rel="noopener noreferrer">Purchase ↗</a></div>
-    <p class="small" style="margin:15px 0 0">Payment takes place on Stripe. Booking access is provided after confirmed payment; checkout alone does not create an appointment.</p>
-  </aside>
+<section class="section alt questions-section" id="questions">
+ <div class="container faq">
+   <p class="kicker">A few things worth knowing</p>
+   <h2>Your questions, answered.</h2>
+   <p class="faq-lead">From the free Shelf Test to a real commercial decision—here is what happens next and how to choose the right level of work.</p>
+   <details open>
+    <summary>Which service makes sense for my brand?</summary>
+    <p>If you want to understand your opportunity, current positioning or biggest unanswered questions, start with the <a href="#assessment">US$950 Opportunity Assessment</a>. If your team is ready to work through platforms, logistics, preparation and a detailed action plan, explore the <a href="#blueprint">US$4,500 Launch Blueprint</a>. You do not need the Blueprint simply because China is a large market.</p>
+   </details>
+   <details>
+    <summary>What will I actually learn?</summary>
+    <p>For the Assessment, you receive a sourced picture of your agreed products, comparable publicly listed offerings in China, visible pricing and recommended next decisions. The Blueprint goes further: which B2C routes deserve consideration, what operational and regulatory preparation is involved, and how to sequence the work. See the <a href="#assessment-detail">Assessment deliverables</a> or <a href="#blueprint-detail">Blueprint deliverables</a>.</p>
+   </details>
+   <details>
+    <summary>We're already selling in China. Can this help us grow?</summary>
+    <p>Yes. The work can start from your current offer and evaluate competitors, price positioning and alternative channels or growth priorities. The Blueprint can organize these findings into a staged improvement plan. It is a commercial review, not a commitment to manage your stores or campaigns.</p>
+   </details>
+   <details>
+    <summary>Can you look at our product line or skincare routine?</summary>
+    <p>Yes. The standard scope can cover one coherent product line or routine, or two separate priority products, with the included SKUs agreed during intake. If you need multiple unrelated ranges assessed, email <a href="mailto:info@central-orbit.com?subject=China%20Skincare%20Services%20-%20Product%20Coverage">info@central-orbit.com</a> before purchase.</p>
+   </details>
+   <details>
+    <summary>What happens after purchase?</summary>
+    <p>Payment takes place securely on Stripe. After payment is confirmed, we email a private Calendly link for your project discussion, without a separate scheduling charge. We then agree the written product brief and start the research. The booking link is not publicly displayed and is currently sent after manual payment verification.</p>
+   </details>
+   <details>
+    <summary>When will we receive our work?</summary>
+    <p>The Assessment targets delivery in approximately 10 business days; the Blueprint takes an indicative 3–4 weeks. Both timelines begin after payment confirmation and completion of the agreed brief, and remain subject to the standard scope. You receive a written report rather than an open-ended consulting engagement.</p>
+   </details>
+   <details>
+    <summary>What does the research rely on?</summary>
+    <p>We use identifiable public sources and the brand materials you provide. Public product listings and their prices do not establish actual sales volumes or profitability; we label assumptions and gaps clearly. We do not include consumer interviews or proprietary third-party sales data in the standard packages. The Blueprint identifies regulatory preparation needs but does not provide certification, product registration, legal advice, store setup or campaign execution.</p>
+   </details>
  </div>
 </section>
-
-<section class="section alt" id="questions">
-  <div class="container faq">
-    <p class="kicker">Frequently asked questions</p>
-    <h2>Before commissioning the work.</h2>
-    <details><summary>Can the review cover a skincare routine rather than only two products?</summary><p>Yes. Either service can cover one coherent product line or routine, or two separate priority products. The included products and analysis depth are established through the written intake within the standard service. For multiple unrelated ranges, please email us before purchasing.</p></details>
-    <details><summary>What makes the Blueprint different from the Assessment?</summary><p>The $950 Assessment establishes the initial commercial case and the next questions to investigate. The $4,500 Blueprint goes further into B2C platform selection, logistics models, regulatory preparation, cost considerations and a detailed launch roadmap. The Blueprint includes the underlying opportunity analysis at greater depth.</p></details>
-    <details><summary>Is the assessment based on consumer interviews or actual Chinese sales figures?</summary><p>No. Both standard services are based on desk research and supplied information. Public product listings and indicative prices are not evidence of actual units sold or achieved profitability. Unknowns are explicitly flagged.</p></details>
-    <details><summary>Will you register our products or open an online store?</summary><p>No. The work identifies relevant requirements and recommends next steps, but regulatory filings, legal advice, customs clearance, platform account opening and hands-on operations are outside these fixed-fee services.</p></details>
-    <details><summary>Is confidential financial data required?</summary><p>You do not need to provide financial data to purchase a standard service. If cost assumptions would improve the analysis, we will identify them in the written brief. You decide what to share; unknown figures are labeled as such.</p></details>
-    <details><summary>How does scheduling work?</summary><p>After you purchase a standard service and payment is confirmed, we email a private Calendly link for your project discussion. There is no separate scheduling charge. For nonstandard scope, email us before purchase.</p></details>
-    <details><summary>Can you guarantee a launch date?</summary><p>No. Launch timing depends on product requirements, the selected sales route, operations and the brand's own decisions. The Blueprint provides a staged roadmap and indicative planning windows, not an unconditional launch-date promise.</p></details>
+<section class="closing-offer" id="contact" aria-labelledby="closing-title">
+ <div class="container closing-inner">
+  <p class="kicker">Your next move</p>
+  <h2 id="closing-title">Ready to explore<br><em>what's possible?</em></h2>
+  <p class="closing-lead">Choose the level of research and planning that fits your brand. We will focus the conversation on your products and priorities once your payment has been confirmed.</p>
+  <p class="closing-stage-note" id="closing-stage-note" hidden>Your Shelf Test suggested strengthening your product foundations first. If you already have a product or routine identified, the Assessment is the more suitable starting point.</p>
+  <div class="closing-options">
+   <div class="closing-choice">
+     <p class="closing-index">01 / Understand the opportunity</p>
+     <h3>Opportunity Assessment</h3>
+     <p>Research your product proposition, visible competitors and price positioning, and identify the next decisions.</p>
+     <div class="closing-price">US$950</div>
+     <a class="btn buy closing-buy" data-umami-event="china-assessment-stripe-checkout-click" data-cta-placement="final" href="https://buy.stripe.com/cNi6oHd8eemd5u63kP00001" target="_blank" rel="noopener noreferrer">Explore the opportunity ↗</a>
+   </div>
+   <div class="closing-choice closing-blueprint" id="closing-blueprint">
+     <p class="closing-index">02 / Build the plan</p>
+     <h3>Launch Blueprint</h3>
+     <p>A deeper commercial plan covering routes to market, operations and a phased China launch or growth roadmap.</p>
+     <div class="closing-price">US$4,500</div>
+     <a class="btn buy closing-buy" data-umami-event="china-blueprint-stripe-checkout-click" data-cta-placement="final" href="https://buy.stripe.com/00w14ngkq2Dve0C1cH00000" target="_blank" rel="noopener noreferrer">Build your China plan ↗</a>
+   </div>
   </div>
+  <div class="closing-support">A question about the standard scope? <a data-umami-event="brand-review-scope-request-click" href="mailto:info@central-orbit.com?subject=China%20Skincare%20Services%20-%20Scope%20Question">Write to us before purchasing</a>. Your private Calendly link follows confirmed payment.</div>
+ </div>
 </section>
 </main>
 <footer class="footer"><div class="container footer-inner">
@@ -423,6 +564,7 @@ h1 em,.commercial h2 em{font-style:italic;color:#b65268}
     byId("services-description").textContent="If you have a product or routine selected, the $950 Opportunity Assessment can test the commercial case. If not, clarify that foundation before commissioning a paid review.";
     byId("assessment-suggested").hidden=false;
     byId("assessment-suggested").textContent="The more appropriate first paid step—once your product is selected.";
+    byId("closing-stage-note").hidden=false;
   }else{
     byId("proposal-headline").innerHTML="You found a possible place.<br><em>Now, how could your brand earn it?</em>";
     byId("research-bridge").hidden=false;
