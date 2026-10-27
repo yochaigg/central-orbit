@@ -137,8 +137,8 @@ export default function Home() {
                 </h2>
                 <p className="mt-4 text-[#675566] max-w-2xl leading-relaxed">
                   Our skincare work connects product positioning, competing offers,
-                  channels and practical commercial planning. Start with a free
-                  commercial research, market understanding and next-step planning.
+                  channels and practical commercial planning for overseas skincare
+                  brands entering China or looking to grow there.
                 </p>
               </div>
               <div className="flex flex-col gap-3 md:items-start">
