@@ -39,7 +39,7 @@ export function Navbar() {
         </Link>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden xl:flex items-center gap-5">
           {NAV_LINKS.map((link) => (
             <Link
               key={link.href}
@@ -63,7 +63,7 @@ export function Navbar() {
 
         {/* Mobile toggle */}
         <button
-          className="md:hidden p-2"
+          className="xl:hidden p-2"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle menu"
         >
@@ -73,7 +73,7 @@ export function Navbar() {
 
       {/* Mobile Nav */}
       {mobileOpen && (
-        <div className="md:hidden bg-white border-t border-border px-6 py-4 space-y-3">
+        <div className="xl:hidden bg-white border-t border-border px-6 py-4 space-y-3">
           {NAV_LINKS.map((link) => (
             <Link
               key={link.href}
