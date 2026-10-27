@@ -591,7 +591,7 @@
         step=0;start();
       });
       $("review-link").addEventListener("click",function(){track("guide-02-paid-review-interest");if(lastResultStage)track("guide-02-paid-review-interest-"+lastResultStage)});
-      $("result-offer-link").addEventListener("click",function(){track("guide-02-results-offer-click");if(lastResultStage)track("guide-02-results-offer-click-"+lastResultStage)});
+      $("result-offer-link").addEventListener("click",function(){if(lastResultStage==="first"){track("guide-02-results-free-next-steps-click");return}track("guide-02-results-offer-click");if(lastResultStage)track("guide-02-results-offer-click-"+lastResultStage)});
       $("share").addEventListener("click",function(){
         var message="I tried the China Skincare Shelf Test. What would your brand need before entering China? https://www.central-orbit.com/china-skincare-guides/shelf/";
         var done=function(){track("guide-02-result-share");$("shareFeedback").textContent="Link copied. Share it with someone working in skincare."};
