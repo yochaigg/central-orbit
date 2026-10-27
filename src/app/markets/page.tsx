@@ -69,7 +69,7 @@ export default function MarketsPage() {
                 <FadeIn key={market.name} delay={Math.min(i * 0.05, 0.4)}>
                   {market.name === "Beauty & Skincare" ? (
                     <Link
-                      href="/skincare"
+                      href="/china-skincare"
                       aria-label="Explore China skincare services"
                       className="group flex items-center gap-4 bg-[#fff5f2] rounded-lg px-6 py-5 border border-[#e8cdcf] hover:border-[#ad6880] hover:shadow-sm transition-all"
                     >
