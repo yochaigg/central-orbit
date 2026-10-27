@@ -4,7 +4,7 @@ import { FadeIn } from "@/components/ui/fade-in";
 export const metadata: Metadata = {
   title: "China Skincare | Turnkey Market Entry & Operations",
   description:
-    "Central Orbit manages China skincare market entry and operations from manufacturer to customer: regulatory approvals, logistics, stores, e-commerce platforms, marketing campaigns, KOLs, tax compliance and fulfillment. Brand-owned, not distribution.",
+    "Central Orbit manages China skincare market entry and operations from manufacturer to customer: regulatory approvals, logistics, stores, e-commerce platforms, marketing campaigns, KOLs, tax compliance and fulfillment. The brand retains ownership.",
   openGraph: {
     title: "China Skincare | Turnkey Services | Central Orbit",
     description:
@@ -88,11 +88,6 @@ export default function SkincarePage() {
               existing presence. We manage the work across regulatory processes,
               logistics, online stores, marketing and ongoing operations.
             </p>
-            <p className="mt-4 text-base text-[#665865] leading-relaxed max-w-3xl">
-              The brand retains ownership. Central Orbit provides the management,
-              coordination and operational execution needed to connect its products
-              with consumers in China. We are a service partner, not a distributor.
-            </p>
           </FadeIn>
         </div>
       </section>
@@ -145,7 +140,8 @@ export default function SkincarePage() {
               The brand owns its products, trademarks, online stores and commercial
               assets. Central Orbit manages the China operation on its behalf,
               from regulatory work and logistics to sales platforms, campaigns
-              and day-to-day customer operations.
+              and day-to-day customer operations. Central Orbit is a service
+              provider, not a distributor.
             </p>
           </FadeIn>
         </div>
