@@ -484,7 +484,7 @@
           first:"Your answers suggest that fundamental product evidence needs attention before detailed China planning."
         }[stage];
         $("breakdown").innerHTML=labels.map(function(label,i){
-          return '<div><div class="breakdown-line"><span>'+escapeHtml(label)+'</span><span>'+points[i]+' / 25</span></div><div class="bar"><span style="width:"'+(points[i]*4)+'%"></span></div></div>';
+          return '<div><div class="breakdown-line"><span>'+escapeHtml(label)+'</span><span>'+points[i]+' / 25</span></div><div class="bar"><span style="width:'+(points[i]*4)+'%"></span></div></div>';
         }).join("");
         var strong=[],gaps=[];
         if(a[0]===0)strong.push("Lead product: You selected a product based on existing sales performance and customer response.");
