@@ -257,6 +257,33 @@ export default function ChinaPage() {
         </div>
       </section>
 
+      {/* Dedicated China skincare destination */}
+      <section className="bg-[#fff8f3] py-10 border-b border-[#eadbdc]">
+        <div className="mx-auto max-w-6xl px-6">
+          <FadeIn>
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
+              <div>
+                <p className="text-xs font-bold uppercase tracking-[0.15em] text-[#a35670] mb-2">
+                  Sector focus / Beauty &amp; Skincare
+                </p>
+                <h2 className="font-serif text-2xl md:text-3xl text-[#463147] tracking-tight">
+                  Bringing a skincare brand to China—or growing one already there?
+                </h2>
+                <p className="mt-2 text-[#685568] max-w-2xl leading-relaxed">
+                  Explore a dedicated approach to product positioning, competition, B2C routes and practical commercial planning.
+                </p>
+              </div>
+              <Link
+                href="/china-skincare"
+                className="inline-flex shrink-0 items-center gap-2 rounded-md bg-[#9b506d] text-white px-5 py-3 text-sm font-semibold hover:bg-[#7e3b55] transition-colors"
+              >
+                Explore China skincare <ArrowRight size={17} />
+              </Link>
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+
       {/* The Opportunity */}
       <section className="py-16 bg-gradient-to-b from-white to-accent/10">
         <div className="mx-auto max-w-6xl px-6">
