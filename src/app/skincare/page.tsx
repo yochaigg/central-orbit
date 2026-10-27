@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import { FadeIn } from "@/components/ui/fade-in";
 
 export const metadata: Metadata = {
-  title: "China Skincare | Commercial Services",
+  title: "China Skincare | Turnkey Market Entry & Operations",
   description:
-    "Central Orbit's China skincare services cover market assessment, brand and product positioning, B2C channel strategy, commercial partnerships, operational preparation and market-entry or growth planning.",
+    "Central Orbit manages China skincare market entry and operations from manufacturer to customer: regulatory approvals, logistics, stores, e-commerce platforms, marketing campaigns, KOLs, tax compliance and fulfillment. Brand-owned, not distribution.",
   openGraph: {
-    title: "China Skincare | Central Orbit",
+    title: "China Skincare | Turnkey Services | Central Orbit",
     description:
-      "Commercial services for overseas skincare brands entering China or developing their existing business in the market.",
+      "An end-to-end China skincare operating service covering regulatory work, logistics, online stores, campaigns, KOLs, platform operations and compliance, with the brand retaining ownership.",
     type: "website",
     locale: "en_US",
     siteName: "Central Orbit",
@@ -21,39 +21,75 @@ export const metadata: Metadata = {
 const services = [
   {
     number: "01",
-    title: "Market and competitive assessment",
+    title: "Market assessment and commercial strategy",
     description:
-      "Research relevant skincare categories, competing brands and products, visible consumer propositions, listed prices and channel conditions. Identify opportunities, constraints and the questions that require further validation.",
+      "Assess priority skincare products, competing brands, price positioning, consumers and online channels. Define a commercial model and market-entry or growth priorities for China.",
   },
   {
     number: "02",
-    title: "Brand and product positioning",
+    title: "Regulatory work and product approvals",
     description:
-      "Evaluate priority products or routines, the brand story, ingredient and benefit claims, supporting evidence and points of differentiation. Translate those findings into a clearer proposition for the Chinese market.",
+      "Manage and coordinate the applicable product registration or notification process, testing, documentation, ingredient and claims checks, labeling, submissions and regulatory approvals with qualified local specialists and authorities.",
   },
   {
     number: "03",
-    title: "Online B2C channel strategy",
+    title: "Manufacturer and supply-chain coordination",
     description:
-      "Compare suitable Chinese online sales routes and platform models. Assess channel fit, positioning requirements, consumer access, costs, operating responsibilities and the trade-offs between alternatives.",
+      "Coordinate with the brand and its manufacturers on product readiness, packaging, production schedules, stock planning, product documents and movement of finished goods into the China supply chain.",
   },
   {
     number: "04",
-    title: "Commercial partners and operating model",
+    title: "International logistics and customer fulfillment",
     description:
-      "Evaluate potential distributor, service-provider and channel-partner roles, including the implications for pricing control, brand presentation, commercial responsibilities and access to customer information.",
+      "Manage freight coordination, import and customs processes, warehouse arrangements, inventory, domestic distribution, consumer order fulfillment, deliveries and returns—from the manufacturer's dispatch to the customer.",
   },
   {
     number: "05",
-    title: "Market-entry and growth planning",
+    title: "Online stores and platform management",
     description:
-      "Turn research into a practical sequence of priorities: product selection, channel decisions, commercial preparation, cost categories, milestones and the next actions for entering China or strengthening an existing presence.",
+      "Set up and operate the agreed brand storefronts and e-commerce channels, including online marketplaces and relevant social-commerce platforms. Manage product listings, merchandising, pricing implementation, stock availability, orders, platform administration and store performance.",
   },
   {
     number: "06",
-    title: "Operational and regulatory preparation",
+    title: "Platform promotion, campaigns and KOLs",
     description:
-      "Map relevant product documentation, claims and labeling questions, fulfillment, warehousing, returns and other operational dependencies. Identify matters requiring confirmation by qualified local specialists.",
+      "Plan and execute platform promotions and digital marketing campaigns, including seasonal events, content localization, influencer and KOL/KOC collaborations, paid media coordination and campaign performance reporting.",
+  },
+  {
+    number: "07",
+    title: "Online presence and customer relationships",
+    description:
+      "Manage the brand's agreed digital presence in China, including official brand content, social-platform activity, community interactions, customer service, ratings, reviews, consumer engagement and repeat-purchase programs.",
+  },
+  {
+    number: "08",
+    title: "Tax, reporting and regulatory compliance",
+    description:
+      "Oversee the tax, accounting, regulatory reporting and continuing compliance work required by the agreed operating structure, coordinating filings and specialist work with appropriately qualified local service providers.",
+  },
+  {
+    number: "09",
+    title: "Ongoing operations and commercial growth",
+    description:
+      "Coordinate local service providers and day-to-day delivery, monitor commercial and operational indicators, report to the brand and adjust channel, campaign, inventory and growth priorities over time.",
+  },
+] as const;
+
+const principles = [
+  {
+    title: "The brand owns its business",
+    body:
+      "The brand retains ownership of its products, trademarks, intellectual property and commercial assets. Storefront accounts, consumer relationships and data rights are structured for the brand's benefit and control, subject to applicable platform rules and local law.",
+  },
+  {
+    title: "Central Orbit runs the operation",
+    body:
+      "We manage and coordinate the work from manufacturer to consumer: registration and regulatory administration, imports, fulfillment, online stores, platform promotion, campaigns, KOL activity, customer operations and ongoing reporting.",
+  },
+  {
+    title: "We are not a distributor",
+    body:
+      "Central Orbit works as a service and operating partner, not as a distributor purchasing the brand's products for resale. The agreed structure sets out which legal entities, regulated providers and platform accounts are required while keeping the brand's ownership at the center.",
   },
 ] as const;
 
@@ -64,21 +100,22 @@ export default function SkincarePage() {
         <div className="mx-auto max-w-6xl px-6">
           <FadeIn>
             <p className="text-xs font-bold uppercase tracking-[0.17em] text-[#94546b] mb-5">
-              Central Orbit / China
+              Central Orbit / China Skincare
             </p>
             <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl tracking-tight text-[#3c2d3f] leading-[1.12] max-w-4xl">
-              Skincare market entry
-              <span className="block italic text-[#a45b73]">and commercial growth</span>
+              From manufacturer
+              <span className="block italic text-[#a45b73]">to customer in China.</span>
             </h1>
             <p className="mt-7 text-lg md:text-xl text-[#594b59] leading-relaxed max-w-3xl">
-              Central Orbit provides commercial research and planning for overseas
-              skincare brands considering the Chinese market and for brands
-              already selling in China that want to strengthen their position.
+              Central Orbit provides turnkey market-entry and operating services
+              for overseas skincare brands entering China or developing their
+              existing presence. We manage the work across regulatory processes,
+              logistics, online stores, marketing and ongoing operations.
             </p>
             <p className="mt-4 text-base text-[#665865] leading-relaxed max-w-3xl">
-              The work connects product positioning, market evidence, routes to
-              consumers, partnerships and the operational decisions behind
-              market entry or expansion.
+              The brand retains ownership. Central Orbit provides the management,
+              coordination and operational execution needed to connect its products
+              with consumers in China. We are a service partner, not a distributor.
             </p>
           </FadeIn>
         </div>
@@ -88,20 +125,20 @@ export default function SkincarePage() {
         <div className="mx-auto max-w-6xl px-6">
           <FadeIn>
             <p className="text-xs font-bold uppercase tracking-[0.15em] text-[#96546d] mb-3">
-              Scope of work
+              The full service
             </p>
             <h2 className="font-serif text-3xl md:text-4xl tracking-tight text-[#3e3040]">
-              Commercial services
+              End-to-end China operations
             </h2>
             <p className="mt-4 text-[#645665] leading-relaxed max-w-3xl">
-              Services are tailored to the brand&apos;s products, current market
-              position and commercial objectives. The emphasis is on evidence,
-              workable alternatives and decisions that can be acted upon.
+              Our scope spans the commercial, operational and administrative work
+              involved in getting skincare products from their manufacturer to
+              customers—and supporting the brand&apos;s ongoing online business.
             </p>
           </FadeIn>
           <div className="mt-10 border-t border-[#e5d5d7]">
             {services.map((service, index) => (
-              <FadeIn key={service.number} delay={Math.min(index * 0.05, 0.2)}>
+              <FadeIn key={service.number} delay={Math.min(index * 0.04, 0.24)}>
                 <div className="grid grid-cols-1 md:grid-cols-[64px_minmax(0,0.92fr)_minmax(0,1.3fr)] gap-3 md:gap-7 py-8 border-b border-[#e5d5d7] items-start">
                   <span className="font-serif text-lg italic text-[#a85e77]">
                     {service.number}
@@ -123,44 +160,37 @@ export default function SkincarePage() {
         <div className="mx-auto max-w-6xl px-6">
           <FadeIn>
             <p className="text-xs font-bold uppercase tracking-[0.15em] text-[#96546d] mb-3">
-              Market situations
+              Our operating model
             </p>
             <h2 className="font-serif text-3xl md:text-4xl tracking-tight text-[#3e3040]">
-              Entry and existing operations
+              Your brand. Your assets. Our execution.
             </h2>
+            <p className="mt-4 text-[#675968] leading-relaxed max-w-3xl">
+              We do not replace the brand or take on the role of a traditional
+              importer-distributor. The operating arrangement is designed to keep
+              the brand in control while Central Orbit manages delivery.
+            </p>
           </FadeIn>
-          <div className="mt-9 grid grid-cols-1 md:grid-cols-2 gap-10">
-            <FadeIn>
-              <div className="border-t-2 border-[#b66c82] pt-5">
-                <h3 className="font-serif text-2xl text-[#413144]">
-                  Preparing to enter China
-                </h3>
-                <p className="mt-4 text-[#675968] leading-relaxed">
-                  Assessment of priority products, competing offers, possible
-                  customer segments and channel routes, followed by a structured
-                  preparation and market-entry plan.
-                </p>
-              </div>
-            </FadeIn>
-            <FadeIn delay={0.1}>
-              <div className="border-t-2 border-[#ad96c4] pt-5">
-                <h3 className="font-serif text-2xl text-[#413144]">
-                  Already active in China
-                </h3>
-                <p className="mt-4 text-[#675968] leading-relaxed">
-                  Review of existing positioning and routes to market, competing
-                  products and commercial priorities, with a focus on
-                  identifying practical opportunities for improvement and growth.
-                </p>
-              </div>
-            </FadeIn>
+          <div className="mt-9 grid grid-cols-1 md:grid-cols-3 gap-8">
+            {principles.map((item, index) => (
+              <FadeIn key={item.title} delay={index * 0.08}>
+                <div className="border-t-2 border-[#b66c82] pt-5">
+                  <h3 className="font-serif text-xl md:text-2xl text-[#413144]">
+                    {item.title}
+                  </h3>
+                  <p className="mt-4 text-[#675968] leading-relaxed">
+                    {item.body}
+                  </p>
+                </div>
+              </FadeIn>
+            ))}
           </div>
           <FadeIn>
             <p className="mt-10 text-sm leading-relaxed text-[#796b76] max-w-4xl">
-              Commercial research and planning identify requirements and
-              dependencies. Regulatory approval, legal advice, platform
-              onboarding and other specialist implementation are separate
-              activities requiring qualified providers.
+              Product approvals, customs, tax filings and other regulated activities
+              depend on the relevant authorities, platform rules and appropriately
+              licensed local parties. Central Orbit manages these workstreams;
+              approvals and commercial outcomes are not guaranteed.
             </p>
           </FadeIn>
         </div>
