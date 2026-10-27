@@ -1,16 +1,14 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { FadeIn } from "@/components/ui/fade-in";
 
 export const metadata: Metadata = {
-  title: "China Skincare Market Entry & Growth",
+  title: "China Skincare | Commercial Services",
   description:
-    "Commercial research, channel assessment and China market-entry and growth planning for established overseas skincare brands, including brands already operating in China.",
+    "Central Orbit's China skincare services cover market assessment, brand and product positioning, B2C channel strategy, commercial partnerships, operational preparation and market-entry or growth planning.",
   openGraph: {
-    title: "China Skincare Market Entry & Growth | Central Orbit",
+    title: "China Skincare | Central Orbit",
     description:
-      "From product positioning to channels and practical next steps. China skincare research and planning for overseas brands entering or growing in China.",
+      "Commercial services for overseas skincare brands entering China or developing their existing business in the market.",
     type: "website",
     locale: "en_US",
     siteName: "Central Orbit",
@@ -20,132 +18,100 @@ export const metadata: Metadata = {
   alternates: { canonical: "/china-skincare" },
 };
 
-const questions = [
+const services = [
   {
-    num: "01",
-    heading: "Why would someone choose your product?",
-    body: "Start with the product, the people who buy it today, its strengths and the proof supporting its benefits.",
+    number: "01",
+    title: "Market and competitive assessment",
+    description:
+      "Research relevant skincare categories, competing brands and products, visible consumer propositions, listed prices and channel conditions. Identify opportunities, constraints and the questions that require further validation.",
   },
   {
-    num: "02",
-    heading: "What would it compete against?",
-    body: "Understand relevant alternatives already offered in China, their visible claims, positioning and listed prices.",
+    number: "02",
+    title: "Brand and product positioning",
+    description:
+      "Evaluate priority products or routines, the brand story, ingredient and benefit claims, supporting evidence and points of differentiation. Translate those findings into a clearer proposition for the Chinese market.",
   },
   {
-    num: "03",
-    heading: "How would customers find and buy it?",
-    body: "Look at possible online B2C routes, operating requirements, fulfillment and the costs of making them work.",
+    number: "03",
+    title: "Online B2C channel strategy",
+    description:
+      "Compare suitable Chinese online sales routes and platform models. Assess channel fit, positioning requirements, consumer access, costs, operating responsibilities and the trade-offs between alternatives.",
   },
-];
+  {
+    number: "04",
+    title: "Commercial partners and operating model",
+    description:
+      "Evaluate potential distributor, service-provider and channel-partner roles, including the implications for pricing control, brand presentation, commercial responsibilities and access to customer information.",
+  },
+  {
+    number: "05",
+    title: "Market-entry and growth planning",
+    description:
+      "Turn research into a practical sequence of priorities: product selection, channel decisions, commercial preparation, cost categories, milestones and the next actions for entering China or strengthening an existing presence.",
+  },
+  {
+    number: "06",
+    title: "Operational and regulatory preparation",
+    description:
+      "Map relevant product documentation, claims and labeling questions, fulfillment, warehousing, returns and other operational dependencies. Identify matters requiring confirmation by qualified local specialists.",
+  },
+] as const;
 
 export default function SkincarePage() {
   return (
     <>
-      <section className="bg-[#fff7f0] pt-28 pb-18 lg:pt-36 lg:pb-24 border-b border-[#e9d8d5]">
+      <section className="bg-[#fff7f1] border-b border-[#eadad8] pt-28 pb-16 lg:pt-36 lg:pb-20">
         <div className="mx-auto max-w-6xl px-6">
           <FadeIn>
-            <p className="text-xs font-bold uppercase tracking-[0.19em] text-[#9a5269] mb-6">
-              Central Orbit / China skincare
+            <p className="text-xs font-bold uppercase tracking-[0.17em] text-[#94546b] mb-5">
+              Central Orbit / China
             </p>
-            <h1 className="font-serif text-4xl sm:text-5xl lg:text-7xl tracking-tight leading-[1.08] text-[#3c2d3e] max-w-4xl">
-              China skincare is crowded.
-              <span className="block italic text-[#a85270] mt-2">
-                Your next move should be deliberate.
-              </span>
+            <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl tracking-tight text-[#3c2d3f] leading-[1.12] max-w-4xl">
+              Skincare market entry
+              <span className="block italic text-[#a45b73]">and commercial growth</span>
             </h1>
-            <p className="mt-8 text-lg md:text-xl text-[#5e4c5b] max-w-3xl leading-relaxed">
-              There may be room for your skincare brand in China. The useful question
-              is how to compete: which products, which consumers, which channels
-              and what preparation would make commercial sense.
+            <p className="mt-7 text-lg md:text-xl text-[#594b59] leading-relaxed max-w-3xl">
+              Central Orbit provides commercial research and planning for overseas
+              skincare brands considering the Chinese market and for brands
+              already selling in China that want to strengthen their position.
             </p>
-            <p className="mt-4 text-base text-[#665866] max-w-3xl leading-relaxed">
-              We help established overseas skincare brands explore a first move
-              into China or improve an existing presence, using focused research
-              and practical commercial planning.
-            </p>
-            <div className="mt-9 flex flex-wrap gap-3">
-              <a
-                href="mailto:info@central-orbit.com?subject=China%20Skincare%20Commercial%20Inquiry"
-                className="inline-flex items-center gap-2 rounded-md bg-[#a44c6a] hover:bg-[#883954] text-white px-6 py-3 font-semibold text-sm transition-colors"
-              >
-                Discuss a commercial question <ArrowUpRight size={17} />
-              </a>
-              <Link
-                href="/china"
-                className="inline-flex items-center gap-2 rounded-md border border-[#bc909e] text-[#643f54] hover:bg-white px-6 py-3 font-semibold text-sm transition-colors"
-              >
-                More on China <ArrowRight size={17} />
-              </Link>
-            </div>
-            <p className="mt-4 text-sm text-[#76646f]">
-              Commercial advice and research focused on product position, routes to market and the next decisions for your brand.
+            <p className="mt-4 text-base text-[#665865] leading-relaxed max-w-3xl">
+              The work connects product positioning, market evidence, routes to
+              consumers, partnerships and the operational decisions behind
+              market entry or expansion.
             </p>
           </FadeIn>
         </div>
       </section>
 
-      <section className="py-18 lg:py-24 bg-white">
+      <section className="bg-white py-16 lg:py-20">
         <div className="mx-auto max-w-6xl px-6">
           <FadeIn>
-            <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#a15571] mb-3">
-              Who we work with
+            <p className="text-xs font-bold uppercase tracking-[0.15em] text-[#96546d] mb-3">
+              Scope of work
             </p>
-            <h2 className="font-serif text-3xl md:text-5xl text-[#3d2e3f] tracking-tight max-w-3xl">
-              Different starting points. The same need for clarity.
+            <h2 className="font-serif text-3xl md:text-4xl tracking-tight text-[#3e3040]">
+              Commercial services
             </h2>
-          </FadeIn>
-          <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-8">
-            <FadeIn>
-              <div className="border-t-2 border-[#bd788e] pt-6 pr-4">
-                <h3 className="font-serif text-2xl text-[#422f42]">
-                  Considering China?
-                </h3>
-                <p className="mt-4 text-[#625463] leading-relaxed">
-                  Before investing in a launch, examine your lead products,
-                  differentiated benefits, relevant competitors, likely pricing
-                  and possible routes to consumers.
-                </p>
-              </div>
-            </FadeIn>
-            <FadeIn delay={0.1}>
-              <div className="border-t-2 border-[#b7a0c8] pt-6 pr-4">
-                <h3 className="font-serif text-2xl text-[#422f42]">
-                  Already selling in China?
-                </h3>
-                <p className="mt-4 text-[#625463] leading-relaxed">
-                  Reassess positioning, channels, competing products and
-                  commercial priorities. The next opportunity might come from
-                  improving what is already there, not starting again.
-                </p>
-              </div>
-            </FadeIn>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-18 lg:py-24 bg-[#faf4f5]">
-        <div className="mx-auto max-w-6xl px-6">
-          <FadeIn>
-            <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#a15571] mb-3">
-              From possibility to evidence
-            </p>
-            <h2 className="font-serif text-3xl md:text-5xl text-[#3d2e3f] tracking-tight">
-              Three questions worth answering.
-            </h2>
-            <p className="mt-4 text-[#635664] max-w-3xl leading-relaxed">
-              A promising product alone is not a market-entry strategy. These
-              are some of the decisions we help brands examine.
+            <p className="mt-4 text-[#645665] leading-relaxed max-w-3xl">
+              Services are tailored to the brand&apos;s products, current market
+              position and commercial objectives. The emphasis is on evidence,
+              workable alternatives and decisions that can be acted upon.
             </p>
           </FadeIn>
-          <div className="mt-10 border-t border-[#e3ced4]">
-            {questions.map((item, i) => (
-              <FadeIn key={item.num} delay={i * 0.06}>
-                <div className="grid grid-cols-1 md:grid-cols-[70px_1fr_1.15fr] md:gap-8 gap-3 py-7 border-b border-[#e3ced4]">
-                  <span className="font-serif text-xl italic text-[#a15571]">{item.num}</span>
-                  <h3 className="font-serif text-xl md:text-2xl text-[#3f3040]">
-                    {item.heading}
+          <div className="mt-10 border-t border-[#e5d5d7]">
+            {services.map((service, index) => (
+              <FadeIn key={service.number} delay={Math.min(index * 0.05, 0.2)}>
+                <div className="grid grid-cols-1 md:grid-cols-[64px_minmax(0,0.92fr)_minmax(0,1.3fr)] gap-3 md:gap-7 py-8 border-b border-[#e5d5d7] items-start">
+                  <span className="font-serif text-lg italic text-[#a85e77]">
+                    {service.number}
+                  </span>
+                  <h3 className="font-serif text-xl md:text-2xl leading-snug tracking-tight text-[#403242]">
+                    {service.title}
                   </h3>
-                  <p className="text-[#635664] leading-relaxed">{item.body}</p>
+                  <p className="text-[#655766] leading-relaxed text-[15px]">
+                    {service.description}
+                  </p>
                 </div>
               </FadeIn>
             ))}
@@ -153,74 +119,49 @@ export default function SkincarePage() {
         </div>
       </section>
 
-      <section className="py-18 lg:py-24 bg-white" id="commercial-focus">
+      <section className="bg-[#faf5f4] border-t border-[#eadcdb] py-16 lg:py-20">
         <div className="mx-auto max-w-6xl px-6">
           <FadeIn>
-            <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#a15571] mb-3">
-              How we can help
+            <p className="text-xs font-bold uppercase tracking-[0.15em] text-[#96546d] mb-3">
+              Market situations
             </p>
-            <h2 className="font-serif text-3xl md:text-5xl text-[#3d2e3f] tracking-tight">
-              A clearer commercial path in China.
+            <h2 className="font-serif text-3xl md:text-4xl tracking-tight text-[#3e3040]">
+              Entry and existing operations
             </h2>
-            <p className="mt-4 text-[#665866] max-w-3xl leading-relaxed">
-              Different brands need different answers. Our work focuses on
-              examining the market, identifying practical options and turning
-              the findings into decisions that make commercial sense.
-            </p>
           </FadeIn>
-          <div className="mt-12 border-t border-[#e9d6d8]">
-            <div className="py-9 border-b border-[#e9d6d8] grid grid-cols-1 lg:grid-cols-[1fr_1.5fr] gap-5 items-start">
-              <h3 className="font-serif text-2xl md:text-3xl text-[#3d2e3f]">
-                Product positioning
-              </h3>
-              <p className="text-[#635664] leading-relaxed">
-                Examine how your product benefits, supporting evidence,
-                price position and brand story compare with relevant
-                alternatives visible in China.
-              </p>
-            </div>
-            <div className="py-9 border-b border-[#e9d6d8] grid grid-cols-1 lg:grid-cols-[1fr_1.5fr] gap-5 items-start">
-              <h3 className="font-serif text-2xl md:text-3xl text-[#3d2e3f]">
-                Customer access and channels
-              </h3>
-              <p className="text-[#635664] leading-relaxed">
-                Assess online B2C routes and channel requirements,
-                including operational considerations and the questions
-                that need local specialist verification.
-              </p>
-            </div>
-            <div className="py-9 border-b border-[#e9d6d8] grid grid-cols-1 lg:grid-cols-[1fr_1.5fr] gap-5 items-start">
-              <h3 className="font-serif text-2xl md:text-3xl text-[#3d2e3f]">
-                Entry and growth planning
-              </h3>
-              <p className="text-[#635664] leading-relaxed">
-                Prioritize commercial research, preparation and next actions
-                for brands considering China, preparing to launch or seeking
-                stronger performance from an existing presence.
-              </p>
-            </div>
+          <div className="mt-9 grid grid-cols-1 md:grid-cols-2 gap-10">
+            <FadeIn>
+              <div className="border-t-2 border-[#b66c82] pt-5">
+                <h3 className="font-serif text-2xl text-[#413144]">
+                  Preparing to enter China
+                </h3>
+                <p className="mt-4 text-[#675968] leading-relaxed">
+                  Assessment of priority products, competing offers, possible
+                  customer segments and channel routes, followed by a structured
+                  preparation and market-entry plan.
+                </p>
+              </div>
+            </FadeIn>
+            <FadeIn delay={0.1}>
+              <div className="border-t-2 border-[#ad96c4] pt-5">
+                <h3 className="font-serif text-2xl text-[#413144]">
+                  Already active in China
+                </h3>
+                <p className="mt-4 text-[#675968] leading-relaxed">
+                  Review of existing positioning and routes to market, competing
+                  products and commercial priorities, with a focus on
+                  identifying practical opportunities for improvement and growth.
+                </p>
+              </div>
+            </FadeIn>
           </div>
-        </div>
-      </section>
-
-      <section className="bg-[#423145] py-16 lg:py-20 text-white">
-        <div className="mx-auto max-w-6xl px-6">
           <FadeIn>
-            <h2 className="font-serif text-3xl md:text-5xl max-w-3xl leading-tight">
-              A better China decision starts with the right questions.
-            </h2>
-            <p className="mt-5 max-w-3xl text-[#f0e2e9] leading-relaxed">
-              Whether you are considering the market or already working in it,
-              your brand deserves a commercially grounded next step.
+            <p className="mt-10 text-sm leading-relaxed text-[#796b76] max-w-4xl">
+              Commercial research and planning identify requirements and
+              dependencies. Regulatory approval, legal advice, platform
+              onboarding and other specialist implementation are separate
+              activities requiring qualified providers.
             </p>
-            <div className="mt-7 flex flex-wrap gap-4">
-              <a href="mailto:info@central-orbit.com?subject=China%20Skincare%20Commercial%20Inquiry" className="inline-flex gap-2 items-center px-6 py-3 bg-[#f7d5df] text-[#432b40] font-semibold rounded-md hover:bg-white transition-colors">
-                Email us about your brand <ArrowRight size={17} />
-              </a>
-              <a href="mailto:info@central-orbit.com?subject=China%20Skincare%20Market%20Inquiry" className="inline-flex gap-2 items-center px-6 py-3 border border-[#ead4de] text-white font-semibold rounded-md hover:bg-[#5b415a] transition-colors">
-                Ask about your situation <ArrowUpRight size={17} />
-              </a>
-            </div>
           </FadeIn>
         </div>
       </section>
