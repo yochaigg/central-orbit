@@ -91,40 +91,46 @@
     .sidebar-note{font:19px "Kalam",cursive;transform:rotate(-2deg);margin-top:27px;padding-left:12px}
     .results{display:none;padding:70px 0 85px}
     .results.active{display:block}
-    .result-next-offer{border:2px solid var(--ink);border-radius:18px;background:var(--lilac);padding:18px 22px;display:flex;gap:18px;align-items:center;justify-content:space-between;box-shadow:5px 5px 0 var(--ink);margin-bottom:35px}
-    .result-next-offer strong{font-weight:800;font-size:20px;line-height:1.18;display:block;letter-spacing:-.035em}
-    .result-next-offer span{font-size:14px;line-height:1.6;display:block;margin-top:5px}
-    .result-next-offer .journey-priority{margin-top:11px;font-size:13px;font-weight:800;color:#403046;line-height:1.5}
-    .result-next-offer small{display:block;font-size:12px;margin-top:4px;color:#514958}
-    .result-next-cta{display:inline-block;flex-shrink:0;background:var(--pink);color:var(--ink);border:2px solid var(--ink);border-radius:99px;padding:14px 19px;font-size:14px;line-height:1.25;text-align:center;font-weight:800;text-decoration:none}
-    .result-next-cta:hover{background:var(--butter)}
-    .result-head{max-width:920px;margin-bottom:32px}
-    .result-head .result-next-offer{margin-top:24px;margin-bottom:0}
-    .results h2{font-size:clamp(50px,7vw,85px);margin:17px 0}
-    .results h2 em{color:#e74479;font-style:normal}
-    .result-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,.78fr);gap:48px;align-items:start}
-    .result-card{border:2px solid var(--ink);background:#fffef8;box-shadow:8px 8px 0 var(--ink);border-radius:19px;padding:28px}
-    .score-row{display:flex;align-items:center;gap:18px;margin-bottom:21px}
-    .score-stamp{background:var(--butter);border:2px solid var(--ink);transform:rotate(-7deg);font:700 clamp(19px,2.3vw,29px) "Kalam",cursive;padding:10px 14px 5px;white-space:normal;line-height:1.05;text-align:center}
-    .score-copy{font-size:12px;line-height:1.4}
-    .result-lead{font-size:17px;line-height:1.5;margin:0 0 25px}
-    .list-label{font-weight:800;font-size:11px;text-transform:uppercase;letter-spacing:.11em;margin:18px 0 6px;color:#9a315f}
-    .advice{padding:13px 0;border-bottom:1px solid #e1d9d9;font-size:14px;line-height:1.5}
-    .breakdown{margin:22px 0 8px;display:grid;gap:13px}
+
+    /* The results begin with two equally prominent panels; the report follows. */
+    .results{padding:28px 0 70px}
+    .result-overline{font:800 12px "DM Sans",Arial,sans-serif;letter-spacing:.15em;margin:0 0 14px}
+    .result-panels{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px;align-items:stretch}
+    .result-card{border:2px solid var(--ink);border-radius:19px;padding:26px;background:var(--card);box-shadow:6px 7px 0 var(--ink);min-width:0}
+    .score-panel{display:flex;flex-direction:column}
+    .score-panel .eyebrow,.offer-panel .eyebrow{margin:0 0 15px;color:#753250}
+    .score-head{display:flex;gap:17px;align-items:center}
+    .score-stamp{display:inline-block;background:var(--butter);border:2px solid var(--ink);transform:rotate(-4deg);font:700 clamp(29px,3.6vw,45px) "Kalam",cursive;padding:12px 15px 4px;white-space:nowrap;line-height:1.1}
+    .score-label{font-weight:800;font-size:clamp(18px,2vw,25px);line-height:1.18;letter-spacing:-.04em}
+    .score-summary{font-size:13px;line-height:1.5;margin:8px 0 0;color:#514958}
+    .score-panel .smallprint{margin:18px 0 2px}
+    .breakdown{margin:20px 0 0;display:grid;gap:12px}
     .breakdown-line{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:5px;font-size:12px;font-weight:800}
-    .bar{height:9px;background:#e8dde0;overflow:hidden;border-radius:20px}.bar span{display:block;height:100%;background:#ed6589}
+    .bar{height:9px;background:#e8dde0;overflow:hidden;border-radius:20px}
+    .bar span{display:block;height:100%;background:#ed6589}
+    .offer-panel{background:var(--lilac);display:flex;flex-direction:column}
+    .offer-panel h2{font-size:clamp(24px,3vw,33px);line-height:1.12;letter-spacing:-.045em;margin:0 0 12px}
+    .offer-panel p{font-size:14px;line-height:1.55;margin:0 0 13px}
+    .offer-priority{font-weight:700;color:#43334c}
+    .offer-options{display:grid;gap:10px;margin:9px 0 17px}
+    .offer-option{border-top:1px solid #8c78a5;padding-top:10px;font-size:13px;line-height:1.4}
+    .offer-option strong{display:block;font-size:15px;margin-bottom:3px}
+    .result-next-cta{display:inline-block;background:var(--pink);border:2px solid var(--ink);border-radius:999px;padding:13px 18px;box-shadow:3px 4px 0 var(--ink);font-size:14px;font-weight:800;text-decoration:none;text-align:center;line-height:1.3;margin-top:auto}
+    .result-next-cta:hover{background:var(--butter)}
+    .offer-details-link{font-weight:700;font-size:12px;margin-top:14px;align-self:center}
+    .offer-panel .smallprint{font-size:11px;margin:12px 0 0}
+    .full-report{padding-top:42px;max-width:1050px}
+    .full-report h2{font-size:clamp(29px,4vw,44px);letter-spacing:-.05em;line-height:1.1;margin:0 0 13px}
+    .report-context{font-size:15px;line-height:1.55;max-width:830px;margin:0 0 10px}
+    .report-grid{display:grid;grid-template-columns:1fr 1fr;gap:35px;margin-top:25px}
+    .list-label{font-weight:800;font-size:12px;text-transform:uppercase;letter-spacing:.11em;margin:20px 0 8px;color:#9a315f}
+    .advice{padding:13px 0;border-bottom:1px solid #e1d9d9;font-size:14px;line-height:1.5}
     .actions{display:flex;flex-wrap:wrap;gap:13px;align-items:center;margin-top:28px}
-    .offer{background:#c9f1de;border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);padding:62px 0 70px;position:relative}
-    .offer-grid{display:grid;grid-template-columns:1fr 1fr;gap:42px;align-items:center}
-    .offer h2{font-size:clamp(38px,5.5vw,68px);margin:14px 0 25px}
-    .offer p{line-height:1.65;font-size:16px}
-    .price-card{background:#fffef8;border:2px solid var(--ink);border-radius:20px;padding:29px;box-shadow:8px 8px 0 var(--ink);transform:rotate(1deg)}
-    .price{font-weight:800;font-size:35px;letter-spacing:-.04em;margin:13px 0}
-    .price-card ul{font-size:14px;line-height:1.8;padding-left:18px;margin-bottom:25px}
     .foot{padding:28px 0 38px;display:flex;justify-content:space-between;gap:24px;font-size:12px;flex-wrap:wrap}
     #shareFeedback{font-size:12px;font-weight:800;min-height:20px;color:#90315a}
     [hidden]{display:none!important}
     @media(max-width:920px){.hero{gap:28px}.scene{height:420px}.products.lower{top:246px}.shelf.one{top:205px}.shelf.two{top:385px}.products.upper{top:74px;height:131px}.bottle{height:89px}.bottle.tall{height:118px}.bottle.short{height:68px}.empty-spot{height:91px}}
+
     @media(max-width:720px){
       .wrapper{padding-left:18px;padding-right:18px}
       .hero{grid-template-columns:1fr;padding:34px 0 48px;gap:22px}
@@ -135,17 +141,17 @@
       .products.upper{top:78px;height:134px}.products.lower{top:251px;height:135px}
       .shelf.one{top:211px}.shelf.two{top:388px}
       .bottle{height:90px}.bottle.tall{height:119px}.bottle.short{height:67px}
-      .quiz-grid,.result-grid,.offer-grid{grid-template-columns:1fr}
-      .quiz,.results{padding:40px 0 52px}
+      .quiz-grid,.result-panels,.report-grid{grid-template-columns:1fr}
+      .quiz,.results{padding:28px 0 52px}
       .question-card{padding:24px 18px}
       .mini-scene{display:none}
-      .result-next-offer{flex-direction:column;align-items:stretch;gap:13px;margin-bottom:29px;padding:17px}
+      .result-panels{gap:18px}
+      .result-card{padding:20px}
+      .score-stamp{font-size:35px}
+      .full-report{padding-top:32px}
+      .report-grid{gap:8px}
+      .offer-panel h2{font-size:26px}
       .result-next-cta{width:100%}
-      .result-head{margin-bottom:24px}
-      .results h2{font-size:clamp(36px,10vw,48px);line-height:1.1}
-      .result-head .result-next-offer{margin-top:20px}
-      .offer{padding:45px 0}
-      .price-card{transform:none}
       .hero-notes{gap:9px 15px}
     }
     @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
@@ -246,90 +252,64 @@
         </div>
       </div>
     </section>
+
     <section class="wrapper results" id="results" aria-live="polite">
-      <div class="result-head">
-        <span class="sticker">YOUR SHELF REPORT ✳</span>
-        <h2 id="result-title">Your starting point.</h2>
-        <p class="deck" id="result-subtitle" style="font-size:17px;line-height:1.5;max-width:770px"></p>
-        <div class="result-next-offer" aria-label="Your next step for China skincare">
-          <div>
-            <strong id="offer-journey-title">A possible opening. Now the real work begins.</strong>
-            <span id="offer-journey-copy">Move from what you know about your product to what matters in the Chinese market.</span>
-            <small id="offer-journey-priority" class="journey-priority">Based on your answers: identify your next evidence gap.</small>
-            <small id="offer-journey-note">The free report and recommendations remain below.</small>
-          </div>
-          <a class="result-next-cta" id="result-offer-link" href="/china-skincare-guides/brand-review/">Explore the next step · from US$950 ↗</a>
-        </div>
-      </div>
-      <div class="result-grid">
-        <div class="result-card">
-          <div class="score-row">
-            <span class="score-stamp" id="score" aria-label="Your product foundations">YOUR BRAND</span>
-            <span class="score-copy">Your product foundations<br><strong>Not a China readiness score or sales prediction</strong></span>
-          </div>
-          <p class="result-lead" id="result-lead"></p>
-          <p class="smallprint">The first four answers inform these product notes. Questions 5–8 only shape the suggestions below; they are not scored.</p>
-          <p class="list-label">Your starting points</p>
-          <div id="strengths"></div>
-          <p class="list-label">What needs checking</p>
-          <div id="gaps"></div>
-          <p class="list-label">Three practical next moves</p>
-          <div id="next-steps"></div>
-          <div class="actions">
-            <button type="button" class="primary" id="share">Copy my shelf result ↗</button>
-            <button type="button" class="secondary" id="restart">Try again</button>
-          </div>
-          <p id="shareFeedback" aria-live="polite"></p>
-          <p class="smallprint">Your answers stay in this browser page and are not submitted to Central Orbit. We track anonymous usage events (start, completion, sharing and offer interest). These notes reflect your answers only; they are not independent market research, legal advice, regulatory clearance or a prediction of sales.</p>
-        </div>
-        <aside>
-          <div class="scene-wrap" style="margin-top:20px">
-            <div class="note" id="result-note">Your spot?</div>
-            <div class="scene">
-              <div class="wall-panel"></div>
-              <div class="products upper">
-                <div class="bottle blue-b"><span class="label">PROYA</span><span class="tiny">珀莱雅</span></div>
-                <div class="bottle lilac-b tall"><span class="label">GLOW</span></div>
-                <div class="bottle yellow-b round"><span class="label">CALM</span></div>
-                <div class="bottle coral-b"><span class="label">WINONA</span><span class="tiny">薇诺娜</span></div>
-              </div>
-              <div class="shelf one"></div>
-              <div class="products lower">
-                <div class="bottle cream-b short"><span class="label">PECHOIN</span><span class="tiny">百雀羚</span></div>
-                <div class="bottle mint-b"><span class="label">DAY</span></div>
-                <div class="empty-spot filled"><span>YOUR<br>BRAND<br>✳</span></div>
-                <div class="bottle pink-b tall"><span class="label">BLOOM</span></div>
-                <div class="bottle blue-b short"><span class="label">MIST</span></div>
-              </div>
-              <div class="shelf two"></div>
-              <div class="scribble">A place worth exploring.</div>
+      <p class="result-overline">YOUR SHELF REPORT ✳</p>
+      <div class="result-panels">
+        <div class="result-card score-panel">
+          <p class="eyebrow">YOUR PRODUCT FOUNDATIONS</p>
+          <div class="score-head">
+            <span class="score-stamp" id="score" aria-label="Your self-reported product-foundations score">0/100</span>
+            <div>
+              <div class="score-label" id="result-title">Your starting point</div>
+              <p class="score-summary" id="score-summary"></p>
             </div>
           </div>
+          <p class="smallprint">Four self-reported dimensions, each worth 25 points. This is not a China market-readiness rating or a sales forecast.</p>
+          <div class="breakdown" id="breakdown" aria-label="Your score across four product foundations"></div>
+        </div>
+        <aside class="result-card offer-panel" aria-label="Optional next step for China skincare">
+          <p class="eyebrow">EXPLORE THE CHINA OPPORTUNITY</p>
+          <h2 id="offer-journey-title">What would your brand compete against?</h2>
+          <p id="offer-journey-copy">A useful next step is independent research into competing products, prices and channels in China.</p>
+          <p id="offer-journey-priority" class="offer-priority"></p>
+          <div class="offer-options">
+            <div class="offer-option">
+              <strong>Opportunity Assessment · US$950</strong>
+              A sourced review of products, competitors, positioning and recommended next decisions.
+            </div>
+            <div class="offer-option">
+              <strong>Launch Blueprint · US$4,500</strong>
+              Deeper channel, operations and market-entry or growth planning.
+            </div>
+          </div>
+          <a class="result-next-cta" id="result-offer-link" href="/china-skincare-guides/brand-review/">Explore the research options ↗</a>
+          <a id="offer-details-link" class="offer-details-link" href="/china-skincare-guides/brand-review/" hidden>Read optional service details ↗</a>
+          <p class="smallprint">Optional paid research, not required to use the free report. No market outcome is guaranteed.</p>
         </aside>
       </div>
-    </section>
-    <section class="offer" id="offer" hidden>
-      <div class="wrapper offer-grid">
-        <div>
-          <span class="sticker" style="background:#fff">A REAL SECOND OPINION?</span>
-          <h2 id="offer-bottom-title">Now, let’s see how your brand could compete in China.</h2>
-          <p id="offer-bottom-copy">Your first look is complete. The next step is to research the real market, your product positioning, relevant competitors and possible ways to reach customers.</p>
-          <p class="smallprint">Separate professional service. Not required to use this tool. See the services, full scope, prices and process before deciding whether to purchase.</p>
+      <div class="full-report">
+        <h2>Your personalized report</h2>
+        <p class="report-context" id="result-subtitle"></p>
+        <p class="report-context" id="result-lead"></p>
+        <div class="report-grid">
+          <div>
+            <h3 class="list-label">What your answers support</h3>
+            <div id="strengths"></div>
+          </div>
+          <div>
+            <h3 class="list-label">What needs checking</h3>
+            <div id="gaps"></div>
+          </div>
         </div>
-        <div class="price-card">
-          <p class="eyebrow">TWO OPTIONAL SERVICES</p>
-          <div class="price">US$950 <span style="font:600 14px DM Sans,Arial,sans-serif">Assessment</span></div>
-          <div class="price" id="blueprint-price-line" style="font-size:27px;margin-top:10px">US$4,500 <span style="font:600 14px DM Sans,Arial,sans-serif">Launch Blueprint</span></div>
-          <p id="offer-card-subline" style="margin:0">An evidence-led opportunity review, or a more detailed plan for entering or growing in China.</p>
-          <ul>
-            <li>Flexible coverage: two products, a coherent product line, or a skincare routine</li>
-            <li>Positioning against publicly visible alternatives</li>
-            <li>Preliminary price and channel considerations</li>
-            <li id="offer-blueprint-bullet">Optional Blueprint adds platform selection, logistics and a detailed launch roadmap</li>
-          </ul>
-          <a id="review-link" class="primary" style="display:inline-block;text-decoration:none;text-align:center" href="/china-skincare-guides/brand-review/">View your options ↗</a>
-          <p class="smallprint">Read the full scope and purchase securely on the service page. Calendly booking details are provided after confirmed payment; the free test never requires payment.</p>
+        <h3 class="list-label">Three practical next moves</h3>
+        <div id="next-steps"></div>
+        <div class="actions">
+          <button type="button" class="primary" id="share">Copy my shelf result ↗</button>
+          <button type="button" class="secondary" id="restart">Try again</button>
         </div>
+        <p id="shareFeedback" aria-live="polite"></p>
+        <p class="smallprint">Your answers stay in this browser page and are not submitted to Central Orbit. We track anonymous usage events (start, completion, sharing and offer interest). The score and notes are based only on what you reported, not independently verified China-market evidence, regulatory approval or a prediction of sales.</p>
       </div>
     </section>
   </main>
@@ -429,7 +409,7 @@
         }
       ];
       var answers=new Array(questions.length).fill(null);
-      var step=0,started=false,lastResultStage=null;
+      var step=0,started=false,lastResultStage=null,lastScore=null;
       var $=function(id){return document.getElementById(id)};
       function track(name){try{if(window.umami && typeof window.umami.track==="function")window.umami.track(name)}catch(e){}}
       function escapeHtml(v){return String(v).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})}
@@ -441,7 +421,7 @@
           if(name==="intro")$(name).hidden=id!=="intro";
         });
         $("intro-band").hidden=id!=="intro";
-        $("offer").hidden=id!=="results";
+
         window.scrollTo({top:0,behavior:"smooth"});
       }
       function start(){
@@ -478,105 +458,121 @@
         else $("question-title").focus({preventScroll:true});
       }
       function detail(text){return '<div class="advice">'+escapeHtml(text)+'</div>'}
+
       function finish(){
-        var strong=[], gaps=[],a=answers;
-        if(a[0]===0)strong.push("Your product choice is grounded in sales performance or customer response.");
-        else if(a[0]===1)strong.push("You have a potential lead product to investigate for China.");
-        else gaps.push("Choose the product or coherent routine you want to evaluate first.");
-        if(a[1]===0)strong.push("You have customer and sales information about your existing buyers.");
-        else if(a[1]===1)strong.push("You have customer reviews or feedback to work from.");
-        else gaps.push(a[1]===4?"Check internally what customer information is available.":"Clarify who currently buys the product and what evidence supports that picture.");
-        if(a[2]===0||a[2]===1)strong.push("You have customer feedback that helps explain why people choose the product.");
-        else gaps.push(a[2]===4?"Find out whether existing customer reviews or research explain why people buy.":"Test what makes the product meaningfully different to current customers.");
-        if(a[3]===0)strong.push("You have documented material supporting your product's main benefits.");
-        else if(a[3]===1)strong.push("You already have some support for your main product claims.");
-        else gaps.push(a[3]===4?"Confirm internally which tests or supporting documents are available.":"List the main product claims and identify what evidence supports each.");
-        var evidenceCount=strong.length;
-        if(strong.length===0)strong.push("You have an established brand to work from. The next task is choosing which product to investigate.");
-        if(gaps.length===0)gaps.push("The China-specific questions still need independent checking: comparable products, pricing and the right sales route.");
-        var foundation=evidenceCount>=3?"SOLID START":evidenceCount===2?"TAKING SHAPE":"FIRST STEPS";
+        var a=answers;
+        // Only questions 1–4 describe product foundations. Questions 5–8
+        // personalize the report and do not contribute points.
+        var pointScales=[
+          [25,15,5,0],       // Lead product selected using existing customer/sales evidence
+          [25,17,8,0,0],    // Knowledge of current buyers
+          [25,17,8,0,0],    // Evidence for differentiation
+          [25,15,6,0,0]     // Evidence for product benefits
+        ];
+        var labels=["Product selection","Customer knowledge","Differentiation","Claims evidence"];
+        var points=pointScales.map(function(scale,i){return scale[a[i]]===undefined?0:scale[a[i]]});
+        var score=points.reduce(function(total,value){return total+value},0);
+        lastScore=score;
+        var stage=score>=75?"solid":score>=45?"shape":"first";
+        lastResultStage=stage;
+        var stageLabel={solid:"SOLID START",shape:"TAKING SHAPE",first:"FIRST STEPS"}[stage];
+        $("score").textContent=score+"/100";
+        $("result-title").textContent=stageLabel;
+        $("score-summary").textContent={
+          solid:"Your answers describe substantial product foundations. China-specific fit still needs evidence.",
+          shape:"Your answers identify some useful foundations and important gaps to address.",
+          first:"Your answers suggest that fundamental product evidence needs attention before detailed China planning."
+        }[stage];
+        $("breakdown").innerHTML=labels.map(function(label,i){
+          return '<div><div class="breakdown-line"><span>'+escapeHtml(label)+'</span><span>'+points[i]+' / 25</span></div><div class="bar"><span style="width:'+(points[i]*4)+'%"></span></div></div>';
+        }).join("");
+        var strong=[],gaps=[];
+        if(a[0]===0)strong.push("Lead product: You selected a product based on existing sales performance and customer response.");
+        else if(a[0]===1)strong.push("Lead product: You have a preferred product to examine for China.");
+        else gaps.push("Lead product: Select one product or coherent routine, and record why it deserves priority.");
+        if(a[1]===0)strong.push("Customer knowledge: You report customer and sales data about existing buyers.");
+        else if(a[1]===1)strong.push("Customer knowledge: You have customer reviews or partner feedback to work from.");
+        else gaps.push(a[1]===4
+          ?"Customer knowledge: Confirm which customer information is available internally."
+          :"Customer knowledge: Identify who currently buys your product and what supports that picture.");
+        if(a[2]===0)strong.push("Differentiation: You report customer research or consistent feedback explaining product choice.");
+        else if(a[2]===1)strong.push("Differentiation: Existing reviews suggest why customers choose your product.");
+        else gaps.push(a[2]===4
+          ?"Differentiation: Check whether current reviews or research explain why people buy."
+          :"Differentiation: Identify a specific product benefit and obtain customer evidence supporting it.");
+        if(a[3]===0)strong.push("Claims evidence: You report relevant testing or documents supporting your main product claims.");
+        else if(a[3]===1)strong.push("Claims evidence: You have some supporting evidence, though not for every claim.");
+        else gaps.push(a[3]===4
+          ?"Claims evidence: Confirm which relevant tests and supporting documents are available."
+          :"Claims evidence: List the main product claims and identify what substantiates each one.");
+        if(!strong.length)strong.push("No evidence-backed strengths were identified in the first four answers yet. Use the gaps opposite as a starting checklist.");
+        if(!gaps.length)gaps.push("China-market evidence is still missing: verify actual competing offers, comparable prices, customer needs and suitable sales routes.");
         var timing=[
-          "Your preferred timing is within six months; verify the practical requirements before setting a launch date.",
-          "You are considering a six-to-twelve-month window; map the research and preparation before committing.",
-          "You have a longer planning horizon; use it to investigate your options and test assumptions.",
-          "You haven't fixed a date; establishing the basic market facts is a useful first step.",
-          "You're deciding whether to enter China at all; the first decision is whether deeper research is justified."
+          "Your preferred timing is within six months. Verify operational and regulatory requirements before making that a launch commitment.",
+          "You're considering a six-to-twelve-month window. Use it to investigate the market and prepare the operating requirements.",
+          "You have a longer planning horizon. There is time to test assumptions and compare approaches.",
+          "You haven't decided on a timeline. Begin with market facts before setting one.",
+          "You're still deciding whether to enter China. Evidence should inform that decision before a launch plan."
         ][a[7]];
         var motive=[
-          "You're exploring expansion through international sales.",
-          "You've received interest connected to China; it's worth checking what that interest actually represents.",
-          "You see a possible match between your products and Chinese consumers; that still needs market evidence.",
-          "You're comparing markets, so a like-for-like comparison of potential routes and requirements will be useful.",
-          "You're at the exploration stage; there's no need to commit to a launch yet."
+          "You selected international sales expansion as the reason for considering China.",
+          "You reported inquiries or interest connected to China. Verify what that interest means in terms of actual demand.",
+          "You selected potential consumer appeal as your reason for exploring China; that is a hypothesis, not measured Chinese demand.",
+          "You're comparing China with other markets; compare evidence, costs and requirements across them.",
+          "You're exploring China without a fixed plan; this is an appropriate point to assess the available evidence."
         ][a[4]];
         var channels=Array.isArray(a[5])?a[5]:[];
         var channelAdvice=channels.indexOf(1)!==-1
-          ?"Compare relevant Chinese online platforms and their operating requirements, starting from your experience selling on marketplaces."
+          ?"Compare relevant Chinese marketplaces and their requirements, starting from your experience on third-party platforms."
           :channels.indexOf(0)!==-1
-          ?"Compare options for reaching Chinese consumers online; your own-store experience is useful, but the local route may be different."
+          ?"Investigate Chinese online routes; experience running your own store is useful, but local platforms can work differently."
           :channels.indexOf(2)!==-1
-          ?"Investigate suitable consumer-facing online channels as well as retail, rather than assuming your current retail model transfers directly."
+          ?"Compare consumer-facing online channels and retail instead of assuming your home-market retail model transfers directly."
           :channels.indexOf(3)!==-1
-          ?"Examine whether your professional-channel strengths can support a consumer-focused China proposition."
-          :"Map your existing sales channels and examine which China consumer channels could make sense.";
+          ?"Check whether your professional-channel strengths can support a proposition for Chinese consumers."
+          :"Map your current sales channels and assess which Chinese consumer channels may fit.";
         var logistics=[
-          "Compare direct international shipping with fulfillment options in China, including delivery times and returns.",
-          "Investigate which China fulfillment models fit your existing third-party warehousing experience, and what requires local verification.",
-          "Clarify which logistics, customer-service and returns responsibilities a potential China partner would handle.",
-          "Compare your existing fulfillment approaches with the requirements of one prospective China sales channel.",
-          "Start with a basic shipping, fulfillment and returns overview for an initial international market.",
-          "Check internally how international shipping is currently handled before deciding on a China fulfillment approach."
+          "Compare cross-border shipping with fulfillment options in China, including delivery times and returns.",
+          "Investigate China fulfillment models using your experience with third-party warehouses.",
+          "Clarify who would handle import, fulfillment, customer service and returns under any China operating arrangement.",
+          "Compare your current fulfillment approaches with the practical requirements of a potential China channel.",
+          "Build a basic shipping, fulfillment and returns plan before making an international launch decision.",
+          "Check internally how international shipping is currently managed before choosing a China logistics model."
         ][a[6]];
-        $("score").textContent=foundation;
-        var stage=foundation==="SOLID START"?"solid":foundation==="TAKING SHAPE"?"shape":"first";
-        lastResultStage=stage;
-        var journeyUrl="/china-skincare-guides/brand-review/?from=shelf&stage="+stage;
-        $("result-offer-link").setAttribute("href",journeyUrl);
-        $("review-link").setAttribute("href",journeyUrl);
-        if(stage==="first"){
-          $("result-title").textContent="Build the foundations first.";
-          $("offer-journey-title").textContent="A good China plan starts with a clear product case.";
-          $("offer-journey-priority").textContent="Your first move: "+(gaps[0]||"Identify a product or routine to evaluate.");
-          $("offer-journey-copy").textContent="Your answers suggest a few basics to strengthen before investing in a detailed China plan. Work through your free recommendations, then decide whether a sourced review would help.";
-          $("offer-journey-priority").style.display="block";
-          $("offer-journey-note").textContent="No rush toward a launch plan. Your practical free recommendations are below.";
-          $("result-offer-link").setAttribute("href","#next-steps");
-          $("result-offer-link").textContent="See what to strengthen first ↓";
-          $("offer-bottom-title").textContent="Start with the basics. Then explore China.";
-          $("offer-bottom-copy").textContent="Start by identifying a lead product, buyer evidence and supported claims. The Opportunity Assessment can then help examine the China opportunity with external evidence.";
-          $("offer-card-subline").textContent="The $950 Opportunity Assessment is the more suitable starting point.";
-          $("blueprint-price-line").hidden=true;
-          $("offer-blueprint-bullet").hidden=true;
-          $("review-link").textContent="Explore the Opportunity Assessment ↗";
-          $("result-note").textContent="Start with what you know.";
-        }else{
-          $("result-title").textContent=stage==="solid"?"There's room worth exploring.":"Your brand has a possible opening.";
-          $("offer-journey-title").textContent="You've found a possible opening. Now, how could your brand compete?";
-          $("offer-journey-priority").textContent="What the free test cannot check: actual Chinese-market competitors, listed prices or the route to consumers.";
-          $("offer-journey-priority").style.display="block";
-          $("offer-journey-copy").textContent="Your answers describe your product foundation. A researched review compares it with real China-market alternatives and identifies what deserves a closer look before you commit."
-          $("offer-journey-note").textContent="Start with the $950 Opportunity Assessment, or explore the detailed $4,500 Blueprint. Neither guarantees a market result."
-          $("result-offer-link").textContent="See how to compete in China · from $950 ↗";
-          $("offer-bottom-title").textContent="You've spotted a possible space. How do you turn it into a plan?"
-          $("offer-bottom-copy").textContent="Take your first look further with evidence on your products, Chinese-market competitors, sales channels and the route forward.";
-          $("offer-card-subline").textContent="Compare your brand with China-market alternatives first—or map a launch or growth plan."
-          $("blueprint-price-line").hidden=false;
-          $("offer-blueprint-bullet").hidden=false;
-          $("review-link").textContent="View your options ↗";
-          $("result-note").textContent="An opening to explore.";
-        }
         $("result-subtitle").textContent=motive;
         $("result-lead").textContent=timing;
-        $("strengths").innerHTML=strong.slice(0,3).map(detail).join("");
-        $("gaps").innerHTML=gaps.slice(0,3).map(detail).join("");
-        var first=gaps[0]||"Compare the main claims and positioning with products already sold in China.";
+        $("strengths").innerHTML=strong.map(detail).join("");
+        $("gaps").innerHTML=gaps.map(detail).join("");
+        var first=gaps[0]||"Compare your strongest product claims and positioning with products already sold in China.";
         $("next-steps").innerHTML=[
           "1. "+first,
           "2. "+channelAdvice,
           "3. "+logistics
         ].map(detail).join("");
+        var journeyUrl="/china-skincare-guides/brand-review/?from=shelf&stage="+stage;
+        $("offer-details-link").setAttribute("href",journeyUrl);
+        if(stage==="first"){
+          $("offer-journey-title").textContent="Start with a clearer product case.";
+          $("offer-journey-copy").textContent="Your product foundations need work before committing to an extensive China plan. Your free report below identifies the first steps.";
+          $("offer-journey-priority").textContent="Priority: "+first;
+          $("result-offer-link").setAttribute("href","#next-steps");
+          $("result-offer-link").textContent="Review your free next steps ↓";
+          $("offer-details-link").hidden=false;
+        }else{
+          $("offer-journey-title").textContent=stage==="solid"
+            ?"Now test the China-market evidence."
+            :"Investigate the remaining gaps.";
+          $("offer-journey-copy").textContent=stage==="solid"
+            ?"Your self-reported product foundations are encouraging, but competitors, prices, consumers and channel options in China still need independent assessment."
+            :"You have useful product information but some gaps remain. Research can help examine China-market competitors and the practical route forward.";
+          $("offer-journey-priority").textContent="The quiz cannot confirm Chinese demand, market fit or future sales.";
+          $("result-offer-link").setAttribute("href",journeyUrl);
+          $("result-offer-link").textContent="Explore the research options ↗";
+          $("offer-details-link").hidden=true;
+        }
         $("progress").style.width="100%";
-        show("results");track("guide-02-assessment-complete");
+        show("results");
+        track("guide-02-assessment-complete");
       }
       $("start").addEventListener("click",start);
       $("previous").addEventListener("click",function(){
@@ -590,10 +586,19 @@
         answers=new Array(questions.length).fill(null);
         step=0;start();
       });
-      $("review-link").addEventListener("click",function(){track("guide-02-paid-review-interest");if(lastResultStage)track("guide-02-paid-review-interest-"+lastResultStage)});
-      $("result-offer-link").addEventListener("click",function(){if(lastResultStage==="first"){track("guide-02-results-free-next-steps-click");return}track("guide-02-results-offer-click");if(lastResultStage)track("guide-02-results-offer-click-"+lastResultStage)});
+      $("offer-details-link").addEventListener("click",function(){
+        track("guide-02-paid-review-interest");
+        if(lastResultStage)track("guide-02-paid-review-interest-"+lastResultStage);
+      });
+      $("result-offer-link").addEventListener("click",function(){
+        if(lastResultStage==="first"){track("guide-02-results-free-next-steps-click");return}
+        track("guide-02-results-offer-click");
+        if(lastResultStage)track("guide-02-results-offer-click-"+lastResultStage);
+        track("guide-02-paid-review-interest");
+        if(lastResultStage)track("guide-02-paid-review-interest-"+lastResultStage);
+      });
       $("share").addEventListener("click",function(){
-        var message="I tried the China Skincare Shelf Test. What would your brand need before entering China? https://www.central-orbit.com/china-skincare-guides/shelf/";
+        var message="My China Skincare Shelf Test product-foundations score: "+lastScore+"/100 (self-reported, not China market readiness). Try it: https://www.central-orbit.com/china-skincare-guides/shelf/";
         var done=function(){track("guide-02-result-share");$("shareFeedback").textContent="Link copied. Share it with someone working in skincare."};
         if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(message).then(done).catch(function(){$("shareFeedback").textContent=message});
         else $("shareFeedback").textContent=message;
