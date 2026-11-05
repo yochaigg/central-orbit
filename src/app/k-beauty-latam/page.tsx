@@ -33,7 +33,7 @@ export default function KBeautyLatamQuiz() {
   function submit(){if(count!==questions.length)return;setFinished(true);track("kbeauty-latam-quiz-complete",{score});}
   return <main className="min-h-screen bg-[#fffaf2] text-[#142638]">
     <section className="mx-auto max-w-4xl px-5 pb-10 pt-16 sm:px-8 sm:pt-24">
-      <p className="text-xs font-bold uppercase tracking-[.18em] text-[#b42e68]">K-Beauty · Latin America</p>
+      <div className="mb-8 overflow-hidden rounded-2xl bg-[#f9e5b6]"><img src="/images/k-beauty-latam-quiz.png" alt="K-beauty LATAM quiz campaign: a Brazilian woman wearing a full skincare sheet mask at Copacabana beach, with beach sports and export-growth teaser" className="h-auto w-full" /></div>\n      <p className="text-xs font-bold uppercase tracking-[.18em] text-[#b42e68]">K-Beauty · Latin America</p>
       <h1 className="mt-4 text-4xl font-extrabold leading-tight tracking-tight sm:text-6xl">Is Your K-Beauty Brand Ready for LATAM?</h1>
       <p className="mt-5 max-w-2xl text-lg leading-relaxed text-[#4b5965]">Eight practical questions about selling skincare in Latin America. Discover what you know and what deserves a closer look.</p>
       <div className="mt-7 flex flex-wrap items-center gap-3 text-sm font-semibold"><span className="rounded-full bg-[#ffe269] px-4 py-2">8 questions</span><span className="rounded-full bg-[#ffd7e7] px-4 py-2">Practical explanations</span><span className="rounded-full bg-white px-4 py-2">No pass or fail</span></div>
