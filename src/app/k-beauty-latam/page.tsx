@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 type Question = { question: string; answers: [string,string,string,string]; correct: number; explanation: string };
 const questions: Question[] = [
@@ -27,23 +27,26 @@ function track(name:string, data:Record<string,string|number>={}) {
 export default function KBeautyLatamQuiz() {
   const [answers,setAnswers]=useState<Record<number,number>>({});
   const [finished,setFinished]=useState(false);
+  const resultsRef=useRef<HTMLDivElement>(null);
+  useEffect(()=>{if(finished)resultsRef.current?.focus();},[finished]);
   const count=Object.keys(answers).length;
   const score=questions.reduce((total,q,i)=>total+(answers[i]===q.correct?1:0),0);
   const tier=tiers.find(t=>score<=t.max)!;
-  function submit(){if(count!==questions.length)return;setFinished(true);track("kbeauty-latam-quiz-complete",{score});}
-  return <main className="min-h-screen bg-[#fffaf2] text-[#142638]">
+  function submit(){if(finished||count!==questions.length)return;setFinished(true);track("kbeauty-latam-quiz-complete",{score});}
+  return <div className="min-h-screen bg-[#fffaf2] text-[#142638]">
     <section className="mx-auto max-w-4xl px-5 pb-10 pt-16 sm:px-8 sm:pt-24">
-      <a href="#quiz-questions" aria-label="Start the K-Beauty LATAM quiz" className="mb-8 block overflow-hidden rounded-2xl bg-[#f9e5b6] focus-visible:outline-4 focus-visible:outline-offset-4 focus-visible:outline-[#e73581]"><img src="/images/k-beauty-latam-quiz.png" alt="K-beauty LATAM quiz campaign at Copacabana beach highlighting 141.3% year-on-year Korean SME cosmetics export growth in Q3 2026. Take the quiz." className="h-auto w-full cursor-pointer transition-transform duration-300 hover:scale-[1.01]" onError={(e)=>{e.currentTarget.style.display="none";}} /></a>\n      <p className="text-xs font-bold uppercase tracking-[.18em] text-[#b42e68]">K-Beauty · Latin America</p>
+      <a href="#quiz-questions" aria-label="Start the K-Beauty LATAM quiz" className="mb-8 block overflow-hidden rounded-2xl bg-[#f9e5b6] focus-visible:outline-4 focus-visible:outline-offset-4 focus-visible:outline-[#e73581]"><img src="/images/k-beauty-latam-quiz.png" alt="K-beauty LATAM quiz campaign at Copacabana beach highlighting 141.3% year-on-year Korean SME cosmetics export growth in Q3 2026. Take the quiz." className="h-auto w-full cursor-pointer transition-transform duration-300 hover:scale-[1.01]" /></a>
+      <p className="text-xs font-bold uppercase tracking-[.18em] text-[#b42e68]">K-Beauty · Latin America</p>
       <h1 className="mt-4 text-4xl font-extrabold leading-tight tracking-tight sm:text-6xl">Is Your K-Beauty Brand Ready for LATAM?</h1>
       <p className="mt-5 max-w-2xl text-lg leading-relaxed text-[#4b5965]">Eight practical questions about selling skincare in Latin America. Discover what you know and what deserves a closer look.</p>
-      <p className="mt-4 text-sm text-[#53616b]"><strong>+141.3% year-on-year</strong> — reported growth in Korean SME cosmetics exports to Latin America, Q3 2026. Source: South Korean Ministry of SMEs and Startups (MSS), Q3 2026 SME Export Trend (27 October 2026). <a href="https://lnkd.in/p/d47sJf2A" target="_blank" rel="noopener noreferrer" className="underline">LinkedIn source post</a>.</p>
+      <p className="mt-4 text-sm text-[#53616b]"><strong>+141.3% year-on-year</strong> — reported growth in Korean SME cosmetics exports to Latin America, Q3 2026. Source: South Korean Ministry of SMEs and Startups (MSS), Q3 2026 export release (3 November 2026). <a href="https://www.mss.go.kr/site/eng/ex/bbs/View.do?bcIdx=1072216&amp;cbIdx=244" target="_blank" rel="noopener noreferrer" className="underline">Read the ministry release</a>.</p>
       <div className="mt-7 flex flex-wrap items-center gap-3 text-sm font-semibold"><span className="rounded-full bg-[#ffe269] px-4 py-2">8 questions</span><span className="rounded-full bg-[#ffd7e7] px-4 py-2">Practical explanations</span><span className="rounded-full bg-white px-4 py-2">No pass or fail</span></div>
-      <p className="mt-6 text-sm text-[#586471]">Progress: {count} of 8 answered</p>
+      <p aria-live="polite" className="mt-6 text-sm text-[#586471]">Progress: {count} of 8 answered</p>
       <div className="mt-2 h-2 overflow-hidden rounded-full bg-[#e9e0d9]"><div className="h-full bg-[#e73581] transition-all" style={{width:`${count/8*100}%`}}/></div>
     </section>
     <section id="quiz-questions" className="mx-auto max-w-4xl scroll-mt-6 space-y-6 px-5 pb-20 sm:px-8">
       {questions.map((q,i)=><fieldset key={i} className="rounded-2xl border border-[#e8e1db] bg-white p-5 shadow-sm sm:p-8" disabled={finished}>
-        <legend className="sr-only">Question {i+1}</legend>
+        <legend className="sr-only">Question {i+1}: {q.question}</legend>
         <p className="mb-4 text-xs font-bold uppercase tracking-widest text-[#b42e68]">Question {i+1} / 8</p>
         <h2 className="mb-6 text-xl font-bold leading-snug sm:text-2xl">{q.question}</h2>
         <div className="grid gap-3">{q.answers.map((answer,j)=><label key={j} className={`flex cursor-pointer items-start gap-3 rounded-xl border p-4 text-sm leading-relaxed transition-colors sm:text-base ${answers[i]===j?"border-[#e73581] bg-[#fff0f6]":"border-[#e8e1db] hover:border-[#e73581]"}`}>
@@ -51,14 +54,15 @@ export default function KBeautyLatamQuiz() {
         </label>)}</div>
         {finished&&<div className="mt-5 rounded-xl bg-[#f4f7f5] p-4 text-sm leading-relaxed"><p className="font-bold">{answers[i]===q.correct?"Good answer":"Best answer: "+q.answers[q.correct]}</p><p className="mt-2">{q.explanation}</p></div>}
       </fieldset>)}
-      {!finished?<button type="button" onClick={submit} disabled={count!==8} className="w-full rounded-xl bg-[#e73581] px-6 py-4 text-lg font-bold text-white disabled:cursor-not-allowed disabled:opacity-40">See my results</button>:<div aria-live="polite" className="rounded-2xl bg-[#142638] p-6 text-white sm:p-10">
+      {!finished?<button type="button" onClick={submit} disabled={count!==8} className="w-full rounded-xl bg-[#e73581] px-6 py-4 text-lg font-bold text-white disabled:cursor-not-allowed disabled:opacity-40">See my results</button>:<div ref={resultsRef} tabIndex={-1} aria-live="polite" className="rounded-2xl bg-[#142638] p-6 text-white sm:p-10">
         <p className="text-sm font-semibold uppercase tracking-widest text-[#ffe269]">Your LATAM knowledge check</p>
         <p className="mt-4 text-5xl font-extrabold">{score}/8</p><h2 className="mt-3 text-2xl font-bold sm:text-3xl">{tier.title}</h2><p className="mt-3 leading-relaxed text-[#d9e0e7]">{tier.body}</p>
         <p className="mt-5 text-sm text-[#c4d0d9]">This score reflects selected market knowledge, not regulatory clearance or commercial launch readiness.</p>
         <a href="mailto:info@central-orbit.com?subject=K-Beauty%20LATAM%20Market%20Entry" onClick={()=>track("kbeauty-latam-contact-click",{score})} className="mt-7 inline-flex rounded-lg bg-[#ffe269] px-5 py-3 font-bold text-[#142638]">Discuss your LATAM plans</a>
         <button type="button" onClick={()=>{setAnswers({});setFinished(false);window.scrollTo({top:0,behavior:"smooth"});}} className="ml-4 mt-4 underline underline-offset-4">Retake quiz</button>
       </div>}
+      <p className="text-sm text-[#53616b]">Regulatory reference: <a className="underline" href="https://www.gov.br/anvisa/en/regulation-of-products/personal-hygiene-products-cosmetics-and-fragrances" target="_blank" rel="noopener noreferrer">ANVISA cosmetics guidance</a>.</p>
       <footer className="border-t border-[#e8e1db] pt-7 text-sm text-[#53616b]"><p className="font-bold">Central Orbit</p><p>Commercial market entry and execution across Latin America.</p><a href="mailto:info@central-orbit.com" className="mt-2 inline-block underline">info@central-orbit.com</a></footer>
     </section>
-  </main>;
+  </div>;
 }
