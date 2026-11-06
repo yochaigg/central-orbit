@@ -1,19 +1,21 @@
 import type { Metadata } from "next";
-import { Inter, Montserrat } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import { SiteShell } from "@/components/layout/site-shell";
 
 
-const inter = Inter({
+const inter = localFont({
+  src: "./fonts/inter-latin-wght-normal.woff2",
   variable: "--font-inter",
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
+  weight: "100 900",
+  display: "swap",
 });
 
-const montserrat = Montserrat({
+const montserrat = localFont({
+  src: "./fonts/montserrat-latin-wght-normal.woff2",
   variable: "--font-montserrat",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
+  weight: "100 900",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
