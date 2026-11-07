@@ -33,3 +33,8 @@ Cloudflare normalizes the HTML URLs to no trailing slash, consistent with the ex
 Nothing has been committed, pushed, or deployed.
 
 Changed guide files pass scoped ESLint. The Codex in-app browser displays the embedded PDF area blank; HTTP delivery and byte integrity are verified, and the direct PDF link is always available. Confirm native PDF rendering in a regular desktop browser before publishing.
+
+## Sitemap and tracking (updated with the Insights build)
+
+- The sitemap (`src/app/sitemap.ts`) deliberately excludes these guides, which stay noindex. `robots.ts` does not block them, so crawlers can read the noindex directive.
+- Umami now loads once from the root layout (`ANALYTICS` in `src/lib/constants.ts`). Do not add the script to a nested layout. The static pages under `public/china-skincare-guides/` keep their own script tags.

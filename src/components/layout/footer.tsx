@@ -1,7 +1,7 @@
 import Link from "next/link";
-import { NAV_LINKS, OFFICES } from "@/lib/constants";
+import { NAV_LINKS, OFFICES, type NavLink } from "@/lib/constants";
 
-export function Footer() {
+export function Footer({ links = NAV_LINKS }: { links?: readonly NavLink[] }) {
   return (
     <footer className="bg-surface border-t border-border">
       <div className="mx-auto max-w-6xl px-6 py-16">
@@ -28,7 +28,7 @@ export function Footer() {
               Navigation
             </h4>
             <ul className="space-y-2">
-              {NAV_LINKS.map((link) => (
+              {links.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}

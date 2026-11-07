@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { twitterMeta } from "@/lib/seo";
 import Link from "next/link";
 import { FadeIn } from "@/components/ui/fade-in";
 import { SectionHeading } from "@/components/ui/section-heading";
@@ -37,6 +38,7 @@ export const metadata: Metadata = {
     images: "/opengraph-image",
   },
   alternates: { canonical: "/latam" },
+  ...twitterMeta("Doing Business in Latin America | Montevideo & LATAM Markets | Central Orbit", "Expert commercial advisory for international companies entering Latin America and LATAM markets. Operations in Montevideo, Uruguay with strategic reach across Brazil and Argentina."),
 };
 
 const services = [

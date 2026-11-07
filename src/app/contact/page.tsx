@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { socialMeta } from "@/lib/seo";
 import Link from "next/link";
 import { FadeIn } from "@/components/ui/fade-in";
 import { SectionHeading } from "@/components/ui/section-heading";
@@ -9,6 +10,7 @@ export const metadata: Metadata = {
   title: "Contact",
   description: "Get in touch with Central Orbit.",
   alternates: { canonical: "/contact" },
+  ...socialMeta({ title: "Contact", description: "Get in touch with Central Orbit.", path: "/contact" }),
 };
 
 export default function ContactPage() {

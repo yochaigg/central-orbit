@@ -6,6 +6,11 @@ export const SITE = {
   url: "https://www.central-orbit.com",
 };
 
+export const ANALYTICS = {
+  umamiSrc: "https://cloud.umami.is/script.js",
+  umamiWebsiteId: "59cc10e2-2ec1-45b9-a0da-46e14c6dc601",
+} as const;
+
 export const NAV_LINKS = [
   { label: "Home", href: "/" },
   { label: "How We Help", href: "/about#services" },
@@ -16,6 +21,19 @@ export const NAV_LINKS = [
   { label: "LATAM", href: "/latam" },
   { label: "About", href: "/about" },
 ] as const;
+
+export type NavLink = { readonly label: string; readonly href: string };
+
+// Insights is added to the navigation only once an article is published.
+export function buildNavLinks(showInsights: boolean): readonly NavLink[] {
+  if (!showInsights) return NAV_LINKS;
+  const i = NAV_LINKS.findIndex((l) => l.href === "/latam");
+  return [
+    ...NAV_LINKS.slice(0, i + 1),
+    { label: "Insights", href: "/insights" },
+    ...NAV_LINKS.slice(i + 1),
+  ];
+}
 
 export const ABOUT = {
   paragraphs: [

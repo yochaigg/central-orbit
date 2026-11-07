@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { socialMeta } from "@/lib/seo";
 import Link from "next/link";
 import { FadeIn } from "@/components/ui/fade-in";
 import { SectionHeading } from "@/components/ui/section-heading";
@@ -19,6 +20,7 @@ export const metadata: Metadata = {
   description:
     "Central Orbit delivers advanced gasification solutions that convert municipal solid waste into clean energy — with near-zero landfill and minimal emissions.",
   alternates: { canonical: "/waste-to-energy" },
+  ...socialMeta({ title: "Waste to Energy", description: "Central Orbit delivers advanced gasification solutions that convert municipal solid waste into clean energy — with near-zero landfill and minimal emissions.", path: "/waste-to-energy" }),
 };
 
 const advantages = [

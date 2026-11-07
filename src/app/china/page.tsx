@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { twitterMeta } from "@/lib/seo";
 import Link from "next/link";
 import { FadeIn } from "@/components/ui/fade-in";
 import { SectionHeading } from "@/components/ui/section-heading";
@@ -36,6 +37,7 @@ export const metadata: Metadata = {
     images: "/opengraph-image",
   },
   alternates: { canonical: "/china" },
+  ...twitterMeta("Doing Business in China | Market Entry Strategy | Central Orbit", "27 years of hands-on experience helping international companies build customers, sales channels, and revenue in China."),
 };
 
 const services = [

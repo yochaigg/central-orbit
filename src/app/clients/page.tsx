@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { socialMeta } from "@/lib/seo";
 import { FadeIn } from "@/components/ui/fade-in";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { CLIENTS } from "@/lib/constants";
@@ -8,6 +9,7 @@ export const metadata: Metadata = {
   description:
     "Trusted by multinational corporations and industry associations across the globe.",
   alternates: { canonical: "/clients" },
+  ...socialMeta({ title: "Clients", description: "Trusted by multinational corporations and industry associations across the globe.", path: "/clients" }),
 };
 
 export default function ClientsPage() {

@@ -3,10 +3,12 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
-import { NAV_LINKS } from "@/lib/constants";
+import type { NavLink } from "@/lib/constants";
 import { Menu, X } from "lucide-react";
 
-export function Navbar() {
+export function Navbar({ links }: { links: readonly NavLink[] }) {
+  const isActive = (href: string) =>
+    pathname === href || (href !== "/" && pathname.startsWith(`${href}/`));
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -40,12 +42,12 @@ export function Navbar() {
 
         {/* Desktop Nav */}
         <div className="hidden xl:flex items-center gap-5">
-          {NAV_LINKS.map((link) => (
+          {links.map((link) => (
             <Link
               key={link.href}
               href={link.href}
               className={`text-sm font-medium transition-colors ${
-                pathname === link.href
+                isActive(link.href)
                   ? "text-primary"
                   : "text-text-light hover:text-primary"
               }`}
@@ -74,13 +76,13 @@ export function Navbar() {
       {/* Mobile Nav */}
       {mobileOpen && (
         <div className="xl:hidden bg-white border-t border-border px-6 py-4 space-y-3">
-          {NAV_LINKS.map((link) => (
+          {links.map((link) => (
             <Link
               key={link.href}
               href={link.href}
               onClick={() => setMobileOpen(false)}
               className={`block py-2 text-sm font-medium ${
-                pathname === link.href
+                isActive(link.href)
                   ? "text-primary"
                   : "text-text-light"
               }`}

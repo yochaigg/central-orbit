@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { twitterMeta } from "@/lib/seo";
 import SkincarePage from "../skincare/page";
 
 // Canonical China-skincare destination. Reuse the maintained skincare content
@@ -8,6 +9,7 @@ export const metadata: Metadata = {
   description:
     "Turnkey China skincare operations from manufacturer to customer: regulatory approvals, logistics, online stores, platform promotions, KOL campaigns, tax compliance and fulfillment, with the brand retaining ownership.",
   alternates: { canonical: "/china-skincare" },
+  ...twitterMeta("China Skincare | Turnkey Services | Central Orbit", "Central Orbit manages China skincare logistics, approvals, e-commerce platforms, campaigns, KOLs and compliance while the brand retains ownership."),
   openGraph: {
     title: "China Skincare | Turnkey Services | Central Orbit",
     description:

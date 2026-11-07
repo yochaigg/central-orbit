@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import Script from "next/script";
 import "./globals.css";
 import { SiteShell } from "@/components/layout/site-shell";
+import { ANALYTICS, buildNavLinks } from "@/lib/constants";
+import { getPublishedArticles } from "@/content/insights";
 
 
 const inter = localFont({
@@ -83,6 +86,7 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
+              "@id": "https://www.central-orbit.com/#organization",
               name: "Central Orbit",
               url: "https://www.central-orbit.com",
               logo: "https://www.central-orbit.com/favicon.svg",
@@ -118,7 +122,15 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-full flex flex-col">
-        <SiteShell>
+        {/* Single site-wide Umami tracker. Do not add this script to nested layouts. */}
+        {process.env.NODE_ENV === "production" ? (
+          <Script
+            src={ANALYTICS.umamiSrc}
+            data-website-id={ANALYTICS.umamiWebsiteId}
+            strategy="afterInteractive"
+          />
+        ) : null}
+        <SiteShell navLinks={buildNavLinks(getPublishedArticles().length > 0)}>
         {children}
         </SiteShell>
       </body>

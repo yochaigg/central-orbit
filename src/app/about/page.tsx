@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { socialMeta } from "@/lib/seo";
 import { FadeIn } from "@/components/ui/fade-in";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { ABOUT, SERVICES, STATS } from "@/lib/constants";
@@ -14,6 +15,7 @@ export const metadata: Metadata = {
   description:
     "Since 1998, Central Orbit has helped companies navigate cross-cultural business in the APAC region.",
   alternates: { canonical: "/about" },
+  ...socialMeta({ title: "About", description: "Since 1998, Central Orbit has helped companies navigate cross-cultural business in the APAC region.", path: "/about" }),
 };
 
 const serviceIcons = {

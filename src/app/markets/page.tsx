@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { socialMeta } from "@/lib/seo";
 import Link from "next/link";
 import { FadeIn } from "@/components/ui/fade-in";
 import { SectionHeading } from "@/components/ui/section-heading";
@@ -38,6 +39,7 @@ export const metadata: Metadata = {
   description:
     "Central Orbit provides services across 17+ industries including telecommunications, technology, cosmetics, and renewable energy.",
   alternates: { canonical: "/markets" },
+  ...socialMeta({ title: "Markets", description: "Central Orbit provides services across 17+ industries including telecommunications, technology, cosmetics, and renewable energy.", path: "/markets" }),
 };
 
 export default function MarketsPage() {
